@@ -1559,3 +1559,55 @@ email-item:hover {
     content: none !important;
   }
 }
+/* ===============================
+   MOBILE FIX – CONTACT CARD
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Container spacing */
+  .container {
+    padding: 40px 16px !important;
+  }
+
+  /* Make each section a full visible card */
+  .container .section:nth-of-type(1),
+  .container .section:nth-of-type(2) {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 14px !important;
+
+    border-radius: 14px !important;
+    border: 2px solid #ffd700 !important;
+    border-bottom: 2px solid #ffd700 !important;
+
+    padding: 18px 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Remove joined-card logic on mobile */
+  .container .section:nth-of-type(1) {
+    border-bottom: 2px solid #ffd700 !important;
+  }
+
+  /* Ensure text wraps properly */
+  .contact-item,
+  .email-item {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* Icons alignment */
+  .contact-item::before,
+  .email-item::before {
+    font-size: 18px !important;
+    flex-shrink: 0;
+  }
+
+  /* Heading spacing inside card */
+  .container .section h2 {
+    margin-bottom: 12px !important;
+    font-size: 18px !important;
+  }
+}
