@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/logo.png" rel="icon">
+    <title>Hatchlab Innovations</title>
+
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7x1e6b7q3hS0Rr3y3+qY7V2Ld8K8xoVg6c3+X1V1j9a1Zl+9xqKZ0Xdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://www.hatchlabinnovations.com/assets/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+    <link rel="stylesheet" href="header-unified.css">
+    <link rel="stylesheet" href="about.css">
+    <!-- Deployment Override - Must be last -->
+    <link rel="stylesheet" href="header-deployment-override.css">
+   
+    <style>
+      .about-section {
+        margin-bottom: 0px;
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+      }
+      .about-section:nth-child(odd) {
+        margin-left: -5px;
+        margin-right: 0;
+        padding-right: 0;
+      }
+      .about-section:nth-child(even) {
+        margin-left: 0;
+        margin-right: auto;
+        padding-left: 0;
+      }
+      .about-content {
+        max-width: none !important;
+        margin: 50px 0 !important;
+        width: 100% !important;
+        padding: 0 5% !important;
+        box-sizing: border-box;
+        justify-content: flex-start;  /* Aligns items to left instead of space-between */
+    gap: 40px;  /* Increased gap for better spacing between text and image */
+      }
+      .about-text {
+        flex: 1 1 60%;             
+        min-width: 250px;          
+      }
+
+      .about-image {
+        flex: 0 0 35%;             
+        min-width: 200px;          
+      }
+
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    max-width: 340px;  /* Reduced from 500px → smaller, better proportion */
+    margin: 0 auto;    /* Centers the image if it's narrower than container */
+
+}
+      body {
+        cursor: none;
+        font-family: 'Lora', serif;
+        background-color: #0f0f16;
+      }
+
+      * {
+        font-family: 'Lora', serif;
+      }
+
+      @keyframes dropAndBounce {
+        0% {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        60% {
+          opacity: 1;
+          transform: translateY(10px);
+        }
+        80% {
+          transform: translateY(-5px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes continuousBounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+    
+      
+
+      
+      .typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fcd703; /* cursor effect */
+  animation: blink-caret 0.7s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #fcd703; }
+}
+* {
+      font-family: 'Lora', serif;
+    }
+
+    /* Responsive styles for about sections only - desktop unchanged */
+    @media (max-width: 768px) {
+        .about-content {
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            gap: 30px !important;
+        }
+
+        .about-text,
+        .about-image {
+            flex: 1 1 100% !important;
+            min-width: 100% !important;
+            width: 100% !important;
+        }
+
+        .about-section:nth-child(odd) .about-image {
+            order: -1; /* Image first on odd sections for alternating feel */
+        }
+
+        .about-image img {
+            max-width: 100% !important;
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        body {
+            cursor: auto !important;
+        }
+
+        .glow-cursor {
+            display: none !important;
+        }
+
+        .about-section h2 {
+            font-size: 1.8em !important;
+            margin-bottom: 30px !important;
+        }
+
+        .about-section p {
+            font-size: 1em !important;
+            line-height: 1.6 !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-content {
+            padding: 0 3% !important;
+            gap: 20px !important;
+        }
+
+        .about-section h2 {
+            font-size: 1.6em !important;
+        }
+    }
+
+    .contact-info-item img {
+      width: 30px;          /* adjust size as needed */
+      height: auto;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="glow-cursor"></div>
+    <header class="main-header">
+        <div class="header-logo">
+            <a href="index.html"><img src="images/logo.png" alt="Hatchlab Logo"></a>
+            <span class="brand-name">Hatchlab Innovations</span>
+        </div>
+        <nav class="header-nav">
+            <a href="about.html">About</a>
+            <a href="services.html">Service</a>
+            <a href="careers_page.html">Career</a>
+            <a href="contactus.html">Contact</a>
+            <button class="get-in-touch-btn" id="getInTouchBtn">Get In Touch</button>
+        </nav>
+    </header>
+
+    <div class="hero-sec home-section">
+        <div id="particles-js"></div>
+        <div class="main">
+            <div class="hero">
+                <h1 class="hero-title">
+                </h1>
+            </div>
+        </div>
+    </div>
+  <div class="about-section home-section">
+    <div class="about-content">
+    <div class="about-text">
+    <h2>Executive Summary</h2>
+    <p>
+      The pace of economic change has accelerated dramatically. Digitalisation, geopolitics, and demographic shifts are reshaping industries, and both start-ups and mature corporations must innovate to survive. Hatchlab Innovations has been built as an integrated platform that addresses these needs through Enterprise Creation as a Service (ECaaS).<br><br>
+      By combining a start-up incubation studio, a diversified investment arm, and a modern consultancy under one roof, Hatchlab enables entrepreneurs, chief executives, and investors to create, finance, and scale ventures with confidence.
+    </p>
+  </div>
+<div class="about-image">
+      <img src="images/Aboutusimg.jpg" alt="Executive Summary Image">
+    </div>
+    </div>
+    </div>
+  <div class="about-section home-section">
+     <div class="about-content">
+<div class="about-image">
+      <img src="images/stock-vector-mission-vision-values-of-company-doodle-icon-set-success-symbol-isolated-background-organization-2559107571.jpg" alt="Vision and Mission">
+    </div>
+    <div class="about-text">
+    <h2>Vision and Mission</h2>
+    <p>
+      Hatchlab Innovations' vision is to become the premier platform for building the next generation of global enterprises.<br><br>
+      Our mission is to empower innovators and institutions by providing the resources, capital, and expertise required to transform ideas into successful businesses.<br><br>
+      We believe that the future of enterprise creation lies in the seamless integration of innovation, finance, and advisory services; our ECaaS model embodies this philosophy.
+    </p>
+  </div>
+    </div>
+    </div>
+  <div class="about-section home-section">
+     <div class="about-content">
+    <div class="about-text">
+    <h2>Strategic Context</h2>
+    <p>
+      Market Dynamics highlight disruption, capital complexity, and an advisory gap – together creating an opportunity for a unified platform like Hatchlab Innovations.
+    </p>
+  </div>
+<div class="about-image">
+      <img src="images/Screenshot 2025-12-17 192917.png" alt="Strategic Context">
+    </div>
+    </div>
+    </div>
+<footer class="footer-section">
+  <!-- Yellow gradient blobs -->
+    <div class="footer-gradient">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+
+    
+        <!-- Main horizontal row -->
+        <div class="footer-content">
+            <!-- Column 1: Logo + Copyright -->
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="HatchLab Logo">
+                </div>
+                <p class="footer-meta">© 2025 HatchLab Innovations Pvt. Ltd.<br>All rights reserved.</p>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="footer-column">
+                <div class="footer-contact">
+                    <a href="tel:+918276057111">+91 8276057111</a>
+                    <a href="mailto:info@hatchlabinnovations.com">info@hatchlabinnovations.com</a>
+                    <a href="mailto:admin@hatchlabinnovations.com">admin@hatchlabinnovations.com</a>
+                </div>
+            </div>
+
+            <!-- Column 4: Email Form -->
+            <div class="footer-column">
+                <form class="footer-form" action="#" onsubmit="return false;">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Contact Us</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Social icons – vertical & centered below the text -->
+        <div class="footer-social">
+            <p>Connect with us through -</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/hatchlab-innovations/posts/?feedView=all" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/hatchlabinnovations.official/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/people/Hatchlab-Innovations/61558095073459/" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://www.hatchlabinnovations.com/assets/js/jquery-3.7.1.min.js"></script>
+<script src="https://www.hatchlabinnovations.com/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://www.hatchlabinnovations.com/assets/js/carousel.js"></script>
+<script src="https://www.hatchlabinnovations.com/assets/js/asp.min.js"></script>
+<script src="https://www.hatchlabinnovations.com/assets/js/aspTrigger.min.js"></script>
+<script src="https://www.hatchlabinnovations.com/assets/js/aspeff.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script src="https://www.hatchlabinnovations.com/assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.38/bundled/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://www.hatchlabinnovations.com/assets/js/particles.js"></script>
+<script src="https://www.hatchlabinnovations.com/assets/js/app.js"></script>
+
+
+
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 80 },
+    "size": { "value": 3 },
+    "color": { "value": "#ffffff" },
+    "line_linked": { "enable": true, "color": "#ffffff", "opacity": 0.3 },
+    "move": { "enable": true, "speed": 2 }
+  }
+});
+
+// Slide-in sections alternating left/right
+gsap.registerPlugin(ScrollTrigger);
+document.querySelectorAll(".about-section").forEach((section, index) => {
+ gsap.from(section, {
+  scrollTrigger: { 
+    trigger: section, 
+    start: "top 80%",
+    toggleActions: "play none none none",
+    onEnter: () => section.classList.add("mask-active")
+  },
+  opacity: 0,
+  x: index % 2 === 0 ? -100 : 100,
+  duration: 1
+});
+
+});
+</script>
+
+<script>
+// Glow Cursor Effect
+const glowCursor = document.querySelector('.glow-cursor');
+document.addEventListener('mousemove', (e) => {
+  glowCursor.style.left = e.clientX + 'px';
+  glowCursor.style.top = e.clientY + 'px';
+});
+
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const faders = document.querySelectorAll(".fade-in-on-scroll");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate__fadeInUp");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  faders.forEach(fader => observer.observe(fader));
+});
+</script>
+
+
+
+
+
+<!-- About text GSAP scrolling animation -->
+ <script>
+ScrollTrigger.create({
+  trigger: section,
+  start: "top 80%",
+  once: true, 
+  onEnter: () => {
+    gsap.to(wordSpans, {
+      opacity: 1,
+      color: "#fff",
+      duration: 0.3,
+      stagger: 0.08,
+      ease: "power1.inOut"
+    });
+  }
+});
+
+</script>
+
+
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+document.querySelectorAll(".about-section").forEach((section, index) => {
+  const p = section.querySelector("p");      
+  const img = section.querySelector(".about-image");
+
+  
+  const words = p.innerText.split(" ");
+  p.innerHTML = words.map(word => `<span class="word">${word} </span>`).join("");
+
+  const wordSpans = p.querySelectorAll(".word");
+
+
+  gsap.set(wordSpans, { opacity: 0, color: "#888" });
+
+
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top 80%",
+    onEnter: () => {
+      gsap.to(wordSpans, {
+        opacity: 1,
+        color: "#fff",
+        duration: 0.3,
+        stagger: 0.08,
+        ease: "power1.inOut",
+        
+      });
+    }
+  });
+
+  
+
+  // Slide-in image
+  if (img) {
+    gsap.from(img, {
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        toggleActions: "play none none reset"
+      },
+      opacity: 0,
+      x: index % 2 === 0 ? 50 : -50,
+      duration: 1.5,
+      ease: "power3.out",
+      immediateRender: false  
+    });
+  }
+});
+</script>
+
+
+  <!-- Get In Touch Modal -->
+  <div id="contactModal" class="contact-modal">
+    <div class="contact-modal-content">
+      <span class="close-contact-modal">&times;</span>
+      <h3>Get In Touch</h3>
+      <div class="contact-info-item">
+        <a href="tel:+918276057111"><img src="images/yellow phone icon.png"> +91 8276057111</a>
+      </div>
+      <div class="contact-info-item">
+        <a href="mailto:info@hatchlabinnovations.com">📧 info@hatchlabinnovations.com</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("contactModal");
+  const openBtn = document.getElementById("getInTouchBtn");
+  const closeBtn = document.querySelector(".close-contact-modal");
+
+  // Open modal
+  openBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+    modal.classList.add("active");
+  });
+
+  // Close modal on ×
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+    setTimeout(() => { modal.style.display = "none"; }, 300);
+  });
+
+  // Close modal when clicking outside content
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+      setTimeout(() => { modal.style.display = "none"; }, 300);
+    }
+  });
+});
+
+</script>
+
+
+
+</body>
+</html>

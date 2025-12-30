@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link href="images/logo.png" rel="icon">
+  <title>Hatchlab Innovations</title>
+
+
+
+
+  
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7x1e6b7q3hS0Rr3y3+qY7V2Ld8K8xoVg6c3+X1V1j9a1Zl+9xqKZ0Xdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+  <!-- CSS LIBS -->
+  <link rel="stylesheet" href="https://www.hatchlabinnovations.com/assets/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- YOUR CSS -->
+  <link rel="stylesheet" href="header-unified.css">
+  <link rel="stylesheet" href="style_sample_1.css">
+  <link rel="stylesheet" href="team-gallery.css">
+  <!-- Deployment Override - Must be last -->
+  <link rel="stylesheet" href="header-deployment-override.css">
+  <!-- Google Font: Lora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    @keyframes dropAndBounce {
+      0% {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(10px);
+      }
+      80% {
+        transform: translateY(-5px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes continuousBounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .word {
+      opacity: 0;
+      animation: dropAndBounce 0.8s ease-out forwards;
+    }
+
+    .word.bouncing {
+      animation: continuousBounce 2s ease-in-out infinite;
+      opacity: 1;
+    }
+
+    .word:nth-child(1) { animation-delay: 0s; }
+    .word:nth-child(2) { animation-delay: 0.1s; }
+    .word:nth-child(3) { animation-delay: 0.2s; }
+    .word:nth-child(4) { animation-delay: 0.3s; }
+    .word:nth-child(5) { animation-delay: 0.4s; }
+
+    /* Page-specific styles only */
+
+
+
+    .main {
+      padding-top: 180px;
+      left: 0;
+      width: 100%;
+      position: relative;
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 40px;
+    }
+
+    .hero p {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      font-size: 24px;
+      color: #fcd703;
+      padding: 30px 0;
+      text-transform: uppercase;
+    }
+
+    .hero p.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .word {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .word.yellow {
+      color: #fcd703;
+    }
+
+    .line {
+      display: block;
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    .hero-sec {
+      height: 100vh;
+      width: 100%;
+      color: #fff;
+      display: flex;
+      position: relative;
+    }
+
+    body {
+      cursor: none;
+      font-family: 'Lora', serif;
+      background-color: #0f0f16;
+    }
+
+    * {
+      font-family: 'Lora', serif;
+    }
+
+    
+
+  </style>
+</head>
+
+<body>
+  <!-- Glow Cursor -->
+  <div class="glow-cursor"></div>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-logo">
+      <img src="images/logo.png" alt="Hatchlab Logo">
+      <span class="brand-name">Hatchlab Innovations</span>
+    </div>
+    <nav class="header-nav">
+      <a href="about.html">About</a>
+      <a href="services.html">Service</a>
+      <a href="careers_page.html">Career</a>
+      <a href="contactus.html">Contact</a>
+      <button class="get-in-touch-btn" id="getInTouchBtn">Get In Touch</button>
+    </nav>
+  </header>
+
+  <div class="hero-sec home-section">
+    <div id="particles-js"></div>
+    <div class="main">
+      <div class="hero">
+        <h1 class="hero-title">
+          <div class="line">
+            <span class="word">Where</span>
+            <span class="word">Big</span>
+            <span class="word">Ideas</span>
+            <span class="word">Meet</span>
+          </div>
+          <div class="line">
+            <span class="word">Cool</span>
+            <span class="word yellow">Tech</span>
+            <span class="word">&</span>
+            <span class="word">Pro</span>
+            <span class="word yellow">Guidance.</span>
+          </div>
+        </h1>
+        <p>A synergy only Hatchlab makes possible.</p>
+        <a class="contact-btn" href="contactus.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--SMRITILATA PART-->
+  <div class="about-section home-section">
+    <h2>About Us</h2>
+    <p>
+      The pace of economic change has accelerated dramatically. Digitalisation, geopolitics, and demographic shifts are
+      reshaping industries, and both start-ups and established corporations must innovate to survive. Yet innovation
+      requires more than bright ideas; it demands structured execution, access to capital, strategic guidance, and
+      operational excellence.<br><br>
+      Hatchlab Innovations has been built as an integrated platform to address these needs through Enterprise Creation
+      as a Service (ECaaS). By combining a start-up studio, a diversified investment arm, and a modern consultancy under
+      one roof, Hatchlab enables entrepreneurs, executives, and investors to create, finance, and scale ventures with
+      confidence.
+      <a href="about.html" class="read-more">Read More</a>
+    </p>
+  </div>
+
+
+
+
+
+  <!-- MOU PART  -->
+  <section class="what-section">
+    <h2 class="what-heading">What We Do</h2>
+
+    <div class="what-cards-container">
+
+      <!-- CARD 1 -->
+      <div class="what-card">
+        <img src="images/what-we-do/udyog.png" class="what-card-img" alt="Hatchlab Inception">
+
+        <div class="card-overlay">
+          <img src="images/what-we-do/udyog-icon.png" class="card-icon" alt="Inception icon">
+          <h3>Hatchlab Inception</h3>
+          <p>
+            Hatchlab Inception empowers early-stage founders with ecosystem
+            support, mentorship, strategic guidance and an environment to innovate.
+          </p>
+          <button class="arrow-btn">➜</button>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="what-card">
+        <img src="images/what-we-do/investment-arm.png" class="what-card-img" alt="Hatchlab Ventures">
+
+        <div class="card-overlay">
+          <img src="images/what-we-do/investment-arm-icon.png" class="card-icon" alt="Ventures icon">
+          <h3>Hatchlab Ventures</h3>
+          <p>
+            Hatchlab Ventures fuels changemakers with purposeful capital,
+            co-building impactful, inclusive and enduring movements.
+          </p>
+          <button class="arrow-btn">➜</button>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="what-card">
+        <img src="images/what-we-do/business-consultancy.png" class="what-card-img" alt="Hatchlab One">
+
+        <div class="card-overlay">
+          <img src="images/what-we-do/business-consultancy-icon.png" class="card-icon" alt="Consultancy icon">
+          <h3>Hatchlab One</h3>
+          <p>
+            Hatchlab One supports businesses with strategy, design and
+            digital transformation for sustainable growth.
+          </p>
+          <button class="arrow-btn">➜</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- SOUMIK PART - OUR INITIATIVES-->
+  <div class="our-initiative home-section">
+    <div class="initiative-body">
+      <div class="initiative-container">
+        <div class="initiative-header">
+          <h2 class="initiative-title animate__animated fade-in-on-scroll custom-duration">Our Initiatives</h2>
+          <div class="initiative-nav">
+            <button class="initiative-prev" aria-label="Previous initiative">
+              <i class="bi bi-arrow-left-square"></i>
+            </button>
+            <button class="initiative-next" aria-label="Next initiative">
+              <i class="bi bi-arrow-right-square"></i>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="owl-carousel owl-theme initiative-carousel">
+
+          <!-- ITEM 1 -->
+          <div class="initiative-item animate__animated fade-in-on-scroll custom-duration">
+
+            <div class="initiative-image">
+              <h2 class="initiative-item-title main-initiative-heading">
+                Techno India Manchester City Football School
+              </h2>
+              <div class="d-flex flex-column justify-content-between h-100 initiative-images">
+
+                <div class="card-image fix-manchester">
+                  <img class="breathing-image" src="images/initiative/mancity_leftside.png" alt="TIMCFS left side">
+                </div>
+              </div>
+            </div>
+            <div class="initiative-text">
+              <div class="initiative-second-box">
+                <div class="initiative-image initiative-right-img">
+                  <img class="breathing-image" src="images/initiative/mancity_rightside.png" alt="TIMCFS right side">
+                </div>
+                <div class="initiative-content">
+                  TIMCFS is Hatchlab's game-changing sports incubation project in collab with Techno India Group and
+                  Manchester City. More than a school, it's a talent launchpad—blending world-class coaching, academic
+                  support, and a parent-friendly progress dashboard.
+                  <br>
+                  <div class="initiative-button">
+                    <a href="#" class="initiative-btn">Explore more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 2 - THOUGHTSHOP -->
+          <div class="initiative-item thoughtshop">
+            <div class="initiative-image">
+              <div class="d-flex flex-column h-100">
+                <div class="initiative-item-title">Thoughtshop</div>
+                <div>
+                  <img class="breathing-image" src="images/initiative/thoughtshop_leftside.png"
+                    alt="Thoughtshop left side">
+                </div>
+              </div>
+            </div>
+            <div class="initiative-text">
+              <div class="initiative-second-box">
+                <div class="initiative-image initiative-right-img">
+                  <img class="breathing-image" src="images/initiative/thoughtshop_rightside.png"
+                    alt="Thoughtshop right side">
+                </div>
+                <div class="initiative-content">
+                  Thoughtshop is the design and storytelling arm of Hatchlab—where raw ideas are refined into compelling
+                  brands with purpose, personality, and visual impact.
+                  For emerging startups, building a strong foundation goes beyond a logo—it's about having a clear
+                  identity, authentic storytelling, and a consistent social presence.
+                  <br>
+                  <div class="initiative-button">
+                    <a href="#" class="initiative-btn">Explore more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 3 -->
+          <div class="initiative-item">
+            <div class="initiative-image">
+              <div class="d-flex flex-column justify-content-between h-100">
+                <div class="initiative-item-title">The Retreat Darjeeling</div>
+                <div>
+                  <img class="breathing-image" src="images/initiative/_RAH3609.jpg" alt="Retreat left side">
+                </div>
+              </div>
+            </div>
+            <div class="initiative-text">
+              <div class="initiative-second-box">
+                <div class="initiative-image initiative-right-img">
+                  <img class="breathing-image" src="images/initiative/retreat_rightside.png" alt="Retreat right side">
+                </div>
+                <div class="initiative-content">
+                  The Retreat Darjeeling is a boutique stay nestled in the Eastern Himalayas, offering stunning views
+                  and rich cultural experiences. Hatchlab partnered to reimagine the property as a living model of
+                  sustainable, community-driven hospitality.
+                  <br>
+                  <div class="initiative-button">
+                    <a href="#" class="initiative-btn">Explore more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- /.initiative-carousel -->
+      </div>
+    </div>
+  </div>
+  <!-- SOUMIK PART END -->
+
+  <!-- TEAM GALLERY SECTION -->
+  <section class="team-gallery">
+    <div id="gallery-particles"></div>
+    <h2 class="team-gallery-title">Gallery</h2>
+    <div class="team-gallery-track">
+      <div class="team-member-card"><img src="images/gallery/gallery-1.jfif" alt="Team 1"></div>
+      <div class="team-member-card"><img src="images/gallery/gallery-2.jfif" alt="Team 2"></div>
+      <div class="team-member-card"><img src="images/gallery/gallery-3.jfif" alt="Team 3"></div>
+      <div class="team-member-card"><img src="images/gallery/gallery-4.jfif" alt="Team 4"></div>
+      <div class="team-member-card"><img src="images/gallery/gallery-5.jfif" alt="Team 5"></div>
+      <div class="team-member-card"><img src="images/gallery/gallery-6.jfif" alt="Team 6"></div>
+    </div>
+    <div class="team-gallery-dots"></div>
+  </section>
+
+  <footer class="footer-section" style="border-top: 2px solid #fcd703;">
+    
+    <!-- Main horizontal row -->
+    <div class="footer-gradient">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="footer-content">
+      <!-- Column 1: Logo + Copyright -->
+      <div class="footer-column">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="HatchLab Logo">
+        </div>
+        <p class="footer-meta">© 2025 HatchLab Innovations Pvt. Ltd.<br>All rights reserved.</p>
+      </div>
+
+      <!-- Column 2: Contact Info -->
+      <div class="footer-column">
+        <div class="footer-contact">
+          <a href="tel:+918276057111">+91 8276057111</a>
+          <a href="mailto:info@hatchlabinnovations.com">info@hatchlabinnovations.com</a>
+          <a href="mailto:admin@hatchlabinnovations.com">admin@hatchlabinnovations.com</a>
+        </div>
+      </div>
+
+      <!-- Column 3: Email Form -->
+      <div class="footer-column">
+        <form class="footer-form" action="#" onsubmit="return false;">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Contact Us</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Social icons – vertical & centered below the text -->
+    <div class="footer-social">
+      <p>Connect with us through -</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/company/hatchlab-innovations/posts/?feedView=all" target="_blank"
+          aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/hatchlabinnovations.official/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/people/Hatchlab-Innovations/61558095073459/" target="_blank"
+          aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Get In Touch Modal -->
+  <div id="contactModal" class="contact-modal">
+    <div class="contact-modal-content">
+      <span class="close-contact-modal">&times;</span>
+      <h3>Get In Touch</h3>
+      <div class="contact-info-item">
+        <a href="tel:+918276057111"><img src="images/yellow phone icon.png"> +91 8276057111</a>
+      </div>
+      <div class="contact-info-item">
+        <a href="mailto:info@hatchlabinnovations.com">📧 info@hatchlabinnovations.com</a>
+      </div>
+    </div>
+  </div>
+  <style>
+    .contact-info-item img {
+  width: 30px;          /* adjust size as needed */
+  height: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+  </style>
+
+  <!-- JS LIBS -->
+  <script src="https://www.hatchlabinnovations.com/assets/js/jquery-3.7.1.min.js"></script>
+  <script src="https://www.hatchlabinnovations.com/assets/js/bootstrap.bundle.min.js"></script>
+  <!-- IMPORTANT: only one jQuery, removed the second include -->
+  <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://www.hatchlabinnovations.com/assets/js/carousel.js"></script>
+  <script src="https://www.hatchlabinnovations.com/assets/js/asp.min.js"></script>
+  <script src="https://www.hatchlabinnovations.com/assets/js/aspTrigger.min.js"></script>
+  <script src="https://www.hatchlabinnovations.com/assets/js/aspeff.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <script src="https://www.hatchlabinnovations.com/assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.38/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://www.hatchlabinnovations.com/assets/js/particles.js"></script>
+  <script src="https://www.hatchlabinnovations.com/assets/js/app.js"></script>
+
+  <!-- INIT: OUR INITIATIVES OWL CAROUSEL -->
+  <!-- INIT: OUR INITIATIVES OWL CAROUSEL - WITH 5 SECOND AUTOPLAY -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.jQuery && typeof jQuery.fn.owlCarousel === 'function') {
+        jQuery(function ($) {
+          var $carousel = $('.initiative-carousel');
+          if ($carousel.length) {
+            // Destroy if already initialized (prevents duplicates)
+            if ($carousel.hasClass('owl-loaded')) {
+              $carousel.trigger('destroy.owl.carousel');
+              $carousel.removeClass('owl-loaded owl-drag');
+            }
+
+            $carousel.owlCarousel({
+              items: 1,
+              loop: true,
+              margin: 24,
+              nav: false,
+              dots: true,
+              autoplay: true,                  // Enable autoplay
+              autoplayTimeout: 5000,           // 5 seconds = 5000ms
+              autoplayHoverPause: true,        // Pause when user hovers (optional but recommended)
+              smartSpeed: 800,                 // Smooth transition
+              animateOut: 'fadeOut',           // Optional: nice fade effect
+              animateIn: 'fadeIn',             // Optional: nice fade effect
+              responsive: {
+                0: { items: 1 },
+                600: { items: 1 },
+                1000: { items: 1 }
+              }
+            });
+
+            // Manual navigation buttons
+            $('.initiative-prev').on('click', function (e) {
+              e.preventDefault();
+              $carousel.trigger('prev.owl.carousel', [600]);
+            });
+            $('.initiative-next').on('click', function (e) {
+              e.preventDefault();
+              $carousel.trigger('next.owl.carousel', [600]);
+            });
+          }
+        });
+      } else {
+        console.warn('jQuery or OwlCarousel not available for initiatives carousel.');
+      }
+    });
+  </script>
+
+  <!-- CONTINUOUS GALLERY CAROUSEL SCRIPT  -->
+  <!-- <script>
+    /*
+      Continuous infinite linear carousel — hover no longer pauses the animation.
+    */
+    (function () {
+      console.log('[continuous-carousel] init (no-pause-on-hover)');
+
+      const track = document.querySelector('.udyog-gallery-owl');
+      if (!track) { console.error('[continuous-carousel] .udyog-gallery-owl not found'); return; }
+      const container = track.closest('.gallery-section');
+      if (!container) { console.error('[continuous-carousel] parent .gallery-section not found'); return; }
+
+      const prevBtn = container.querySelector('.prev');
+      const nextBtn = container.querySelector('.next');
+
+      const cfg = {
+        speed: 110,
+        swipeThreshold: 40,
+      };
+
+      function waitForImages(nodeList, cb) {
+        const imgs = Array.from(nodeList.querySelectorAll('img'));
+        if (imgs.length === 0) return cb();
+        let loaded = 0;
+        imgs.forEach(img => {
+          if (img.complete) { if (++loaded === imgs.length) cb(); }
+          else {
+            img.addEventListener('load', () => { if (++loaded === imgs.length) cb(); });
+            img.addEventListener('error', () => { if (++loaded === imgs.length) cb(); });
+          }
+        });
+      }
+
+      function clearClones() {
+        track.querySelectorAll('.clone').forEach(n => n.remove());
+      }
+
+      function buildClones() {
+        clearClones();
+        const originals = Array.from(track.querySelectorAll('.gallery-card')).filter(n => !n.classList.contains('clone'));
+        if (originals.length === 0) return;
+        const appendFrag = document.createDocumentFragment();
+        originals.forEach(n => {
+          const c = n.cloneNode(true);
+          c.classList.add('clone');
+          appendFrag.appendChild(c);
+        });
+        track.appendChild(appendFrag);
+
+        const prependFrag = document.createDocumentFragment();
+        originals.forEach(n => {
+          const c = n.cloneNode(true);
+          c.classList.add('clone');
+          prependFrag.appendChild(c);
+        });
+        track.insertBefore(prependFrag, track.firstChild);
+      }
+
+      function getOriginalsTotalWidth() {
+        const nodes = Array.from(track.querySelectorAll('.gallery-card')).filter(n => !n.classList.contains('clone'));
+        if (nodes.length === 0) return 0;
+        const gap = computeGap();
+        const widths = nodes.map(n => Math.round(n.getBoundingClientRect().width));
+        const total = widths.reduce((a, b) => a + b, 0) + gap * (nodes.length - 1);
+        return total;
+      }
+
+      function computeGap() {
+        const items = track.querySelectorAll('.gallery-card');
+        if (items.length < 2) return 20;
+        const a = items[0].getBoundingClientRect();
+        const b = items[1].getBoundingClientRect();
+        return Math.max(0, Math.round(b.left - a.right));
+      }
+
+      let originalsTotalWidth = 0;
+      let translate = 0;
+      let lastTs = null;
+      let rafId = null;
+      let running = true;
+
+      function initLayout() {
+        buildClones();
+        originalsTotalWidth = getOriginalsTotalWidth();
+        if (originalsTotalWidth === 0) {
+          console.warn('[continuous-carousel] originalsTotalWidth is 0 — check .gallery-card presence.');
+        }
+        const firstOriginal = track.querySelector('.gallery-card:not(.clone)');
+        if (firstOriginal) {
+          const trackRect = track.getBoundingClientRect();
+          const itemRect = firstOriginal.getBoundingClientRect();
+          const delta = itemRect.left - trackRect.left;
+          translate = -delta;
+          applyTranslate(true);
+        } else {
+          translate = 0;
+          applyTranslate(true);
+        }
+      }
+
+      function applyTranslate(instant) {
+        if (instant) {
+          track.style.transition = 'none';
+          track.style.transform = `translateX(${translate}px)`;
+          requestAnimationFrame(() => { track.style.transition = ''; });
+        } else {
+          track.style.transform = `translateX(${translate}px)`;
+        }
+      }
+
+      function step(ts) {
+        if (!lastTs) lastTs = ts;
+        const dt = (ts - lastTs) / 1000;
+        lastTs = ts;
+
+        if (running) {
+          translate -= cfg.speed * dt;
+        }
+
+        if (originalsTotalWidth > 0) {
+          if (translate <= -originalsTotalWidth * 2) {
+            translate += originalsTotalWidth;
+          }
+          if (translate > 0) {
+            translate -= originalsTotalWidth;
+          }
+        }
+
+        applyTranslate(false);
+        rafId = requestAnimationFrame(step);
+      }
+
+      function start() {
+        if (rafId) return;
+        lastTs = null;
+        running = true;
+        rafId = requestAnimationFrame(step);
+      }
+
+      function shiftByCard(direction) {
+        const originalsNodes = Array.from(track.querySelectorAll('.gallery-card')).filter(n => !n.classList.contains('clone'));
+        if (originalsNodes.length === 0) return;
+        const card = originalsNodes[0];
+        const gap = computeGap();
+        const cardW = Math.round(card.getBoundingClientRect().width) + gap;
+        translate -= direction * cardW;
+
+        if (originalsTotalWidth > 0) {
+          while (translate <= -originalsTotalWidth * 2) translate += originalsTotalWidth;
+          while (translate > 0) translate -= originalsTotalWidth;
+        }
+        applyTranslate(false);
+      }
+
+      if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); shiftByCard(1); });
+      if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); shiftByCard(-1); });
+
+      (function enableSwipe() {
+        let sx = 0, dx = 0, touching = false, t0 = 0;
+        track.addEventListener('touchstart', e => { touching = true; sx = e.touches[0].clientX; dx = 0; t0 = Date.now(); }, { passive: true });
+        track.addEventListener('touchmove', e => { if (!touching) return; dx = e.touches[0].clientX - sx; }, { passive: true });
+        track.addEventListener('touchend', () => {
+          touching = false;
+          const dt = Date.now() - t0;
+          if (Math.abs(dx) > cfg.swipeThreshold && dt < 800) {
+            if (dx < 0) shiftByCard(1); else shiftByCard(-1);
+          }
+        }, { passive: true });
+      })();
+
+      waitForImages(track, () => {
+        initLayout();
+        start();
+        console.log('[continuous-carousel] started — originalsTotalWidth:', originalsTotalWidth);
+      });
+
+      let resizeTimer = null;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          initLayout();
+        }, 120);
+      });
+
+    })();
+  </script> -->
+
+
+
+
+
+
+  <!-- <script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.querySelector('.udyog-gallery-owl');
+    if (!container) return;
+
+    const slides = gsap.utils.toArray('.udyog-gallery-owl .gallery-card');
+    if (!slides.length) return;
+
+    let current = 0;
+
+    function layoutSlides(animate) {
+      const total = slides.length;
+
+      slides.forEach((slide, i) => {
+        // position around the center
+        let rel = i - current;
+        if (rel > total / 2) rel -= total;
+        if (rel < -total / 2) rel += total;
+
+        const angle = rel * -18;                  // how much to curve
+        const x = rel * 220;                      // horizontal spacing
+        const z = -Math.abs(rel) * 180;           // depth
+        const scale = rel === 0 ? 1 : 0.8;        // center is bigger
+        const opacity = rel === 0 ? 1 : 0.45;     // side slides dimmer
+
+        const vars = {
+          x: x,
+          z: z,
+          rotationY: angle,
+          scale: scale,
+          opacity: opacity,
+          zIndex: 100 - Math.abs(rel),
+          ease: 'power3.out',
+          duration: animate ? 0.8 : 0
+        };
+
+        gsap.to(slide, vars);
+      });
+    }
+
+    // initial layout
+    layoutSlides(false);
+
+    // arrow buttons
+    const nextBtn = document.querySelector('.gallery-controls .next');
+    const prevBtn = document.querySelector('.gallery-controls .prev');
+
+    function go(dir) {
+      current = (current + dir + slides.length) % slides.length;
+      layoutSlides(true);
+    }
+
+    nextBtn && nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      go(1);
+    });
+
+    prevBtn && prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      go(-1);
+    });
+
+    // autoplay every 4s, pause on hover
+    let autoRotate = gsap.delayedCall(4, function repeat() {
+      go(1);
+      autoRotate.restart(true);
+    });
+
+    [container, nextBtn, prevBtn].forEach(el => {
+      if (!el) return;
+      el.addEventListener('mouseenter', () => autoRotate.pause());
+      el.addEventListener('mouseleave', () => autoRotate.resume());
+    });
+  });
+</script> -->
+
+
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // use your existing gallery cards as 3D panels
+      const panels = gsap.utils.toArray(".udyog-gallery-owl .gallery-card");
+      if (!panels.length) return;
+
+      const total = panels.length;
+      let current = Math.floor(total / 2);
+
+
+      // center panels and set base style once
+      gsap.set(panels, {
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        xPercent: -50,
+        yPercent: -50,
+        transformOrigin: "center center",
+        transformStyle: "preserve-3d"
+      });
+
+      function layout(instant = false) {
+        panels.forEach((panel, i) => {
+          const offset = i - current;             // distance from active slide
+          const x = offset * 260;                 // horizontal spacing
+          const z = -Math.abs(offset) * 160;      // push back side slides
+          const rotY = offset * -14;              // angle cards
+          const scale = i === current ? 1 : 0.8;  // center bigger
+          const opacity = 1;
+
+          gsap.to(panel, {
+            duration: instant ? 0 : 0.7,
+            x,
+            z,
+            rotateY: rotY,
+            scale,
+            opacity,
+            ease: "power3.inOut"
+          });
+        });
+      }
+
+      // first layout
+      layout(true);
+
+      // hook to your existing arrows
+      const nextBtn = document.querySelector(".gallery-controls .next");
+      const prevBtn = document.querySelector(".gallery-controls .prev");
+
+      function goTo(idxDelta) {
+        current = (current + idxDelta + total) % total;
+        layout(false);
+      }
+
+      if (nextBtn) nextBtn.addEventListener("click", () => goTo(1));
+      if (prevBtn) prevBtn.addEventListener("click", () => goTo(-1));
+    });
+
+
+
+
+  </script> -->
+
+
+<!-- <script>
+document.addEventListener("DOMContentLoaded", () => {
+  if (!window.gsap) return;
+
+  // All the gallery cards
+  const panels = gsap.utils.toArray(".udyog-gallery-owl .gallery-card");
+  if (!panels.length) return;
+
+  const total = panels.length;
+
+  // Start from the middle card
+  let current = Math.floor(total / 2);
+
+  // Controls the animation speed (higher = slower)
+  const STEP_DURATION = 2.2; // seconds per slide movement
+
+  // Base positioning for all panels
+  gsap.set(panels, {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    xPercent: -50,
+    yPercent: -50,
+    transformOrigin: "center center",
+    transformStyle: "preserve-3d"
+  });
+
+  function layout(instant = false) {
+    panels.forEach((panel, i) => {
+      const offset = i - current;             // distance from active slide
+      const x = offset * 260;                 // horizontal spacing
+      const z = -Math.abs(offset) * 160;      // depth
+      const rotY = offset * -14;              // angle cards
+      const scale = i === current ? 1 : 0.8;  // center bigger
+
+      gsap.to(panel, {
+        duration: instant ? 0 : STEP_DURATION,
+        x,
+        z,
+        rotateY: rotY,
+        scale,
+        opacity: 1,
+        ease: "power3.inOut"
+      });
+    });
+  }
+
+  // First layout (no animation)
+  layout(true);
+
+  const nextBtn = document.querySelector(".gallery-controls .next");
+  const prevBtn = document.querySelector(".gallery-controls .prev");
+
+  function goTo(delta) {
+    current = (current + delta + total) % total;
+    layout(false);
+  }
+
+  // Manual arrows still work
+  if (nextBtn) nextBtn.addEventListener("click", () => goTo(1));
+  if (prevBtn) prevBtn.addEventListener("click", () => goTo(-1));
+
+  // 🔁 Continuous, infinite auto-rotation
+  function autoLoop() {
+    goTo(1); // move to next slide
+    gsap.delayedCall(STEP_DURATION, autoLoop); // schedule next move right after this one
+  }
+
+  // Small initial delay so page settles
+  gsap.delayedCall(0.8, autoLoop);
+});
+</script> -->
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<script>
+(function () {
+  const options = {
+    containerId: 'gallery-hex',      // <-- important: use our gallery container
+    minDelay: 300,
+    maxDelay: 2000,
+    infectionChance: 0.5,
+    infectionChanceOnClick: 0.7,
+    responsive: true,
+    animateWhenVisible: false
+  };
+
+  function Infectagons(opts) {
+    opts = opts || {};
+    this.options = {
+      containerId: 'hex',
+      minDelay: 250,
+      maxDelay: 2000,
+      infectionChance: 0.5,
+      infectionChanceOnClick: 0.7,
+      responsive: false,
+      animateWhenVisible: false
+    };
+    for (var prop in this.options) {
+      if (prop in opts) this.options[prop] = opts[prop];
+    }
+    this.container = document.getElementById(this.options.containerId);
+    this.hexagon = document.createElement('div');
+    this.col = document.createElement('div');
+    this.hexagon.className = 'hexagon';
+    this.col.className = 'col';
+    this.numRows = 0;
+    this.numCols = 0;
+
+    this.start = function () {
+      if (!this.container) return;
+      this.respond();
+      if (this.options.responsive) {
+        window.addEventListener('resize', this.handleResize.bind(this));
+        this.handleResize();
+      }
+      this.transformProperty = this.getSupportedProp(
+        ['transform', 'MozTransform', 'WebkitTransform', 'msTransform', 'OTransform']
+      );
+      this.int = setTimeout(
+        this.go.bind(this),
+        this.getRandomInt(this.options.minDelay, this.options.maxDelay),
+        true
+      );
+    };
+
+    this.respond = function () {
+      if (!this.container) return;
+      var rows = Math.ceil((this.container.offsetHeight + 100) / 120),
+          cols = Math.ceil((this.container.offsetWidth + 100) / 94);
+      if (cols !== this.cols || rows !== this.rows) {
+        this.els = [];
+        this.container.innerHTML = '';
+        this.cols = cols;
+        this.rows = rows;
+        for (var i = 0; i < cols; i++) {
+          var col = this.col.cloneNode();
+          for (var j = 0; j < rows; j++) {
+            var hexagon = this.hexagon.cloneNode();
+            col.appendChild(hexagon);
+            this.els.push(hexagon);
+            hexagon.onclick = this.handleClick.bind(this);
+          }
+          this.container.appendChild(col);
+        }
+      }
+    };
+
+    this.handleClick = function (e) {
+      var el = e.target,
+          sibs = this.getAdjacentSiblings(el),
+          els = sibs.concat(el);
+      this.spin(el);
+      for (var i = 0; i < els.length; i++) {
+        var r = Math.random();
+        if (r < this.options.infectionChanceOnClick) this.animate(els[i]);
+      }
+    };
+
+    this.handleResize = function () {
+      this.respond();
+    };
+
+    this.go = function (r) {
+      if (!this.els || !this.els.length) return;
+      var i = this.getRandomInt(0, this.els.length),
+          el = this.els[i];
+      this.animate(el);
+      if (r === true)
+        setTimeout(
+          this.go.bind(this),
+          this.getRandomInt(this.options.minDelay, this.options.maxDelay),
+          true
+        );
+    };
+
+    this.animate = function (el) {
+      var ch = Math.random(),
+          cl = this.addClassTo(el);
+      if (cl) el.t = setTimeout(this.removeClassFrom, 500, el);
+      if (ch < this.options.infectionChance) {
+        var s = this.getAdjacentSiblings(el),
+            r = this.getRandomInt(0, s.length);
+        this.spin(el);
+        setTimeout(this.animate.bind(this), 50, s[r]);
+      }
+    };
+
+    this.spin = function (el) {
+      el.rotation = el.rotation + 60 || 60;
+      el.style[this.transformProperty] =
+        'rotate(' + el.rotation + 'deg) translateZ(0)';
+    };
+
+    this.addClassTo = function (el) {
+      if (el.className.indexOf('highlight') === -1) {
+        el.className += ' highlight';
+        return true;
+      } else {
+        clearTimeout(el.t);
+        el.t = setTimeout(this.removeClassFrom, 500, el);
+        return false;
+      }
+    };
+
+    this.removeClassFrom = function (el) {
+      el.className = el.className.replace('highlight', '');
+    };
+
+    this.getAdjacentSiblings = function (el) {
+      var ret = [],
+          row = el.parentNode,
+          isOdd = this.rowIsOdd(row),
+          offset = isOdd ? -1 : 1,
+          elIndex = this.getElIndex(el);
+      if (el.previousSibling !== null) ret.push(el.previousSibling);
+      if (el.nextSibling !== null) ret.push(el.nextSibling);
+      if (row.previousSibling !== null && row.previousSibling.nodeName === 'DIV') {
+        ret.push(row.previousSibling.childNodes[elIndex]);
+        if (typeof row.previousSibling.childNodes[elIndex + offset] !== 'undefined')
+          ret.push(row.previousSibling.childNodes[elIndex + offset]);
+      }
+      if (row.nextSibling !== null && row.nextSibling.nodeName === 'DIV') {
+        ret.push(row.nextSibling.childNodes[elIndex]);
+        if (typeof row.nextSibling.childNodes[elIndex + offset] !== 'undefined')
+          ret.push(row.nextSibling.childNodes[elIndex + offset]);
+      }
+      return ret;
+    };
+
+    this.getElIndex = function (el) {
+      var i = 0;
+      while (el.previousSibling !== null) {
+        el = el.previousSibling;
+        i++;
+      }
+      return i;
+    };
+
+    this.rowIsOdd = function (el) {
+      var i = 0;
+      while (el.previousSibling !== null) {
+        el = el.previousSibling;
+        i++;
+      }
+      return i % 2 === 1;
+    };
+
+    this.getRandomInt = function (min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    };
+
+    this.getSupportedProp = function (a) {
+      var r = document.documentElement;
+      for (var i = 0; i < a.length; i++) {
+        if (a[i] in r.style) return a[i];
+      }
+    };
+  }
+
+  // start background
+  document.addEventListener('DOMContentLoaded', function () {
+    const h = new Infectagons(options);
+    h.start();
+  });
+})();
+</script>
+
+
+
+
+
+
+
+
+  <!-- HEADING  -->
+  <script>
+    (function () {
+      // debounce helper
+      function debounce(fn, wait = 120) { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), wait); }; }
+
+      function pushRightColumnBelowTitle() {
+        document.querySelectorAll('.initiative-item').forEach(item => {
+          const title = item.querySelector('.initiative-item-title');
+          if (!title) return;
+
+          // measure title height incl. margins
+          const rect = title.getBoundingClientRect();
+          const st = getComputedStyle(title);
+          const mt = parseFloat(st.marginTop) || 0;
+          const mb = parseFloat(st.marginBottom) || 0;
+          const titleHeight = Math.ceil(rect.height + mt + mb);
+
+          // prefer the right column container(s)
+          const right = item.querySelector('.initiative-right') || item.querySelector('.initiative-text');
+          // smaller image wrapper inside right (if present) — we'll push this too for safety
+          const rightImage = item.querySelector('.initiative-right-img') || item.querySelector('.initiative-image');
+
+          // bigger breathing room — increase this number to push further
+          const extraGap = 36; // <-- increased gap (px)
+
+          const targetMargin = titleHeight + extraGap;
+
+          if (right) {
+            // only increase margin if it's less than what we need (prevents shrinking unexpectedly)
+            const cur = parseFloat(getComputedStyle(right).marginTop) || 0;
+            if (cur < targetMargin) right.style.marginTop = targetMargin + 'px';
+          }
+          if (rightImage && rightImage !== right) {
+            const cur2 = parseFloat(getComputedStyle(rightImage).marginTop) || 0;
+            if (cur2 < targetMargin) rightImage.style.marginTop = targetMargin + 'px';
+          }
+        });
+      }
+
+      // run initially and on resize (debounced)
+      window.addEventListener('load', pushRightColumnBelowTitle);
+      window.addEventListener('DOMContentLoaded', pushRightColumnBelowTitle);
+      window.addEventListener('resize', debounce(pushRightColumnBelowTitle, 120));
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  <!-- GALLERY ANIMATION -->
+
+
+  <script>
+    (function () {
+      const container = document.querySelector('.gallery-section .gallery-particles');
+      if (!container) return;
+      const count = Math.min(18, Math.floor(window.innerWidth / 80));
+      const colors = ['rgba(252,215,3,0.95)', 'rgba(255,255,255,0.06)'];
+      function createParticle(i) {
+        const el = document.createElement('div');
+        el.className = 'particle';
+        el.style.left = Math.random() * 100 + '%';
+        el.style.top = (20 + Math.random() * 60) + '%';
+        const size = (Math.random() * 6 + 4) * (window.innerWidth < 600 ? 0.8 : 1);
+        el.style.width = size + 'px';
+        el.style.height = size + 'px';
+        el.style.background = colors[Math.floor(Math.random() * colors.length)];
+        const delay = Math.random() * 6;
+        el.style.animationDelay = delay + 's';
+        container.appendChild(el);
+      }
+      for (let i = 0; i < count; i++) createParticle(i);
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          const c = document.querySelector('.gallery-section .gallery-particles');
+          if (!c) return;
+          while (c.firstChild) c.removeChild(c.firstChild);
+          const newCount = Math.min(22, Math.floor(window.innerWidth / 80));
+          for (let i = 0; i < newCount; i++) createParticle(i);
+        }, 120);
+      });
+    })();
+  </script>
+
+  <!-- GALLERY FLIP ANIMATION -->
+  <script>
+    (function() {
+      const cards = Array.from(document.querySelectorAll('.team-member-card'));
+      const dotsContainer = document.querySelector('.team-gallery-dots');
+      if (!cards.length) return;
+      
+      let currentSet = 0;
+      const totalSets = Math.ceil(cards.length / 3);
+      
+      for (let i = 0; i < totalSets; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        dot.addEventListener('click', () => showSet(i));
+        dotsContainer.appendChild(dot);
+      }
+      
+      const dots = document.querySelectorAll('.dot');
+      
+      function showSet(setIndex) {
+        currentSet = setIndex;
+        const start = setIndex * 3;
+        const end = start + 3;
+        
+        cards.forEach((card, i) => {
+          if (i >= start && i < end) {
+            card.classList.add('active');
+          } else {
+            card.classList.remove('active');
+          }
+        });
+        
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === setIndex);
+        });
+      }
+      
+      function next() {
+        currentSet = (currentSet + 1) % totalSets;
+        showSet(currentSet);
+      }
+      
+      showSet(0);
+      setInterval(next, 6000);
+    })();
+  </script>
+
+  <!-- TEAM GALLERY PARALLAX -->
+  <script>
+    (function() {
+      const gallery = document.querySelector('.team-gallery');
+      if (!gallery) return;
+      
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const galleryTop = gallery.offsetTop;
+        const galleryHeight = gallery.offsetHeight;
+        const windowHeight = window.innerHeight;
+        
+        if (scrolled + windowHeight > galleryTop && scrolled < galleryTop + galleryHeight) {
+          const offset = (scrolled - galleryTop + windowHeight) / (galleryHeight + windowHeight);
+          gallery.style.setProperty('--parallax-before', `translateY(${offset * 100}px)`);
+          gallery.style.setProperty('--parallax-after', `translateY(${offset * -80}px)`);
+        }
+      });
+    })();
+  </script>
+
+
+
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "size": { "value": 3 },
+        "color": { "value": "#ffffff" },
+        "line_linked": { "enable": true, "color": "#ffffff" },
+        "move": { "enable": true, "speed": 2 }
+      }
+    });
+    
+    particlesJS("gallery-particles", {
+      "particles": {
+        "number": { "value": 120 },
+        "size": { "value": 3 },
+        "color": { "value": "#ffffff" },
+        "line_linked": { "enable": true, "color": "#ffffff", "opacity": 0.3 },
+        "move": { "enable": true, "speed": 1.5 },
+        "opacity": { "value": 0.5 }
+      }
+    });
+  </script>
+
+  <!-- Glow Cursor -->
+  <script>
+    const glowCursor = document.querySelector('.glow-cursor');
+    document.addEventListener('mousemove', (e) => {
+      glowCursor.style.left = e.clientX + 'px';
+      glowCursor.style.top = e.clientY + 'px';
+    });
+  </script>
+
+  <!-- Fade-in on scroll -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const faders = document.querySelectorAll(".fade-in-on-scroll");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate__fadeInUp");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      faders.forEach(fader => observer.observe(fader));
+    });
+  </script>
+
+  <!-- Hero text animation + magnetic button -->
+  <script>
+    const heroParagraph = document.querySelector('.hero p');
+    const contactBtn = document.querySelector('.contact-btn');
+    const words = document.querySelectorAll('.hero-title .word');
+
+    // Start continuous bounce after drop animation completes
+    setTimeout(() => {
+      words.forEach(word => word.classList.add('bouncing'));
+    }, 1200);
+
+    setTimeout(() => {
+      if (heroParagraph) heroParagraph.classList.add('animate');
+      setTimeout(() => {
+        if (contactBtn) contactBtn.classList.add('animate');
+      }, 600);
+    }, 500);
+
+    if (contactBtn) {
+      contactBtn.addEventListener('mousemove', (e) => {
+        const rect = contactBtn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        contactBtn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.1)`;
+      });
+
+      contactBtn.addEventListener('mouseleave', () => {
+        contactBtn.style.transform = 'translate(0, 0) scale(1)';
+      });
+    }
+  </script>
+
+
+  <script>
+    // GSAP scroll animations disabled - sections now visible by default
+    console.log('GSAP scroll animations disabled');
+  </script>
+
+
+
+
+
+  <!-- About text GSAP scrolling animation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const aboutText = document.querySelector(".about-section p");
+      if (aboutText) {
+        const rawHTML = aboutText.innerHTML;
+        const aTagMatch = rawHTML.match(/<a [^>]+>.*?<\/a>/);
+        const aTag = aTagMatch ? aTagMatch[0] : "";
+        const cleanedText = rawHTML.replace(aTag, "##LINK##");
+        const words = cleanedText.split(/(\s+|<br><br>)/).map(word => {
+          if (word === "<br><br>" || word.trim() === "") return word;
+          return `<span class="about-word">${word}</span>`;
+        });
+        aboutText.innerHTML = words.join("").replace("##LINK##", aTag);
+        gsap.set(".about-word", { opacity: 0.2 });
+        gsap.to(".about-word", {
+          scrollTrigger: {
+            trigger: ".about-section",
+            start: "top 80%",
+            toggleActions: "play none none reset",
+          },
+          opacity: 1,
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: 0.05
+        });
+      }
+    });
+  </script>
+
+
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    // Modal Logic
+    const modal = document.getElementById("connectModal");
+    const btn = document.getElementById("connectBtn");
+    const closeBtn = document.querySelector(".close-modal");
+
+    if (btn) btn.onclick = () => modal.style.display = "flex";
+    if (closeBtn) closeBtn.onclick = () => modal.style.display = "none";
+    
+    window.onclick = (e) => { 
+        if (e.target === modal) modal.style.display = "none"; 
+    }
+
+    // Get In Touch Modal
+    const contactModal = document.getElementById("contactModal");
+    const getInTouchBtn = document.getElementById("getInTouchBtn");
+    const closeContactBtn = document.querySelector(".close-contact-modal");
+
+    if (getInTouchBtn) getInTouchBtn.onclick = () => contactModal.style.display = "flex";
+    if (closeContactBtn) closeContactBtn.onclick = () => contactModal.style.display = "none";
+    
+    window.onclick = (e) => { 
+        if (e.target === contactModal) contactModal.style.display = "none";
+    }
+
+    document.getElementById("connectForm").onsubmit = (e) => {
+        e.preventDefault();
+        alert("Thank you! We will contact you soon.");
+        modal.style.display = "none";
+    };
+
+    // Arrow buttons link to services page
+    document.querySelectorAll('.arrow-btn').forEach(btn => {
+        btn.onclick = () => window.location.href = 'services.html';
+    });
+
+    // Glowy Cursor Logic
+    const cursor = document.querySelector('.glow-cursor');
+    
+    document.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    
+    const inputs = document.querySelectorAll('input, textarea, button, .close-modal, .close-contact-modal');
+    inputs.forEach(input => {
+        input.addEventListener('mouseenter', () => {
+            cursor.gitstyle.width = '20px';
+            cursor.style.height = '20px';
+            cursor.style.backgroundColor = 'rgba(255, 215, 0, 0.1)';
+        });
+        input.addEventListener('mouseleave', () => {
+            cursor.style.width = '20px';
+            cursor.style.height = '20px';
+            cursor.style.backgroundColor = 'transparent';
+        });
+    });
+</script>
+<link rel="stylesheet" href="gallery-mobile-rotation.css">
+<script src="gallery-mobile-rotation.js"></script>
+</body>
+
+</html>

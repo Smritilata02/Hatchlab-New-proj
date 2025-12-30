@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hatchlab Innovations</title>
+
+    <link rel="stylesheet" href="header-unified.css">
+    <link rel="stylesheet" href="contactus.css">
+    <!-- Deployment Override - Must be last -->
+    <link rel="stylesheet" href="header-deployment-override.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Updated Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <style>
+        body { cursor: none; font-family: 'Lora', serif; }
+        * { font-family: 'Lora', serif; }
+
+        .glow-cursor {
+            position: fixed;
+            width: 16px;
+            height: 16px;
+            background: radial-gradient(circle, #ffff00 0%, rgba(255, 255, 0, 0.35) 50%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 12px #ffd700;
+        }
+
+        @media (max-width: 768px) {
+            body { cursor: default; }
+            .glow-cursor { display: none; }
+        }
+
+        #particles-left, #particles-right {
+            position: absolute;
+            top: 0;
+            width: 25%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #particles-left { left: 0; }
+        #particles-right { right: 0; }
+
+        .container { position: relative; z-index: 10; }
+
+
+      
+
+</style>
+</head>
+
+<body>
+    <div id="particles-left"></div>
+    <div id="particles-right"></div>
+
+    <div class="glow-cursor"></div>
+
+    <header class="main-header">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Hatchlab Logo">
+            </a>
+            <span class="brand-name">Hatchlab Innovations</span>
+        </div>
+        <nav class="header-nav">
+            <a href="about.html">About</a>
+            <a href="services.html">Service</a>
+            <a href="careers_page.html">Career</a>
+            <a href="contactus.html">Contact</a>
+            <!-- FIXED: Added missing id -->
+            <button class="get-in-touch-btn" id="getInTouchBtn">Get In Touch</button>
+        </nav>
+    </header>
+
+    <br><br><br><br>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="section">
+            <h2>Call</h2>
+            <div class="contact-item"><img src="images/yellow phone icon.png">+91 8276057111</div>
+        </div>
+  <style>
+    .contact-item img {
+  width: 30px;          /* adjust size as needed */
+  height: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+  </style>
+
+
+
+        <div class="section">
+            <h2>Email</h2>
+            <a href="mailto:info@hatchlabinnovations.com" class="email-item">info@hatchlabinnovations.com</a>
+            <a href="mailto:admin@hatchlabinnovations.com" class="email-item">admin@hatchlabinnovations.com</a>
+        </div>
+    </div>
+
+    <!-- Footer (unchanged) -->
+    <footer class="footer-section">
+        <div class="footer-gradient"><div></div><div></div><div></div><div></div></div>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo"><img src="images/logo.png" alt="HatchLab Logo"></div>
+                <p class="footer-meta">© 2025 HatchLab Innovations Pvt. Ltd.<br>All rights reserved.</p>
+            </div>
+            <div class="footer-column">
+                <div class="footer-contact">
+                    <a href="tel:+918276057111">+91 8276057111</a>
+                    <a href="mailto:info@hatchlabinnovations.com">info@hatchlabinnovations.com</a>
+                    <a href="mailto:admin@hatchlabinnovations.com">admin@hatchlabinnovations.com</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <form class="footer-form" onsubmit="return false;">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Contact Us</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-social">
+            <p>Connect with us through -</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/hatchlab-innovations/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/hatchlabinnovations.official/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/people/Hatchlab-Innovations/61558095073459/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+  <!-- Get In Touch Modal -->
+  <div id="contactModal" class="contact-modal">
+    <div class="contact-modal-content">
+      <span class="close-contact-modal">&times;</span>
+      <h3>Get In Touch</h3>
+      <div class="contact-info-item">
+        <a href="tel:+918276057111"><img src="images/yellow phone icon.png"> +91 8276057111</a>
+      </div>
+      <div class="contact-info-item">
+        <a href="mailto:info@hatchlabinnovations.com">📧 info@hatchlabinnovations.com</a>
+      </div>
+    </div>
+  </div>
+  <style>
+    .contact-info-item img {
+  width: 30px;          /* adjust size as needed */
+  height: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+  </style>
+
+    <!-- Scripts -->
+    <script>
+        // Glow Cursor
+        const cursor = document.querySelector(".glow-cursor");
+        document.addEventListener("mousemove", e => {
+            cursor.style.left = e.clientX + "px";
+            cursor.style.top = e.clientY + "px";
+        });
+
+        // Particles
+        particlesJS("particles-left", { particles: { number: { value: 80 }, size: { value: 3 }, color: { value: "#ffffff" }, line_linked: { enable: true, color: "#ffffff" }, move: { enable: true, speed: 1.2 } } });
+        particlesJS("particles-right", { particles: { number: { value: 80 }, size: { value: 3 }, color: { value: "#ffffff" }, line_linked: { enable: true, color: "#ffffff" }, move: { enable: true, speed: 1.2 } } });
+
+        // Modal Logic
+        const contactModal = document.getElementById("contactModal");
+        const getInTouchBtn = document.getElementById("getInTouchBtn");
+        const closeContactBtn = document.querySelector(".close-contact-modal");
+
+        if (getInTouchBtn) {
+            getInTouchBtn.onclick = () => contactModal.style.display = "flex";
+        }
+
+        if (closeContactBtn) {
+            closeContactBtn.onclick = () => contactModal.style.display = "none";
+        }
+
+        window.onclick = (e) => {
+            if (e.target === contactModal) contactModal.style.display = "none";
+        };
+    </script>
+</body>
+</html>
