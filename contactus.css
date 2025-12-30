@@ -505,185 +505,6 @@ email-item::before {
     ) !important;
     height: 2px !important;
 }
-/* ===============================
-   MODERATE HOVER GLOW FOR PHONE & EMAIL
-   =============================== */
-.contact-item:hover,
-email-item:hover {
-    transform: translateX(3px);
-    color: #ffd700;
-    text-shadow: 0 0 6px rgba(255, 215, 0, 0.8), 0 0 12px rgba(255, 215, 0, 0.5);
-    transition: 
-        transform 0.3s ease,
-        color 0.3s ease,
-        text-shadow 0.3s ease;
-}
-
-
-
-
-
-
-
-    /* --- Navbar / Support Button --- */
-    nav {
-        padding: 20px;
-        text-align: right;
-    }
-
-    #connectBtn {
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 18px;
-        letter-spacing: 1px;
-        cursor: pointer;
-        position: relative;
-        z-index: 10;
-    }
-
-    #connectBtn:hover {
-        color: #ffd700;
-    }
-
-    /* --- Modal Overlay --- */
-    .custom-modal {
-        display: none;
-        position: fixed;
-        z-index: 99999;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* --- Transparent Form Container --- */
-    .custom-modal-content {
-        background: rgba(255, 255, 255, 0.05); 
-        backdrop-filter: blur(10px); 
-        padding: 10px;
-        width: 300px;
-        border-radius: 10px;
-        color: #fff;
-        border: 1px solid white; 
-        position: relative;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    }
-
-    .close-modal {
-        float: right;
-        cursor: pointer;
-        font-size: 30px;
-        line-height: 20px;
-        color: #fff;
-        transition: color 0.3s;
-    }
-    .close-modal:hover {
-        color: #ffd700;
-    }
-
-    .custom-modal-content h3 {
-        margin-top: 0;
-        text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.3);
-        padding-bottom: 10px;
-    }
-
-    /* --- Inputs & Labels --- */
-    .custom-modal-content label {
-        display: block;
-        margin-top: 15px;
-        font-size: 0.9rem;
-        transition: color 0.3s;
-    }
-
-    .custom-modal-content input,
-    .custom-modal-content textarea {
-        width: 100%;
-        margin-top: 5px;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        background: rgba(0, 0, 0, 0.2); 
-        color: #fff;
-        font-family: inherit;
-        outline: none;
-        transition: all 0.3s;
-        box-sizing: border-box;
-        cursor: text;
-    }
-
-    /* --- Hover Effects (Turn Yellow) --- */
-    /* 1. Label hover remains */
-    .custom-modal-content label:hover {
-        color: #ffd700;
-        text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
-    }
-    
-    /* 2. Input/Textarea hover remains */
-    .custom-modal-content input:hover,
-    .custom-modal-content textarea:hover {
-        border-color: #ffd700;
-    }
-
-    /* 3. NEW: Input/Textarea Focus (when typing) */
-    .custom-modal-content input:focus,
-    .custom-modal-content textarea:focus {
-        border-color: #ffd700;
-        color: #ffd700; /* Input text color is yellow while focused */
-        background: rgba(255, 215, 0, 0.05); 
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-    }
-
-    /* 4. NEW: Label text turns yellow when the input *after* it is focused */
-    .custom-modal-content input:focus + label,
-    .custom-modal-content textarea:focus + label {
-        color: #ffd700;
-        text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
-    }
-
-    
-    .form-group {
-        display: flex;
-        flex-direction: column-reverse; /* Puts the label on top visually */
-    }
-
-
-    /* --- SUBMIT BUTTON ANIMATION --- */
-    @keyframes popInOut {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); } 
-        100% { transform: scale(1); }
-    }
-
-    .submit-btn {
-        width: 90%;
-        margin-top: 20px;
-        margin-left: 13px;
-        padding: 12px;
-        background: white;
-        border: 1px solid white;
-        color: black;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        animation: pulse 2s infinite, glow 2s ease-in-out infinite alternate;
-        transition: all 0.3s ease;
-    }
-
-    .submit-btn:hover {
-        animation: none; 
-        transform: scale(1.1); 
-        background: #ffd700;
-        color: #000;
-        border-color: #ffd700;
-        box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-    }
 
     /* --- Glow Cursor --- */
     .glow-cursor {
@@ -733,38 +554,6 @@ html, body {
   width: 100% !important;
   max-width: 100% !important;
 }
-
-
-/* ===============================
-   ✅ NAVBAR SUPPORT BUTTON ALIGN FIX
-   =============================== */
-.navbar #connectBtn {
-    all: unset;                     /* reset default button styles */
-    display: flex;                  /* treat like a flex item */
-    align-items: center;            /* vertically center */
-    justify-content: center;        /* horizontal center */
-    color: #fff;                    /* match links */
-    font-size: 18px;                /* match links */
-    font-family: inherit;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    height: 100%;                   /* fill navbar height for perfect centering */
-}
-
-.navbar #connectBtn:hover {
-    color: #FFD700;
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -938,19 +727,6 @@ html, body {
   background: #fcd703;
   color: #000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Footer styling */
@@ -1716,23 +1492,8 @@ email-item:hover {
 }
 
 
-@media (max-width: 768px) {
-  .main-header {
-    padding-bottom:  32px !important; 
-  }
-}
 
 
-@media (max-width: 768px) {
-
-  .header-nav {
-    transform: scale(1.09);          /* ⬅ zoom out slightly */
-    transform-origin: center top;    /* keeps it centered */
-    margin-top: 13px !important;      /* keeps it close to brand */
-    gap: 18px !important;            /* spacing stays clean */
-  }
-
-}
 
 /* ================= CLEAN MOBILE HEADER ================= */
 @media (max-width: 768px) {

@@ -95,11 +95,6 @@ header.main-header {
     color: #fcd703;
 }
 
-
-
-
-
-
 /* Services Section */
 .middle-text {
     margin: 6rem auto 2rem auto;          /* More top margin for breathing room */
@@ -135,61 +130,10 @@ header.main-header {
 
 /* Mobile Responsiveness (Updated Media Query) */
 @media (max-width: 768px) {
-    /* Sidebar & Body Padding */
-    .left-sidebar {
-        display: none !important;
-    }
-
     body {
         padding-left: 0 !important;
     }
 
-    header.main-header {
-        padding: 0;  /* No extra padding */
-        width: 100vw;  /* Full viewport width */
-        left: 0;
-        overflow: visible;
-    }
-
-    .navbar {
-        padding: 0.75rem;  /* Tighter padding for mobile */
-        gap: 0;
-        justify-content: flex-start;  /* Align left for stacked items */
-        width: 100vw;  /* Full width, including any bleed */
-        left: 0;
-        position: relative;  /* Not fixed—sticky via header */
-        height: auto;
-        background: rgba(17, 17, 24, 0.95);  /* More opaque for mobile menu */
-    }
-
-    .logo img {
-        height: 2rem;  /* Scale logo */
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 100%;  /* Below navbar */
-        left: 0;
-        width: 100vw;  /* Full width */
-        background: rgba(17, 17, 24, 0.95);  /* Match header bg */
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-        margin: 0;
-        display: none;  /* Hidden by default */
-        text-align: center;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 20px rgba(0,0,0,0.5);  /* Drop shadow for depth */
-        transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;  /* Smooth slide + height */
-        transform: translateY(-10px);
-        opacity: 0;
-        max-height: 0;  /* Collapse height */
-        overflow: hidden;
-        position: relative;
-        z-index: 12;  /* Ensure above other elements */
-    }
-
-   
 
     /* Logo after support */
     .logo {
@@ -329,14 +273,8 @@ header.main-header {
         gap: 0.75rem;
     }
 
-    .nav-links li a,
-    .connect-button {
+    .nav-links li a {
         font-size: 16px;
-    }
-
-    .hamburger {
-        padding: 8px;
-        font-size: 1.5rem;
     }
 
     .what-we-do {
@@ -378,23 +316,7 @@ header.main-header {
         text-align: right;
     }
 
-    #connectBtn {
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 18px;
-        letter-spacing: 1px;
-        cursor: pointer;
-        position: relative;
-        z-index: 10;
-    }
-
-    #connectBtn:hover {
-        color: #ffd700;
-    }
-
-
-
+   
     /* ====== HORIZONTAL SCROLL FIX (ADD AT VERY BOTTOM) ====== */
 
 /* Never allow sideways scrolling */
@@ -688,19 +610,6 @@ html, body {
   background: #fcd703;
   color: #000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Footer styling */
@@ -1367,73 +1276,6 @@ h2:not(.content h2)::after {
 
 
 
-/* ================= MOBILE HEADER (FIXED AS REQUESTED) ================= */
-@media (max-width: 768px) {
-
-  .main-header {
-    padding: 12px 8px 2px !important; 
-    display: block !important;
-    text-align: center !important;
-  }
-
-  .header-logo {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    position: relative !important;
-    margin-bottom: 2px !important; /* ⬅ reduce gap */
-  }
-
-  
-  .header-logo img {
-    position: absolute !important;
-    left: 0 !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 32px !important;
-  }
-
- 
-
-  .header-logo::after {
-    content: none !important;
-  }
-
-    .brand-name {
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    line-height: 1.2 !important;
-    margin: 0 !important; 
-  }
-
-  /* Nav links tighter */
-  .header-nav {
-    margin-top: 1px !important;  
-    display: flex !important;
-    justify-content: center !important;
-    gap: 8px !important;
-  }
-   .header-nav a {
-    font-size: 12px !important;
-    line-height: 1.2 !important;
-    margin: 0 !important; 
-    white-space: nowrap !important;
-  }
-
-
-  .get-in-touch-btn {
-    display: inline-block !important;
-    margin: 10px auto 0 !important; 
-    padding: 10px 12px !important; 
-    font-size: 13px !important; 
-    border-radius: 6px !important;
-  }
-
-  .main {
-    padding-top: 48px !important;
-  }
-}
 @media (max-width: 767px) {
 
   
@@ -1522,53 +1364,6 @@ h2:not(.content h2)::after {
 }
 
 
-/* ================= MOBILE NAVBAR – FINAL COMPACT VERSION ================= */
-
-@media (max-width: 768px) {
-
-  .main-header {
-    flex-direction: column !important;
-    align-items: center !important;
-    padding: 10px 12px !important;
-    gap: 8px !important;
-  }
-
-  .header-logo {
-    justify-content: center !important;
-    gap: 8px !important;
-  }
-
-  .header-logo img {
-    width: 40px !important;
-  }
-
-  .brand-name {
-    font-size: 14px !important;
-  }
-
-  .header-nav {
-    margin: 0 !important;
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    justify-content: center !important;
-    gap: 14px !important;
-  }
-
-  .header-nav a {
-    font-size: 13.5px !important;
-    padding: 4px 4px !important;
-  }
-
-  /* Button stays centered but NOT full width */
-  .get-in-touch-btn {
-    margin: 6px auto 0 !important;
-    padding: 7px 20px !important;
-    font-size: 14px !important;
-    display: block !important;
-  }
-}
-
-
 
 .footer-section {
   padding: 20px 20px !important;   
@@ -1600,13 +1395,11 @@ h2:not(.content h2)::after {
   margin-top: 6px !important;
 }
 
-
-/* ================= MOBILE HEADER – FULLY CENTRALIZED ================= */
+/* ================= CLEAN MOBILE HEADER ================= */
 @media (max-width: 768px) {
 
-  /* Header wrapper */
   .main-header {
-    padding: 12px 16px 10px !important;
+    padding: 12px 16px 14px !important;
     display: block !important;
     text-align: center !important;
   }
@@ -1620,135 +1413,49 @@ h2:not(.content h2)::after {
     width: 100% !important;
   }
 
-  /* Logo slightly left but visually balanced */
   .header-logo img {
     position: absolute !important;
     left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     width: 36px !important;
   }
 
-  /* Brand name dead center */
   .brand-name {
-    position: relative !important;
     font-size: 15px !important;
     font-weight: 600 !important;
     white-space: nowrap !important;
     text-align: center !important;
   }
 
-  /* Social icons centered as a group */
-  .header-logo::after {
-    content: "\f0e1  \f16d  \f0e1"; /* LinkedIn – Instagram – LinkedIn */
-    font-family: "Font Awesome 6 Brands";
-    font-size: 13px;
-    color: #fff;
-
-    position: absolute !important;
-    right: 0 !important;
-    display: inline-flex;
-    align-items: center;
-    letter-spacing: 12px;
-  }
-
-  /* ===== SECOND ROW ===== */
+  /* ===== NAV ROW ===== */
   .header-nav {
-    margin-top: 12px !important;
-    padding-top: 10px !important;
-    border-top: 1px solid rgba(255,255,255,0.35) !important;
-
+    margin-top: 10px !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 22px !important;
-  }
-
-  .header-nav a {
-    font-size: 14px !important;
-    white-space: nowrap !important;
-    text-align: center !important;
-  }
-
-  /* Hide CTA on mobile */
-  .get-in-touch-btn {
-    display: none !important;
-  }
-
-  /* Push hero down */
-  .main {
-    padding-top: 145px !important;
-  }
-}
-/* ===== REMOVE LINE BELOW "Hatchlab Innovations" ===== */
-@media (max-width: 768px) {
-  .header-nav {
-    border-top: none !important;
-    padding-top: 0 !important;
-    margin-top: 10px !important; /* keeps spacing without line */
-  }
-}
-/* ===== CENTER ABOUT / SERVICE / CAREER / CONTACT (MOBILE) ===== */
-@media (max-width: 768px) {
-
- 
-  .main-header {
-    padding: 12px 16px 8px !important; 
-    display: block !important;
-    text-align: center !important;
-  }
-
-  .header-logo {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    position: relative !important;
-  }
-
-  .header-logo img {
-    position: absolute !important;
-    left: 0 !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 36px !important; 
-  }
-
-  .brand-name {
-    font-size: 15px !important; 
-    font-weight: 600 !important;
-  }
-
-  .header-logo::after {
-    content: none !important;
-  }
-
-  .header-nav {
-    margin-top: 8.5px !important; 
-    display: flex !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    transform: scale(1.092) !important;   
+    gap: 16px !important;
+    flex-wrap: wrap !important;
   }
 
   .header-nav a {
     font-size: 13px !important;
     white-space: nowrap !important;
+    text-align: center !important;
   }
 
-}
-
+  /* CTA button stays hidden on mobile */
   .get-in-touch-btn {
-    display: inline-block !important;
-    margin: 10px auto 0 !important; 
-    padding: 10px 12px !important; 
-    font-size: 13px !important; 
-    border-radius: 6px !important;
-  }
-.header-nav,
-  .get-in-touch-btn {
-    align-self: center !important;
+    display: none !important;
   }
 
+  /* Push content down correctly */
+  .main {
+    padding-top: 130px !important;
+  }
 
-.header-logo::after {
-  content: none !important;
+  /* Remove any decorative lines/icons */
+  .header-logo::after {
+    content: none !important;
+  }
 }
