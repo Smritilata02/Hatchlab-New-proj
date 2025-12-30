@@ -525,123 +525,6 @@ email-item:hover {
 
 
 
-/* LEFT SIDEBAR */
-
- /* demo page reset */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-
-    /* Sidebar */
-    .left-sidebar{
-      position: fixed;
-      left: 0;
-      top: 0;
-      height: 100vh;
-      width: 60px;                   /* adjust width as needed */
-      background: #0e0e12;           /* dark background */
-      border-right: 1px solid #fffffff6;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 10px;
-      z-index: 9999;                 /* ensure it sits above page content */
-    }
-
-    /* Logo block (top) */
-    /* Logo block (top) */
-.sidebar-logo {
-    width: 45px;
-    height: 45px;
-    border-radius: 8px;             /* smooth corners */
-    background: #1a1a1d;            /* dark box background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px;                   /* inner spacing */
-}
-
-.sidebar-logo img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;            /* the image fits perfectly inside */
-    border-radius: 0px;
-}
-
-    /* Vertical text in middle */
-    .sidebar-text{
-      writing-mode: vertical-rl;     /* text rendered vertically */
-      transform: rotate(180deg);     /* flip so text reads bottom-to-top like screenshot */
-      font-family: "Poppins", Arial, sans-serif;
-      font-weight: 600;
-      color: #f5f5f5;
-      letter-spacing: 2px;
-      margin-top: 8px;
-      text-transform: none;
-      font-size: 16px;
-    }
-
-    /* Social icons at bottom */
-    .sidebar-social{
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-      align-items:center;
-      padding-bottom:6px;
-    }
-
-    .sidebar-social a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:34px;
-      height:34px;
-      border-radius:6px;
-      background:#111;
-      color:#fff;
-      text-decoration:none;
-      border:1px solid #ffffff22;
-      font-size:14px;
-    }
-    .sidebar-social a:hover{ 
-   
-    background: #ffd700;
-    color: #000;
-    border-color: #ffd700;
-    box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
-    transform: translateY(-3px);
-    transition: 0.3s ease;
-}
-.left-sidebar {
-    transition: 0.3s ease-in-out;
-}
-
-.left-sidebar:hover {
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.35);
-    border-right: 1px solid #ffd700;
-}
-
-.sidebar-text:hover {
-    color: #ffd700;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-}
-  .left-sidebar,
-  .left-sidebar * {
-    cursor: pointer;
-}
-    /* Push the page content to the right so it is not hidden under the sidebar */
-    main{
-      padding-left: 90px;            /* must match .left-sidebar width */
-      min-height:100vh;
-      background:#121217;
-      color:#fff;
-      font-family: Arial, sans-serif;
-    }
-
-   
-
-
-
     /* --- Navbar / Support Button --- */
     nav {
         padding: 20px;
@@ -1569,14 +1452,6 @@ email-item:hover {
     background: yellow !important;
 }
 
-/* Sidebar hover glow */
-.left-sidebar:hover,
-.sidebar-text:hover,
-.sidebar-social a:hover {
-    box-shadow: 0 0 15px yellow !important;
-    border-color: yellow !important;
-    color: yellow !important;
-}
 
 /* Footer */
 .footer-links a:hover,
