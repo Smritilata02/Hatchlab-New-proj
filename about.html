@@ -135,50 +135,7 @@
       font-family: 'Lora', serif;
     }
 
-    /* Responsive styles for about sections only - desktop unchanged */
-    @media (max-width: 768px) {
-        .about-content {
-            flex-direction: column !important;
-            align-items: center !important;
-            text-align: center !important;
-            gap: 30px !important;
-        }
-
-        .about-text,
-        .about-image {
-            flex: 1 1 100% !important;
-            min-width: 100% !important;
-            width: 100% !important;
-        }
-
-        .about-section:nth-child(odd) .about-image {
-            order: -1; /* Image first on odd sections for alternating feel */
-        }
-
-        .about-image img {
-            max-width: 100% !important;
-            width: 100% !important;
-            height: auto !important;
-        }
-
-        body {
-            cursor: auto !important;
-        }
-
-        .glow-cursor {
-            display: none !important;
-        }
-
-        .about-section h2 {
-            font-size: 1.8em !important;
-            margin-bottom: 30px !important;
-        }
-
-        .about-section p {
-            font-size: 1em !important;
-            line-height: 1.6 !important;
-        }
-    }
+    
 
     @media (max-width: 480px) {
         .about-content {
