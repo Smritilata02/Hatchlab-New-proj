@@ -1438,11 +1438,6 @@ h2:not(.content h2)::after {
     display: none !important;
   }
 
-  /* Push content down correctly */
-  .main {
-    padding-top: 130px !important;
-  }
-
   /* Remove any decorative lines/icons */
   .header-logo::after {
     content: none !important;

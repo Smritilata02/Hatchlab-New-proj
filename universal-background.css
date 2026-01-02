@@ -1,0 +1,4 @@
+/* Universal background color for all pages */
+body {
+  background-color: rgb(23, 22, 31) !important;
+}
