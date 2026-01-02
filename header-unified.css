@@ -14,7 +14,7 @@ html .main-header {
   background: rgba(23, 22, 31, 0.95) !important;
   backdrop-filter: blur(10px) !important;
   z-index: 1000 !important;
-  border-bottom: 2px solid #fcd703 !important;
+  border-bottom: none !important;
   box-sizing: border-box !important;
   height: auto !important;
 }

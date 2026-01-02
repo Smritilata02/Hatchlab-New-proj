@@ -1,0 +1,154 @@
+/* ================= MOBILE HEADER FIX ================= */
+/* This file addresses mobile header inconsistencies across pages */
+
+/* Force consistent mobile header layout */
+@media (max-width: 768px) {
+  /* Reset and standardize mobile header */
+  html body .main-header,
+  body .main-header,
+  .main-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 15px 20px 20px !important;
+    min-height: auto !important;
+    height: auto !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+
+  /* Logo row - keep flex layout instead of absolute positioning */
+  html body .header-logo,
+  body .header-logo,
+  .header-logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    position: relative !important;
+    margin: 0 !important;
+  }
+
+  /* Logo image - remove absolute positioning */
+  html body .header-logo img,
+  body .header-logo img,
+  .header-logo img {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    width: 40px !important;
+    height: auto !important;
+  }
+
+  /* Brand name */
+  html body .brand-name,
+  body .brand-name,
+  .brand-name {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  /* Navigation - keep flex layout */
+  html body .header-nav,
+  body .header-nav,
+  .header-nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Navigation links */
+  html body .header-nav a,
+  body .header-nav a,
+  .header-nav a {
+    font-size: 14px !important;
+    padding: 4px 8px !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  /* Get in touch button */
+  html body .get-in-touch-btn,
+  body .get-in-touch-btn,
+  .get-in-touch-btn {
+    padding: 8px 16px !important;
+    font-size: 12px !important;
+    margin: 8px 0 0 !important;
+    border-radius: 4px !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  /* Consistent content padding for all pages */
+  .main,
+  .content,
+  .hero-sec,
+  body > div:first-of-type,
+  .about-section:first-of-type {
+    padding-top: 130px !important;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .main-header {
+    padding: 12px 16px 18px !important;
+  }
+
+  .header-logo img {
+    width: 36px !important;
+  }
+
+  .brand-name {
+    font-size: 15px !important;
+  }
+
+  .header-nav {
+    gap: 12px !important;
+  }
+
+  .header-nav a {
+    font-size: 13px !important;
+    padding: 3px 6px !important;
+  }
+
+  .get-in-touch-btn {
+    padding: 6px 14px !important;
+    font-size: 11px !important;
+  }
+
+  /* Adjust content padding for smaller header */
+  .main,
+  .content,
+  .hero-sec,
+  body > div:first-of-type,
+  .about-section:first-of-type {
+    padding-top: 120px !important;
+  }
+}
+
+/* Ensure header stays above all content */
+.main-header {
+  z-index: 10000 !important;
+}
+
+/* Fix any overflow issues */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+  
+  .main-header {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}

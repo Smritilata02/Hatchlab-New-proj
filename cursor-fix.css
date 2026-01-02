@@ -1,0 +1,16 @@
+/* Hide default cursor on all clickable elements when custom glow cursor is active */
+a, button, [role="button"], .clickable {
+  cursor: none !important;
+}
+
+/* Ensure glow cursor is visible on all pages */
+body {
+  cursor: none !important;
+}
+
+/* Mobile: Show default cursor */
+@media (max-width: 768px) {
+  body, a, button, [role="button"], .clickable {
+    cursor: default !important;
+  }
+}

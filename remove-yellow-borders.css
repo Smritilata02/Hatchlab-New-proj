@@ -1,0 +1,68 @@
+/* Remove yellow border lines from header and footer */
+
+/* Remove yellow border from header - higher specificity */
+html body .main-header,
+body .main-header,
+.main-header,
+header.main-header {
+  border-bottom: none !important;
+  border-top: none !important;
+  border: none !important;
+}
+
+/* Remove yellow border from footer - higher specificity */
+html body .footer-section,
+body .footer-section,
+.footer-section,
+footer.footer-section {
+  border-top: none !important;
+  border-bottom: none !important;
+  border: none !important;
+}
+
+/* Remove any potential borders from footer elements */
+footer {
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Remove yellow border pseudo-elements from header */
+.main-header::before,
+.main-header::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  background: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Remove yellow border pseudo-elements from footer */
+.footer-section::before,
+.footer-section::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  background: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Remove any yellow lines or borders from all footer children */
+.footer-section *,
+.footer-section *::before,
+.footer-section *::after {
+  border-color: transparent !important;
+}
+
+/* Specifically target the yellow border rules */
+.footer-section::before {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+.main-header::after {
+  background: transparent !important;
+  border-color: transparent !important;
+}

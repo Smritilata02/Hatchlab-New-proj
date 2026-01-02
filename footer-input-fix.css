@@ -1,0 +1,13 @@
+/* Footer email input visibility fix */
+.footer-form input[type="email"] {
+  border: 2px solid #fff !important;
+  background: transparent !important;
+  color: #fff !important;
+  transition: all 0.3s ease !important;
+}
+
+.footer-form input[type="email"]:focus {
+  border-color: #fcd703 !important;
+  box-shadow: 0 0 10px rgba(252, 215, 3, 0.6) !important;
+  outline: none !important;
+}
