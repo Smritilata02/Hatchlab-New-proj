@@ -1,0 +1,67 @@
+/* Mobile title left alignment fix for index page */
+@media (max-width: 768px) {
+  /* Left align section titles with higher specificity */
+  .about-section h2,
+  .what-section h2,
+  .what-section .what-heading,
+  .our-initiative h2,
+  .our-initiative .initiative-title,
+  .team-gallery-title,
+  .team-gallery h2 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    display: block !important;
+    width: fit-content !important;
+  }
+
+  /* Left align underlines with titles */
+  .about-section h2::after,
+  .what-section h2::after,
+  .what-section .what-heading::after,
+  .our-initiative h2::after,
+  .our-initiative .initiative-title::after {
+    left: 0 !important;
+    transform: none !important;
+  }
+
+  /* Left align what-we-do section content */
+  .what-section {
+    text-align: left !important;
+  }
+
+  /* Left align initiative title */
+  .initiative-title {
+    text-align: left !important;
+  }
+
+  /* Left align gallery title */
+  .team-gallery .team-gallery-title {
+    text-align: left !important;
+    display: inline-block !important;
+    width: fit-content !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding-bottom: 14px !important;
+  }
+
+  /* Hide existing underlines */
+  .team-gallery-title::after,
+  .team-gallery h2::after {
+    display: none !important;
+  }
+
+  /* Add new left-aligned underline for gallery */
+  .team-gallery .team-gallery-title::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 70% !important;
+    height: 2px !important;
+    transform: none !important;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent) !important;
+    opacity: 0.85 !important;
+    border-radius: 2px !important;
+  }
+}
