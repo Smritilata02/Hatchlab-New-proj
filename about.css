@@ -1055,3 +1055,107 @@ html, body {
     content: none !important;
   }
 }
+
+/* Footer Logo Improvements */
+.footer-column .footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-column .footer-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(252, 215, 3, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.footer-column .footer-logo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(252, 215, 3, 0.4);
+}
+
+.footer-meta {
+  color: #bbb !important;
+  font-size: 16px !important;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+  font-weight: 400;
+}
+
+.footer-meta strong {
+  color: #fcd703;
+  font-weight: 600;
+  font-size: 16px !important;
+}
+/* Index.html Header Styles Override */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  background: rgba(23, 22, 31, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 2px solid #fcd703;
+  box-sizing: border-box;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 360px;
+}
+
+.header-logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.brand-name, .header-logo a.brand-name {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.header-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 520;
+  line-height: 1;
+}
+
+.get-in-touch-btn {
+  padding: 12px 24px;
+  height: 44px;
+  background: #fff;
+  border: none;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+}

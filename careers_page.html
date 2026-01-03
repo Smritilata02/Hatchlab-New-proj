@@ -35,6 +35,14 @@
     <link rel="stylesheet" href="footer-input-fix.css">
     <!-- Universal Background -->
     <link rel="stylesheet" href="universal-background.css">
+    <!-- Responsive Optimization -->
+    <link rel="stylesheet" href="responsive-optimization.css">
+    <!-- Enhanced Header -->
+    <link rel="stylesheet" href="header-enhanced.css">
+    <!-- Remove Click Effects -->
+    <link rel="stylesheet" href="remove-click-effects.css">
+    <!-- Desktop Header Fix -->
+    <link rel="stylesheet" href="desktop-header-fix.css">
 
     <style>
         /* ------------------ Glow Cursor ------------------ */
@@ -79,6 +87,46 @@
         .word:nth-child(4) { animation-delay: 0.3s; }
         .word:nth-child(5) { animation-delay: 0.4s; }
 
+        /* Career page desktop header fix */
+        @media (min-width: 1025px) {
+            .main-header .brand-name {
+                font-size: 22px !important;
+                font-weight: 700 !important;
+            }
+            
+            .main-header .header-nav a {
+                font-size: 18px !important;
+                font-weight: 600 !important;
+            }
+            
+            .main-header .get-in-touch-btn {
+                font-size: 16px !important;
+                font-weight: 700 !important;
+                padding: 14px 26px !important;
+            }
+            
+            /* Career page content text size fix */
+            .content h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .content h2 {
+                font-size: 2rem !important;
+            }
+            
+            .content h3 {
+                font-size: 1.5rem !important;
+            }
+            
+            .content p, .content li {
+                font-size: 18px !important;
+            }
+            
+            .email {
+                font-size: 18px !important;
+            }
+        }
+
 
     </style>
 </head>
@@ -94,7 +142,7 @@
             <a href="index.html">
                 <img src="images/logo.png" alt="Hatchlab Logo">
             </a>
-            <span class="brand-name">Hatchlab Innovations</span>
+            <a href="index.html" class="brand-name">Hatchlab Innovations</a>
         </div>
         <nav class="header-nav">
             <a href="about.html">About</a>
@@ -135,7 +183,10 @@
         <div class="footer-content">
             <div class="footer-column">
                 <div class="footer-logo"><img src="images/logo.png" alt="HatchLab Logo"></div>
-                <p class="footer-meta">© 2025 HatchLab Innovations Pvt. Ltd.<br>All rights reserved.</p>
+                <p class="footer-meta">
+                  <strong>© 2026 HatchLab Innovations Pvt. Ltd.</strong><br>
+                  All rights reserved.
+                </p>
             </div>
             <div class="footer-column">
                 <div class="footer-contact">
@@ -217,5 +268,6 @@
         if (closeContactBtn) { closeContactBtn.onclick = () => contactModal.style.display = "none"; }
         window.onclick = (e) => { if (e.target === contactModal) contactModal.style.display = "none"; };
     </script>
+    <script src="enhanced-mobile.js"></script>
 </body>
 </html>

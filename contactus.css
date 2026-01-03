@@ -1611,3 +1611,40 @@ email-item:hover {
     font-size: 18px !important;
   }
 }
+/* Footer Logo Improvements */
+.footer-column .footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-column .footer-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(252, 215, 3, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.footer-column .footer-logo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(252, 215, 3, 0.4);
+}
+
+.footer-meta {
+  color: #bbb !important;
+  font-size: 16px !important;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+  font-weight: 400;
+}
+
+.footer-meta strong {
+  color: #fcd703;
+  font-weight: 600;
+  font-size: 16px !important;
+}

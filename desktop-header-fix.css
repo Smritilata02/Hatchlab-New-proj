@@ -1,0 +1,26 @@
+/* ================= DESKTOP HEADER TEXT SIZE FIX ================= */
+/* Fix for header text appearing too small on desktop for non-index pages */
+
+@media (min-width: 1025px) {
+  html body .main-header .brand-name,
+  body .main-header .brand-name,
+  .main-header .brand-name {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+  }
+  
+  html body .main-header .header-nav a,
+  body .main-header .header-nav a,
+  .main-header .header-nav a {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+  }
+  
+  html body .main-header .get-in-touch-btn,
+  body .main-header .get-in-touch-btn,
+  .main-header .get-in-touch-btn {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    padding: 14px 26px !important;
+  }
+}

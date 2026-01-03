@@ -299,3 +299,78 @@ html .get-in-touch-btn:hover {
     display: none !important;
   }
 }
+/* Header Logo Hover Effects */
+.header-logo img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-logo img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(252, 215, 3, 0.4);
+}
+
+.header-logo:hover .brand-name {
+  color: #fcd703;
+  transition: color 0.3s ease;
+}
+/* Header Logo Hover Effects - High Specificity */
+.main-header .header-logo img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.main-header .header-logo img:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 4px 15px rgba(252, 215, 3, 0.4) !important;
+}
+
+.main-header .header-logo:hover .brand-name {
+  color: #fcd703 !important;
+  transition: color 0.3s ease !important;
+}
+/* Brand Name Link Styling */
+.header-logo a.brand-name {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.header-logo a.brand-name:hover {
+  color: #fcd703;
+}
+/* Consistent Header Styling Across All Pages */
+.main-header {
+  height: 94px !important;
+  padding: 0 50px !important;
+  box-sizing: border-box !important;
+}
+
+.header-logo {
+  min-width: 360px !important;
+  gap: 15px !important;
+}
+
+.header-logo img {
+  width: 45px !important;
+  height: 45px !important;
+}
+
+.brand-name,
+.header-logo a.brand-name {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+}
+
+.header-nav a {
+  font-size: 18px !important;
+  font-weight: 520 !important;
+}
+
+.get-in-touch-btn {
+  height: 44px !important;
+  padding: 12px 24px !important;
+  font-size: 16px !important;
+}

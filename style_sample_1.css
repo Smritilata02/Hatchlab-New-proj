@@ -242,7 +242,6 @@ section.what-section .card-overlay { padding: 18px; }
 
 /* SOUMIK PART */
 .our-initiative {
-background: #000;
 padding: 80px 0;
 }
 
@@ -1027,15 +1026,41 @@ section.what-section h2.what-heading {
   text-align: center;
 }
 
+.footer-column .footer-logo {
+  margin-bottom: 20px;
+}
+
 .footer-column .footer-logo img {
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   display: block;
-  border-radius: 6px;
+  margin: 0 auto 15px;
+  border-radius: 8px;
   background: #ffffff;
-  padding: 4px;
-  margin: 0 auto 8px;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(252, 215, 3, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.footer-column .footer-logo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(252, 215, 3, 0.4);
+}
+
+.footer-meta {
+  color: #bbb !important;
+  font-size: 16px !important;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+  font-weight: 400;
+}
+
+.footer-meta strong {
+  color: #fcd703;
+  font-weight: 600;
+  font-size: 16px !important;
 }
 
 .footer-column p {
@@ -1256,6 +1281,11 @@ section.what-section h2.what-heading {
   pointer-events: auto !important;
   -webkit-font-smoothing: antialiased !important;
   color: #fcd703;
+}
+
+.main-initiative-heading::after,
+.initiative-item .initiative-item-title::after {
+  display: none !important;
 }
 
 

@@ -1,0 +1,32 @@
+/* ================= DISABLE AUTO SCROLL ON MOBILE ================= */
+/* Fix for unwanted auto-scroll behavior on iPhone and mobile devices */
+
+@media (max-width: 768px) {
+  /* Disable smooth scrolling on mobile */
+  html {
+    scroll-behavior: auto !important;
+  }
+  
+  /* Disable momentum scrolling on iOS */
+  body {
+    -webkit-overflow-scrolling: auto !important;
+    overflow-scrolling: auto !important;
+  }
+  
+  /* Disable any auto-scroll triggers */
+  .about-section,
+  .why-hatchlab-section,
+  .three-pillars-section,
+  .our-initiative,
+  .team-gallery {
+    scroll-snap-type: none !important;
+    scroll-snap-align: none !important;
+  }
+}
+
+/* Disable Lenis smooth scroll on mobile */
+@media (max-width: 768px) {
+  body[data-lenis-prevent] {
+    overflow: auto !important;
+  }
+}

@@ -1,0 +1,16 @@
+/* Footer background fix to match body background */
+footer.footer-section,
+.footer-section,
+footer {
+  background: rgb(23, 22, 31) !important;
+  background-color: rgb(23, 22, 31) !important;
+}
+
+/* Override any gradient backgrounds */
+.footer-gradient {
+  background: transparent !important;
+}
+
+.footer-gradient > div {
+  background: transparent !important;
+}

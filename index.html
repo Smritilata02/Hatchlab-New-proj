@@ -50,6 +50,14 @@
   <link rel="stylesheet" href="mobile-title-center.css">
   <!-- Universal Background -->
   <link rel="stylesheet" href="universal-background.css">
+  <!-- Responsive Optimization -->
+  <link rel="stylesheet" href="responsive-optimization.css">
+  <!-- Enhanced Header -->
+  <link rel="stylesheet" href="header-enhanced.css">
+  <!-- Remove Click Effects -->
+  <link rel="stylesheet" href="remove-click-effects.css">
+  <!-- Disable Mobile Auto Scroll -->
+  <link rel="stylesheet" href="disable-mobile-autoscroll.css">
   <!-- Google Font: Lora -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -179,6 +187,435 @@
       font-family: 'Lora', serif;
     }
 
+    /* Why Hatchlab Section Styles */
+    .why-hatchlab-section {
+      padding: 80px 5% 60px;
+      color: #fff;
+    }
+
+    .why-hatchlab-section h2 {
+      font-size: 2.5rem;
+      color: #fcd703;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .why-subtitle {
+      font-size: 1.2rem;
+      color: #ddd;
+      margin-bottom: 50px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .why-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .why-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(252, 215, 3, 0.2);
+      border-radius: 12px;
+      padding: 30px 25px;
+      text-align: left;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .why-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(252, 215, 3, 0.5);
+      box-shadow: 0 10px 30px rgba(252, 215, 3, 0.1);
+    }
+
+    .why-card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      color: #fcd703;
+    }
+
+    .why-card-icon i {
+      transition: transform 0.3s ease;
+    }
+
+    .why-card:hover .why-card-icon i {
+      transform: scale(1.1);
+    }
+
+    .why-card h3 {
+      font-size: 1.4rem;
+      color: #fcd703;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .why-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+      margin: 0;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .why-hatchlab-section {
+        padding: 60px 4% 40px;
+      }
+
+      .why-hatchlab-section h2 {
+        font-size: 2rem;
+      }
+
+      .why-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+      }
+
+      .why-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .why-card {
+        padding: 25px 20px;
+      }
+
+      .why-card-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+
+      .why-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .why-card p {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* MacBook Air View (1024px - 1440px) */
+    @media (min-width: 1024px) and (max-width: 1440px) {
+      .why-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+      }
+
+      .why-card {
+        padding: 35px 30px;
+      }
+    }
+
+    /* Three Pillars Section Styles */
+    .three-pillars-section {
+      padding: 80px 5% 60px;
+      color: #fff;
+    }
+
+    .pillars-heading {
+      font-size: 2.5rem;
+      color: #fcd703;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-align: left;
+      position: relative;
+      width: fit-content;
+      padding-bottom: 14px;
+      padding-top: 60px;
+    }
+
+    .pillars-heading::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 75%;
+      height: 2px;
+      transform: translateX(-50%);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        #ffd703,
+        transparent
+      );
+      opacity: 0.85;
+    }
+
+    .pillars-subtitle {
+      font-size: 1.2rem;
+      color: #ddd;
+      margin-bottom: 50px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .pillars-cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      align-items: start;
+    }
+
+    .pillar-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(252, 215, 3, 0.2);
+      border-radius: 12px;
+      padding: 30px 25px;
+      text-align: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      min-height: 280px;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .pillar-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 12px;
+      z-index: 1;
+      transition: background 0.3s ease;
+    }
+
+    .pillar-card:hover::before {
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    .pillar-card > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .pillar-card-inception {
+      background-image: url('images/what-we-do/udyog.png');
+    }
+
+    .pillar-card-ventures {
+      background-image: url('images/what-we-do/investment-arm.png');
+    }
+
+    .pillar-card-one {
+      background-image: url('images/what-we-do/business-consultancy.png');
+    }
+
+    .pillar-card-content {
+      position: relative;
+    }
+
+    .three-pillars-section .pillar-card:hover {
+      transform: translateY(-5px) scale(1.05) !important;
+      border-color: rgba(252, 215, 3, 0.5);
+      box-shadow: 0 10px 30px rgba(252, 215, 3, 0.1);
+    }
+
+    .pillar-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: transform 0.4s ease;
+    }
+
+    .pillar-card:hover .pillar-card-img {
+      transform: scale(1.2);
+    }
+
+    .pillar-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 25px;
+      z-index: 2;
+      transition: background 0.3s ease;
+    }
+
+    .pillar-card:hover .pillar-card-overlay {
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    .pillar-card-icon {
+      font-size: 3rem;
+      color: #fcd703;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .pillar-card:hover .pillar-card-icon {
+      transform: scale(1.1);
+    }
+
+    .pillar-title {
+      font-size: 1.4rem;
+      color: #fcd703;
+      margin-bottom: 15px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .pillar-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    .pillar-details {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .pillar-card:hover .pillar-details {
+      opacity: 1;
+      max-height: 200px;
+    }
+
+    .pillar-details ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pillar-details li {
+      padding: 8px 0;
+      color: #ccc;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(252, 215, 3, 0.1);
+    }
+
+    .pillar-details li:last-child {
+      border-bottom: none;
+    }
+
+    .pillars-footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(252, 215, 3, 0.1);
+      border-radius: 8px;
+      border-left: 4px solid #fcd703;
+    }
+
+    .pillars-footer p {
+      color: #ddd;
+      font-size: 1rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .pillars-footer strong {
+      color: #fcd703;
+    }
+
+    .arrow-btn {
+      position: absolute;
+      bottom: -10px;
+      right: 10px;
+      background: #fcd703;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+
+    .arrow-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(252, 215, 3, 0.4);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .three-pillars-section {
+        padding: 60px 4% 40px;
+      }
+
+      .pillars-heading {
+        font-size: 2rem;
+      }
+
+      .pillars-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+      }
+
+      .pillars-cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .pillar-card {
+        padding: 25px 20px;
+        min-height: 250px;
+      }
+
+      .pillar-card-icon {
+        font-size: 2.5rem;
+      }
+
+      .pillar-title {
+        font-size: 1.2rem;
+      }
+
+      .pillar-description {
+        font-size: 0.9rem;
+      }
+
+      .pillars-footer {
+        padding: 15px;
+      }
+
+      .pillars-footer p {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* MacBook Air View (1024px - 1440px) */
+    @media (min-width: 1024px) and (max-width: 1440px) {
+      .pillars-cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+      }
+
+      .pillar-card {
+        padding: 35px 25px;
+      }
+    }
+
     
 
   </style>
@@ -191,7 +628,7 @@
   <header class="main-header">
     <div class="header-logo">
       <img src="images/logo.png" alt="Hatchlab Logo">
-      <span class="brand-name">Hatchlab Innovations</span>
+      <a href="index.html" class="brand-name">Hatchlab Innovations</a>
     </div>
     <nav class="header-nav">
       <a href="about.html">About</a>
@@ -221,8 +658,8 @@
             <span class="word yellow">Guidance.</span>
           </div>
         </h1>
-        <p>A synergy only Hatchlab makes possible.</p>
-        <a class="contact-btn" href="contactus.html">Contact Us</a>
+        <p>Building the Future of Enterprises</p>
+        <a class="contact-btn" href="contactus.html">Connect With Us</a>
       </div>
     </div>
   </div>
@@ -237,69 +674,137 @@
       reshaping industries, and both start-ups and established corporations must innovate to survive. Yet innovation
       requires more than bright ideas; it demands structured execution, access to capital, strategic guidance, and
       operational excellence.<br><br>
-      Hatchlab Innovations has been built as an integrated platform to address these needs through Enterprise Creation
-      as a Service (ECaaS). By combining a start-up studio, a diversified investment arm, and a modern consultancy under
-      one roof, Hatchlab enables entrepreneurs, executives, and investors to create, finance, and scale ventures with
-      confidence.
+      Hatchlab Innovations is an integrated platform for enterprise creation. Through Enterprise Creation as a Service (ECaaS), we combine a start-up studio, a diversified investment arm, and a modern consultancy so entrepreneurs, executives, and investors can create, finance, and scale ventures with confidence.
+
       <a href="about.html" class="read-more">Read More</a>
     </p>
+  </div>
+
+  <!-- WHY HATCHLAB SECTION -->
+  <div class="why-hatchlab-section home-section">
+    <h2>Why Hatchlab?</h2>
+    <p class="why-subtitle">Our strategic differentiators in enterprise creation.</p>
+    <div class="why-cards-grid">
+      <div class="why-card">
+        <div class="why-card-icon">
+          <i class="fas fa-link"></i>
+        </div>
+        <h3>Integrated Platform</h3>
+        <p>A unified ecosystem uniting incubation, investment, and advisory services. We eliminate silos to create a seamless journey from ideation to scale.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3>ECaaS Model</h3>
+        <p>Enterprise Creation as a Service allows partners to leverage our full platform's capabilities, accelerating time-to-market at any lifecycle stage.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Institutional Governance</h3>
+        <p>Rigorous risk management, transparent processes, and robust investment committees de-risk growth and protect stakeholder value from day one.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <i class="fas fa-gem"></i>
+        </div>
+        <h3>Curated Deal Flow</h3>
+        <p>Proprietary access to high-quality, validated ventures emerging directly from our incubator studio, reducing early-stage investment blind spots.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <i class="fas fa-chess-knight"></i>
+        </div>
+        <h3>Strategy to Execution</h3>
+        <p>We don't just advise; we build. Hatchlab ONE bridges the gap between high-level strategy and on-the-ground operational reality.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <i class="fas fa-coins"></i>
+        </div>
+        <h3>Access to Capital</h3>
+        <p>A diversified financial backbone providing venture capital, private equity, and structured finance to fuel growth at every maturity level.</p>
+      </div>
+    </div>
   </div>
 
 
 
 
 
-  <!-- MOU PART  -->
-  <section class="what-section">
-    <h2 class="what-heading">What We Do</h2>
+  <!-- THREE PILLARS SECTION -->
+  <section class="three-pillars-section">
+    <h2 class="pillars-heading">Three Pillars of Hatchlab Innovations</h2>
+    <p class="pillars-subtitle">Distinct verticals united under one organization.</p>
 
-    <div class="what-cards-container">
+    <div class="pillars-cards-container">
 
       <!-- CARD 1 -->
-      <div class="what-card">
-        <img src="images/what-we-do/udyog.png" class="what-card-img" alt="Hatchlab Inception">
-
-        <div class="card-overlay">
-          <img src="images/what-we-do/udyog-icon.png" class="card-icon" alt="Inception icon">
-          <h3>Hatchlab Inception</h3>
-          <p>
-            Hatchlab Inception empowers early-stage founders with ecosystem
-            support, mentorship, strategic guidance and an environment to innovate.
-          </p>
+      <div class="pillar-card pillar-card-inception">
+        <div class="pillar-card-icon">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <div class="pillar-card-content">
+          <h3 class="pillar-title">HATCHLAB INCEPTION</h3>
+          <p class="pillar-description">Conceives, validates, and launches new ventures through a structured ideation-to-scale process.</p>
+          <div class="pillar-details">
+            <ul>
+              <li>Ideation & Selection</li>
+              <li>Validation & Prototyping</li>
+              <li>Product Build</li>
+              <li>Scale & Spin-out</li>
+            </ul>
+          </div>
           <button class="arrow-btn">➜</button>
         </div>
       </div>
 
       <!-- CARD 2 -->
-      <div class="what-card">
-        <img src="images/what-we-do/investment-arm.png" class="what-card-img" alt="Hatchlab Ventures">
-
-        <div class="card-overlay">
-          <img src="images/what-we-do/investment-arm-icon.png" class="card-icon" alt="Ventures icon">
-          <h3>Hatchlab Ventures</h3>
-          <p>
-            Hatchlab Ventures fuels changemakers with purposeful capital,
-            co-building impactful, inclusive and enduring movements.
-          </p>
+      <div class="pillar-card pillar-card-ventures">
+        <div class="pillar-card-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="pillar-card-content">
+          <h3 class="pillar-title">HATCHLAB VENTURES</h3>
+          <p class="pillar-description">Provides the financial backbone for ventures across VC, PE, and structured finance platforms.</p>
+          <div class="pillar-details">
+            <ul>
+              <li>Venture Capital</li>
+              <li>Private Equity</li>
+              <li>Institutional Investment</li>
+              <li>Strategic Partnerships</li>
+            </ul>
+          </div>
           <button class="arrow-btn">➜</button>
         </div>
       </div>
 
       <!-- CARD 3 -->
-      <div class="what-card">
-        <img src="images/what-we-do/business-consultancy.png" class="what-card-img" alt="Hatchlab One">
-
-        <div class="card-overlay">
-          <img src="images/what-we-do/business-consultancy-icon.png" class="card-icon" alt="Consultancy icon">
-          <h3>Hatchlab One</h3>
-          <p>
-            Hatchlab One supports businesses with strategy, design and
-            digital transformation for sustainable growth.
-          </p>
+      <div class="pillar-card pillar-card-one">
+        <div class="pillar-card-icon">
+          <i class="fas fa-cog"></i>
+        </div>
+        <div class="pillar-card-content">
+          <h3 class="pillar-title">HATCHLAB ONE</h3>
+          <p class="pillar-description">Full-service consultancy driving growth through strategy, brand, and operational excellence.</p>
+          <div class="pillar-details">
+            <ul>
+              <li>Innovation Strategy</li>
+              <li>Brand & Digital</li>
+              <li>Operations Excellence</li>
+              <li>Managed Services</li>
+            </ul>
+          </div>
           <button class="arrow-btn">➜</button>
         </div>
       </div>
 
+    </div>
+    
+    <div class="pillars-footer">
+      <p><strong>INTEGRATED BY ECaaS:</strong> Enterprise Creation as a Service is the operating framework that connects these pillars to accelerate value creation.</p>
     </div>
   </section>
   <!-- SOUMIK PART - OUR INITIATIVES-->
@@ -448,7 +953,10 @@
         <div class="footer-logo">
           <img src="images/logo.png" alt="HatchLab Logo">
         </div>
-        <p class="footer-meta">© 2025 HatchLab Innovations Pvt. Ltd.<br>All rights reserved.</p>
+        <p class="footer-meta">
+          <strong>© 2026 HatchLab Innovations Pvt. Ltd.</strong><br>
+          All rights reserved.
+        </p>
       </div>
 
       <!-- Column 2: Contact Info -->
@@ -527,6 +1035,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://www.hatchlabinnovations.com/assets/js/particles.js"></script>
   <script src="https://www.hatchlabinnovations.com/assets/js/app.js"></script>
+  <script src="enhanced-mobile.js"></script>
+  <script>
+    // Disable Lenis smooth scroll on mobile
+    if (window.innerWidth <= 768) {
+      if (window.lenis) {
+        window.lenis.destroy();
+      }
+    }
+  </script>
 
   <!-- INIT: OUR INITIATIVES OWL CAROUSEL -->
   <!-- INIT: OUR INITIATIVES OWL CAROUSEL - WITH 5 SECOND AUTOPLAY -->
