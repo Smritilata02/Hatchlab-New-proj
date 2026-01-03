@@ -464,6 +464,11 @@ a.initiative-btn { text-decoration: none; display: inline-block; }
 .initiative-title { font-size: 28px; }
 .initiative-item-title { font-size: 20px; }
 .initiative-btn { font-size: 14px; padding: 8px 18px; }
+
+/* INITIATIVES TITLE MOBILE PADDING FIX */
+.initiative-title {
+  padding-bottom: 20px !important;
+}
 }
 
 /* SMRITILATA PART */
@@ -1442,7 +1447,7 @@ section.what-section h2.what-heading {
 /* Footer styling */
 .footer-section {
     background: #0b0b0b;
-    padding: 60px 5%;
+    padding: 20px 5%;
     color: #fff;
     font-family: 'Poppins', sans-serif;
     position: relative;

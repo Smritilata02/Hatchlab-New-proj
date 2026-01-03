@@ -10,7 +10,7 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    padding: 15px 20px 20px !important;
+    padding: 8px 16px 12px !important;
     min-height: auto !important;
     height: auto !important;
     text-align: center !important;
@@ -81,7 +81,7 @@
   .get-in-touch-btn {
     padding: 8px 16px !important;
     font-size: 12px !important;
-    margin: 8px 0 0 !important;
+    margin: 1px 0 0 !important;
     border-radius: 4px !important;
     height: auto !important;
     min-height: auto !important;
@@ -150,5 +150,32 @@
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+  }
+  
+  /* Reduce footer padding on mobile */
+  .footer-section {
+    padding: 10px 15px !important;
+  }
+  
+  .footer-content {
+    gap: 8px !important;
+  }
+  
+  .footer-column {
+    margin-bottom: 5px !important;
+  }
+  
+  .footer-meta {
+    margin-top: 5px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .footer-social {
+    margin-top: 5px !important;
+  }
+  
+  /* Fix index page footer gradient spacing */
+  .footer-gradient {
+    display: none !important;
   }
 }

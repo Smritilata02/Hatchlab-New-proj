@@ -1,0 +1,30 @@
+/* INDEX PAGE MOBILE FOOTER FIX */
+@media (max-width: 768px) {
+  /* Override index page footer styles specifically */
+  body .footer-section,
+  html .footer-section {
+    padding: 15px 20px !important;
+    background: #0b0b0b !important;
+  }
+  
+  body .footer-gradient,
+  html .footer-gradient {
+    display: none !important;
+  }
+  
+  body .footer-content,
+  html .footer-content {
+    gap: 15px !important;
+    padding-bottom: 10px !important;
+  }
+  
+  body .footer-column,
+  html .footer-column {
+    margin-bottom: 8px !important;
+  }
+  
+  body .footer-social,
+  html .footer-social {
+    margin-top: 8px !important;
+  }
+}

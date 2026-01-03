@@ -58,6 +58,8 @@
   <link rel="stylesheet" href="remove-click-effects.css">
   <!-- Disable Mobile Auto Scroll -->
   <link rel="stylesheet" href="disable-mobile-autoscroll.css">
+  <!-- Index Mobile Footer Fix -->
+  <link rel="stylesheet" href="index-mobile-footer-fix.css">
   <!-- Google Font: Lora -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,6 +110,65 @@
     .word:nth-child(5) { animation-delay: 0.4s; }
 
     /* Page-specific styles only */
+
+    /* MOBILE FOOTER FIX FOR INDEX PAGE */
+    @media (max-width: 768px) {
+      .footer-section {
+        padding: 15px 20px !important;
+        background: #0b0b0b !important;
+      }
+      .footer-gradient {
+        display: none !important;
+      }
+      .footer-content {
+        gap: 15px !important;
+        padding-bottom: 10px !important;
+      }
+      .footer-column {
+        margin-bottom: 8px !important;
+      }
+      .footer-social {
+        margin-top: 8px !important;
+      }
+    }
+
+    /* OVERRIDE INDEX PAGE FOOTER TO MATCH ABOUT PAGE */
+    @media (max-width: 768px) {
+      .footer-section {
+        padding: 32px 20px !important;
+        gap: 20px !important;
+      }
+      .footer-column {
+        flex: 1 1 100% !important;
+        min-width: 0 !important;
+      }
+      .footer-form {
+        justify-content: center !important;
+        width: 100% !important;
+      }
+      .footer-form input[type="email"] {
+        min-width: 60% !important;
+        max-width: 400px !important;
+      }
+      
+      /* MOBILE ABOUT US SECTION FIX */
+      .about-section {
+        padding: 20px 20px !important;
+        margin: 0 auto !important;
+      }
+      
+      /* REDUCE HERO SECTION HEIGHT ON MOBILE */
+      .hero-sec {
+        height: 60vh !important;
+        min-height: 400px !important;
+      }
+      
+      /* GALLERY SECTION TITLE SPACING */
+      .team-gallery-title {
+        padding-top: 60px !important;
+        margin-bottom: 15px !important;
+      }
+    }
 
 
 
@@ -601,6 +662,15 @@
 
       .pillars-footer p {
         font-size: 0.9rem;
+      }
+      
+      /* THREE PILLARS ARROWS MOBILE FIX */
+      .arrow-btn {
+        bottom: -15px !important;
+        right: 1px !important;
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 1rem !important;
       }
     }
 
