@@ -105,7 +105,7 @@ h1 {
   font-size: 52px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: yellow;
+  color: #fcd703;
   margin-top: 80px;
   margin-bottom: 30px;
 }
@@ -140,7 +140,7 @@ h1 {
 
 /* ✅ Sub Headings */
 h2 {
-  color: yellow;
+  color: #fcd703;
   
   margin-top: 40px;
   font-size: 28px;
@@ -149,12 +149,12 @@ h2 {
 /* ✅ Cards */
 .card {
   width: 100%;
-  border: 2px solid #ffd703;
+  border: 2px solid #fcd703;
   border-radius: 10px;
   padding: 20px;
   margin: 30px 0;
   background-color: rgb(0, 0, 0);
-  box-shadow: 0 0 14px rgba(255, 196, 107, 0.4);
+  box-shadow: 0 0 14px rgba(252, 215, 3, 0.4);
 }
 
 /* ✅ Card Headings */
@@ -342,7 +342,7 @@ h2::after {
   background: linear-gradient(
     90deg,
     transparent,
-    #ffd700,
+    #fcd703,
     transparent
   );
   opacity: 0.8;
@@ -357,12 +357,12 @@ email {
   margin-top: 14px;
   padding: 8px 18px;             /* slightly smaller padding */
   border-radius: 30px;
-  border: 1px solid yellow;
+  border: 1px solid #fcd703;
   color: #fcd703;
 
   background: linear-gradient(
     145deg,
-    rgba(255, 215, 0, 0.08),
+    rgba(252, 215, 3, 0.08),
     rgba(0, 0, 0, 0.6)
   );
 
@@ -378,11 +378,11 @@ email {
 
 
 email:hover {
-  background: #ffd700;
+  background: #fcd703;
   color: #000;
   transform: translateY(-2px);
   box-shadow: 
-    0 10px 20px rgba(255, 215, 0, 0.35);
+    0 10px 20px rgba(252, 215, 3, 0.35);
 }
 
 .content h2 {
@@ -1039,7 +1039,7 @@ h1, h2 {
     color: yellow !important;
 }
 .drop {
-  color: yellow !important;
+  color: #fcd703 !important;
 }
 h1::after,
 h2::after {
