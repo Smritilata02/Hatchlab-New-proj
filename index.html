@@ -154,7 +154,7 @@
       /* MOBILE ABOUT US SECTION FIX */
       .about-section {
         padding: 20px 20px !important;
-        margin: 0 auto !important;
+        margin: 145px auto 0 auto !important;
       }
       
       /* REDUCE HERO SECTION HEIGHT ON MOBILE */
@@ -666,11 +666,11 @@
       
       /* THREE PILLARS ARROWS MOBILE FIX */
       .arrow-btn {
-        bottom: -15px !important;
+        bottom: -20px !important;
         right: 1px !important;
-        width: 35px !important;
-        height: 35px !important;
-        font-size: 1rem !important;
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.9rem !important;
       }
     }
 
@@ -2119,7 +2119,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Arrow buttons link to services page
     document.querySelectorAll('.arrow-btn').forEach(btn => {
-        btn.onclick = () => window.location.href = 'services.html';
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            window.location.href = 'services.html';
+        });
     });
 
     // Glowy Cursor Logic

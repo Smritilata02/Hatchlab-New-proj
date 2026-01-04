@@ -50,128 +50,397 @@
     <link rel="stylesheet" href="desktop-header-fix.css">
    
     <style>
-      .about-section {
-        margin-bottom: 0px;
-        max-width: 100%;
-        padding: 0;
-        width: 100%;
-      }
-      .about-section:nth-child(odd) {
-        margin-left: -5px;
-        margin-right: 0;
-        padding-right: 0;
-      }
-      .about-section:nth-child(even) {
-        margin-left: 0;
-        margin-right: auto;
-        padding-left: 0;
-      }
-      .about-content {
-        max-width: none !important;
-        margin: 50px 0 !important;
-        width: 100% !important;
-        padding: 0 5% !important;
-        box-sizing: border-box;
-        justify-content: flex-start;  /* Aligns items to left instead of space-between */
-    gap: 40px;  /* Increased gap for better spacing between text and image */
-      }
-      .about-text {
-        flex: 1 1 60%;             
-        min-width: 250px;          
-      }
-
-      .about-image {
-        flex: 0 0 35%;             
-        min-width: 200px;          
-      }
-
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-    max-width: 340px;  /* Reduced from 500px → smaller, better proportion */
-    margin: 0 auto;    /* Centers the image if it's narrower than container */
-
-}
       body {
         cursor: none;
         font-family: 'Lora', serif;
         background-color: #0f0f16;
+        color: #fff;
+        margin: 0;
+        padding: 0;
       }
 
       * {
         font-family: 'Lora', serif;
       }
 
-      @keyframes dropAndBounce {
-        0% {
-          opacity: 0;
-          transform: translateY(-100px);
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* About Intro Section */
+      .about-intro {
+        padding: 80px 0 60px;
+        text-align: center;
+      }
+
+      .about-intro h1 {
+        font-size: 2.5rem;
+        color: #fcd703;
+        margin-bottom: 30px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .about-intro h1::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          #fcd703,
+          transparent
+        );
+        margin-left: calc(50% - 40px);
+        opacity: 0.85;
+      }
+
+      .about-intro p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #ddd;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Vision & Mission Section */
+      .vision-mission {
+        padding: 80px 0;
+        background: rgba(255, 255, 255, 0.02);
+        text-align: center;
+      }
+
+      .vision-mission h2 {
+        font-size: 2.5rem;
+        color: #fcd703;
+        text-align: center;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .vision-mission h2::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          #fcd703,
+          transparent
+        );
+        margin-left: calc(50% - 40px);
+        opacity: 0.85;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #aaa;
+        font-size: 1.1rem;
+        margin-bottom: 50px;
+      }
+
+      .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(252, 215, 3, 0.2);
+        border-radius: 12px;
+        padding: 40px 30px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(252, 215, 3, 0.5);
+        box-shadow: 0 10px 30px rgba(252, 215, 3, 0.1);
+      }
+
+      .card-icon {
+        font-size: 3rem;
+        color: #fcd703;
+        margin-bottom: 20px;
+      }
+
+      .card h3 {
+        font-size: 1.3rem;
+        color: #fcd703;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #ddd;
+        margin: 0;
+      }
+
+      /* Core Philosophy Section */
+      .core-philosophy {
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .core-philosophy h2 {
+        font-size: 2.5rem;
+        color: #fcd703;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .core-philosophy h2::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          #fcd703,
+          transparent
+        );
+        margin-left: calc(50% - 40px);
+        opacity: 0.85;
+      }
+
+      .quote-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 0;
+      }
+
+      blockquote {
+        font-size: 2rem;
+        line-height: 1.4;
+        color: #fff;
+        margin: 40px 0;
+        position: relative;
+        font-style: italic;
+      }
+
+      .quote-description {
+        font-size: 1.1rem;
+        color: #aaa;
+        line-height: 1.6;
+        margin-top: 30px;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 15px;
         }
-        60% {
-          opacity: 1;
-          transform: translateY(10px);
+
+        .about-intro {
+          padding-top: 50px;
         }
-        80% {
-          transform: translateY(-5px);
+
+        .about-intro h1 {
+          font-size: 2rem;
         }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
+
+        .about-intro p {
+          font-size: 1rem;
+          line-height: 1.6;
+        }
+
+        .vision-mission,
+        .core-philosophy {
+          padding: 60px 0;
+        }
+
+        .vision-mission h2,
+        .core-philosophy h2 {
+          font-size: 2rem;
+        }
+
+        .cards-container {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+
+        .card {
+          padding: 30px 20px;
+        }
+
+        .card-icon {
+          font-size: 2.5rem;
+        }
+
+        .card h3 {
+          font-size: 1.2rem;
+        }
+
+        .card p {
+          font-size: 0.95rem;
+        }
+
+        blockquote {
+          font-size: 1.4rem;
+          margin: 30px 0;
+        }
+
+        blockquote::before,
+        blockquote::after {
+          display: none;
+        }
+
+        .quote-description {
+          font-size: 1rem;
         }
       }
 
-      @keyframes continuousBounce {
-        0%, 100% {
-          transform: translateY(0);
+      /* Extra Small Mobile */
+      @media (max-width: 480px) {
+        .about-intro {
+          padding: 50px 0 30px;
         }
-        50% {
-          transform: translateY(-10px);
+
+        .about-intro h1 {
+          font-size: 1.8rem;
+        }
+
+        .about-intro p {
+          font-size: 0.9rem;
+        }
+
+        .vision-mission h2,
+        .core-philosophy h2 {
+          font-size: 1.7rem;
+        }
+
+        .card {
+          padding: 25px 15px;
+        }
+
+        .card-icon {
+          font-size: 2.2rem;
+        }
+
+        blockquote {
+          font-size: 1.2rem;
         }
       }
 
-    
-      
-
-      
-      .typewriter-text {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid #fcd703; /* cursor effect */
-  animation: blink-caret 0.7s step-end infinite;
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #fcd703; }
-}
-* {
-      font-family: 'Lora', serif;
-    }
-
-    
-
-    @media (max-width: 480px) {
-        .about-content {
-            padding: 0 3% !important;
-            gap: 20px !important;
+      /* MacBook Air View (1024px - 1440px) */
+      @media (min-width: 1024px) and (max-width: 1440px) {
+        .container {
+          max-width: 1000px;
+          padding: 0 30px;
         }
 
-        .about-section h2 {
-            font-size: 1.6em !important;
+        .about-intro {
+          padding: 100px 0 80px;
         }
-    }
 
-    .contact-info-item img {
-      width: 30px;          /* adjust size as needed */
-      height: auto;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
+        .about-intro h1 {
+          font-size: 2.8rem;
+        }
+
+        .about-intro p {
+          font-size: 1.3rem;
+          max-width: 900px;
+        }
+
+        .vision-mission,
+        .core-philosophy {
+          padding: 100px 0;
+        }
+
+        .vision-mission h2,
+        .core-philosophy h2 {
+          font-size: 2.8rem;
+        }
+
+        .cards-container {
+          max-width: 1000px;
+          gap: 50px;
+        }
+
+        .card {
+          padding: 50px 40px;
+        }
+
+        .card-icon {
+          font-size: 3.5rem;
+        }
+
+        .card h3 {
+          font-size: 1.4rem;
+        }
+
+        .card p {
+          font-size: 1.1rem;
+        }
+
+        .quote-container {
+          max-width: 900px;
+        }
+
+        blockquote {
+          font-size: 2.2rem;
+        }
+
+        .quote-description {
+          font-size: 1.2rem;
+        }
+      }
+
+      /* Large Desktop */
+      @media (min-width: 1441px) {
+        .container {
+          max-width: 1300px;
+        }
+
+        .about-intro h1 {
+          font-size: 3.5rem;
+        }
+
+        .about-intro p {
+          font-size: 1.4rem;
+        }
+
+        .vision-mission h2,
+        .core-philosophy h2 {
+          font-size: 3rem;
+        }
+
+        blockquote {
+          font-size: 2.4rem;
+        }
+      }
+
+      .contact-info-item img {
+        width: 30px;
+        height: auto;
+        vertical-align: middle;
+        margin-right: 8px;
+      }
     </style>
 
 
@@ -194,48 +463,58 @@
     </header>
 
     <div style="padding-top: 30px;"></div>
-  <div class="about-section home-section">
-    <div class="about-content">
-    <div class="about-text">
-    <h2>Executive Summary</h2>
-    <p>
-      The pace of economic change has accelerated dramatically. Digitalisation, geopolitics, and demographic shifts are reshaping industries, and both start-ups and mature corporations must innovate to survive. Hatchlab Innovations has been built as an integrated platform that addresses these needs through Enterprise Creation as a Service (ECaaS).<br><br>
-      By combining a start-up incubation studio, a diversified investment arm, and a modern consultancy under one roof, Hatchlab enables entrepreneurs, chief executives, and investors to create, finance, and scale ventures with confidence.
-    </p>
-  </div>
-<div class="about-image">
-      <img src="images/Aboutusimg.jpg" alt="Executive Summary Image">
-    </div>
-    </div>
-    </div>
-  <div class="about-section home-section">
-     <div class="about-content">
-<div class="about-image">
-      <img src="images/mission-vision-success.webp" alt="Vision and Mission">
-    </div>
-    <div class="about-text">
-    <h2>Vision and Mission</h2>
-    <p>
-      Hatchlab Innovations' vision is to become the premier platform for building the next generation of global enterprises.<br><br>
-      Our mission is to empower innovators and institutions by providing the resources, capital, and expertise required to transform ideas into successful businesses.<br><br>
-      We believe that the future of enterprise creation lies in the seamless integration of innovation, finance, and advisory services; our ECaaS model embodies this philosophy.
-    </p>
-  </div>
-    </div>
-    </div>
-  <div class="about-section home-section">
-     <div class="about-content">
-    <div class="about-text">
-    <h2>Strategic Context</h2>
-    <p>
-      Market Dynamics highlight disruption, capital complexity, and an advisory gap – together creating an opportunity for a unified platform like Hatchlab Innovations.
-    </p>
-  </div>
-<div class="about-image">
-      <img src="images/strategic_context.webp" alt="Strategic Context">
-    </div>
-    </div>
-    </div>
+    
+    <!-- About Us Section -->
+    <section class="about-intro">
+        <div class="container">
+            <h1 style="padding-top: 50px;">About Us</h1>
+            <p>Hatchlab Innovations is an integrated platform for enterprise creation. Through Enterprise Creation as a Service (ECaaS), we combine a start-up studio, a diversified investment arm, and a modern consultancy so entrepreneurs, executives, and investors can create, finance, and scale ventures with confidence.</p>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission">
+        <div class="container">
+            <h2>Vision & Mission</h2>
+            <p class="subtitle">Guiding principles for the future of enterprise.</p>
+            
+            <div class="cards-container">
+                <div class="card vision-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>OUR VISION</h3>
+                    <p>To become the premier platform for building the next generation of global enterprises.</p>
+                </div>
+                
+                <div class="card mission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>OUR MISSION</h3>
+                    <p>To empower innovators and institutions by providing the resources, capital and expertise required to transform ideas into successful businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Philosophy Section -->
+    <section class="core-philosophy">
+        <div class="container">
+            <h2>OUR CORE PHILOSOPHY</h2>
+            <p class="subtitle">Guiding principles for the future of enterprises.</p>
+            
+            <div class="quote-container">
+                <blockquote>
+                    "The future of enterprise creation lies in the seamless integration of innovation, finance, and advisory services."
+                </blockquote>
+                
+                <p class="quote-description">
+                    Our ECaaS model embodies this philosophy, providing aligned incentives and comprehensive expertise to bridge the gap between concept and commercial reality.
+                </p>
+            </div>
+        </div>
+    </section>
 <footer class="footer-section">
   <!-- Yellow gradient blobs -->
     <div class="footer-gradient">
