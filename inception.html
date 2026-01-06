@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HatchLab Inception - Hatchlab Innovations</title>
+
+    <link rel="stylesheet" href="header-unified.css">
+    <link rel="stylesheet" href="contactus.css">
+    <!-- Deployment Override - Must be last -->
+    <link rel="stylesheet" href="header-deployment-override.css">
+    <!-- Mobile Header Fix -->
+    <link rel="stylesheet" href="header-mobile-fix.css">
+    <!-- Remove Yellow Borders -->
+    <link rel="stylesheet" href="remove-yellow-borders.css">
+    <!-- Cursor Fix -->
+    <link rel="stylesheet" href="cursor-fix.css">
+    <!-- Footer Input Fix -->
+    <link rel="stylesheet" href="footer-input-fix.css">
+    <!-- Universal Background -->
+    <link rel="stylesheet" href="universal-background.css">
+    <!-- Responsive Optimization -->
+    <link rel="stylesheet" href="responsive-optimization.css">
+    <!-- Enhanced Header -->
+    <link rel="stylesheet" href="header-enhanced.css">
+    <!-- Remove Click Effects -->
+    <link rel="stylesheet" href="remove-click-effects.css">
+    <!-- Desktop Header Fix -->
+    <link rel="stylesheet" href="desktop-header-fix.css">
+    <!-- Pure Yellow Override -->
+    <link rel="stylesheet" href="pure-yellow-override.css">
+    <!-- Typography Hierarchy -->
+    <link rel="stylesheet" href="typography-hierarchy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body { 
+            cursor: none; 
+            font-family: 'Lora', serif;
+            background-color: #0f0f16;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        * { 
+            font-family: 'Lora', serif; 
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .vertical-label {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-icon {
+            width: 80px;
+            height: 80px;
+            background: #fcd703;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+        }
+
+        .hero-icon i {
+            font-size: 2rem;
+            color: #000;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            color: #fcd703;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .hero-section h1::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #fcd703, transparent);
+            transform: translateX(-50%);
+            opacity: 0.85;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #ddd;
+            margin-top: 30px;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            padding: 80px 0;
+            border-left: 4px solid #fcd703;
+            padding-left: 40px;
+            margin-left: 20px;
+        }
+
+        .intro-section h2 {
+            font-size: 2.5rem;
+            color: #fcd703;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .intro-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ddd;
+            margin-bottom: 50px;
+        }
+
+        .intro-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .intro-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(252, 215, 3, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .intro-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(252, 215, 3, 0.5);
+            box-shadow: 0 8px 25px rgba(252, 215, 3, 0.1);
+        }
+
+        .intro-card-icon {
+            width: 50px;
+            height: 50px;
+            background: #fcd703;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .intro-card-icon i {
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+        .intro-card-content h3 {
+            font-size: 1.2rem;
+            color: #fcd703;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .intro-card-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ddd;
+            margin: 0;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .process-section h2 {
+            font-size: 2.5rem;
+            color: #fcd703;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .process-section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #fcd703, transparent);
+            transform: translateX(-50%);
+            opacity: 0.85;
+        }
+
+        .process-subtitle {
+            font-size: 1.1rem;
+            color: #aaa;
+            margin-bottom: 60px;
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #fcd703;
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 0 auto 20px;
+        }
+
+        .step-title {
+            font-size: 1rem;
+            color: #fcd703;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .step-description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .step-output {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(252, 215, 3, 0.2);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .output-label {
+            font-size: 0.8rem;
+            color: #fcd703;
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .output-title {
+            font-size: 0.9rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero-section {
+                padding: 100px 0 60px;
+            }
+
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .intro-section {
+                padding: 60px 0;
+                padding-left: 20px;
+                margin-left: 10px;
+            }
+
+            .intro-section h2 {
+                font-size: 2rem;
+            }
+
+            .process-section {
+                padding: 60px 0;
+            }
+
+            .process-section h2 {
+                font-size: 2rem;
+            }
+
+            .process-timeline {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .step-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .services-section,
+            .value-section {
+                padding: 60px 0;
+            }
+
+            .services-section h2,
+            .value-section h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .value-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .service-card,
+            .value-card {
+                padding: 25px;
+            }
+
+            .service-icon,
+            .value-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .service-icon i,
+            .value-icon i {
+                font-size: 1.5rem;
+            }
+
+            .key-outputs-section {
+                padding: 60px 0;
+            }
+
+            .key-outputs-section h2 {
+                font-size: 2rem;
+            }
+
+            .deliverables-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .deliverable-card,
+            .benefit-card {
+                padding: 20px;
+            }
+        }
+
+        .glow-cursor {
+            position: fixed;
+            width: 16px;
+            height: 16px;
+            background: radial-gradient(circle, #ffff00 0%, rgba(255, 255, 0, 0.35) 50%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 12px #ffd700;
+        }
+
+        @media (max-width: 768px) {
+            body { cursor: default; }
+            .glow-cursor { display: none; }
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .services-section h2 {
+            font-size: 2.5rem;
+            color: #fcd703;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+        }
+
+        .services-section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #fcd703, transparent);
+            transform: translateX(-50%);
+            opacity: 0.85;
+        }
+
+        .services-subtitle {
+            font-size: 1.1rem;
+            color: #aaa;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(252, 215, 3, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(252, 215, 3, 0.5);
+            box-shadow: 0 10px 30px rgba(252, 215, 3, 0.1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #fcd703;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .service-icon i {
+            font-size: 1.8rem;
+            color: #000;
+        }
+
+        .service-content h3 {
+            font-size: 1.2rem;
+            color: #fcd703;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-features li {
+            font-size: 0.9rem;
+            color: #aaa;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* Value Proposition Section */
+        .value-section {
+            padding: 80px 0;
+        }
+
+        .value-section h2 {
+            font-size: 2.5rem;
+            color: #fcd703;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+        }
+
+        .value-section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #fcd703, transparent);
+            transform: translateX(-50%);
+            opacity: 0.85;
+        }
+
+        .value-subtitle {
+            font-size: 1.1rem;
+            color: #aaa;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .value-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(252, 215, 3, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(252, 215, 3, 0.5);
+            box-shadow: 0 10px 30px rgba(252, 215, 3, 0.1);
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: #fcd703;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .value-icon i {
+            font-size: 1.8rem;
+            color: #000;
+        }
+
+        .value-content h3 {
+            font-size: 1rem;
+            color: #fcd703;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .value-content h4 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .value-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .value-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .value-benefits li {
+            font-size: 0.9rem;
+            color: #ddd;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .value-benefits li i {
+            color: #fcd703;
+            font-size: 0.8rem;
+        }
+
+        /* Key Outputs & Benefits Section */
+        .key-outputs-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .key-outputs-section h2 {
+            font-size: 2.5rem;
+            color: #fcd703;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+        }
+
+        .key-outputs-section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #fcd703, transparent);
+            transform: translateX(-50%);
+            opacity: 0.85;
+        }
+
+        .key-outputs-subtitle {
+            font-size: 1.1rem;
+            color: #aaa;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-label {
+            font-size: 0.9rem;
+            color: #fcd703;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .deliverables-section {
+            margin-bottom: 60px;
+        }
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .deliverable-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(252, 215, 3, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .deliverable-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(252, 215, 3, 0.5);
+            box-shadow: 0 8px 25px rgba(252, 215, 3, 0.1);
+        }
+
+        .deliverable-icon {
+            width: 50px;
+            height: 50px;
+            background: #fcd703;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+
+        .deliverable-icon i {
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+        .deliverable-card h4 {
+            font-size: 1rem;
+            color: #fff;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(252, 215, 3, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(252, 215, 3, 0.5);
+            box-shadow: 0 10px 30px rgba(252, 215, 3, 0.1);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: #fcd703;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .benefit-icon i {
+            font-size: 1.8rem;
+            color: #000;
+        }
+
+        .benefit-card h4 {
+            font-size: 1rem;
+            color: #fcd703;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .benefit-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ddd;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glow-cursor"></div>
+
+    <header class="main-header">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Hatchlab Logo">
+            </a>
+            <a href="index.html" class="brand-name">Hatchlab Innovations</a>
+        </div>
+        <nav class="header-nav">
+            <a href="about.html">About</a>
+            <a href="services.html">Service</a>
+            <a href="careers_page.html">Career</a>
+            <a href="contactus.html">Contact</a>
+            <button class="get-in-touch-btn" id="getInTouchBtn">Get In Touch</button>
+        </nav>
+    </header>
+
+    <div style="padding-top: 30px;"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <p class="vertical-label">VERTICAL 01</p>
+            <div class="hero-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h1>HATCHLAB INCEPTION</h1>
+            <p class="hero-subtitle">The Venture Studio Incubator</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="container">
+            <h2>HATCHLAB INCEPTION</h2>
+            <p class="intro-description">
+                The engine room of enterprise creation. We transform raw concepts into scalable businesses through a rigorous, hands-on process of validation, building, and launching.
+            </p>
+            
+            <div class="intro-cards">
+                <div class="intro-card">
+                    <div class="intro-card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="intro-card-content">
+                        <h3>Incubation & Build</h3>
+                        <p>Providing the full stack of resources, engineering, design, product management to build MVPs and validate product-market fit.</p>
+                    </div>
+                </div>
+                
+                <div class="intro-card">
+                    <div class="intro-card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="intro-card-content">
+                        <h3>Corporate Venturing</h3>
+                        <p>Enabling established organizations to launch new subsidiaries and test business models, shielding core operations from risk.</p>
+                    </div>
+                </div>
+                
+                <div class="intro-card">
+                    <div class="intro-card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="intro-card-content">
+                        <h3>Centralized Governance</h3>
+                        <p>Managing legal, IP protection, compliance, and brand identity centrally to ensure consistency and speed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2>The Venture Building Process</h2>
+            <p class="process-subtitle">A disciplined framework transforming ideas into scalable enterprises.</p>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Ideation & Selection</h3>
+                    <p class="step-description">Sourcing ideas via research and corporate challenges. We apply a rigorous framework to assess market opportunity, regulatory feasibility, and strategic alignment before proceeding.</p>
+                    <div class="step-output">
+                        <p class="output-label">Key Output</p>
+                        <p class="output-title">Feasibility Report</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Validation & Design</h3>
+                    <p class="step-description">Conducting intensive market testing, customer interviews, and prototype development. We validate assumptions, refine the value proposition, and design the business model prior to heavy investment.</p>
+                    <div class="step-output">
+                        <p class="output-label">Key Output</p>
+                        <p class="output-title">Validated Prototype</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Build & Launch</h3>
+                    <p class="step-description">Deploying cross-functional agile squads to build the MVP. Centralized management of legal, IP, and compliance ensures speed and consistency during execution.</p>
+                    <div class="step-output">
+                        <p class="output-label">Key Output</p>
+                        <p class="output-title">Live Product (MVP)</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Scale & Spin-Out</h3>
+                    <p class="step-description">Transitioning successful ventures into independent entities. Hatchlab continues to provide strategic support and access to investment capital for scaling.</p>
+                    <div class="step-output">
+                        <p class="output-label">Key Output</p>
+                        <p class="output-title">Independent Entity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Offerings Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2>Services & Offerings</h2>
+            <p class="services-subtitle">Comprehensive venture studio capabilities from ideation to scale.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Corporate Venture Building</h3>
+                        <p>Partnering with established organizations to build subsidiaries and test new business models while shielding core operations from risk.</p>
+                        <ul class="service-features">
+                            <li>Risk-shielded Experimentation</li>
+                            <li>Innovation Spin-offs</li>
+                            <li>New Market Entry</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Cross-Functional Teams</h3>
+                        <p>Assembling specialized agile squads to execute the 'Build' phase, ensuring rapid MVP development and product-market fit.</p>
+                        <ul class="service-features">
+                            <li>Engineers & Developers</li>
+                            <li>Product Managers & Designers</li>
+                            <li>Industry Specialists</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>GTM Strategy</h3>
+                        <p>Designing and executing go-to-market roadmaps to validate commercial viability and acquire initial customers efficiently.</p>
+                        <ul class="service-features">
+                            <li>Sales Channel Development</li>
+                            <li>Pricing & Business Modeling</li>
+                            <li>Customer Acquisition</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Centralized Legal & IP</h3>
+                        <p>A shared services backbone that manages critical governance tasks, ensuring speed and consistency from day one.</p>
+                        <ul class="service-features">
+                            <li>Legal & Compliance Mgmt</li>
+                            <li>IP Protection</li>
+                            <li>Brand Identity Management</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Ideation & Validation</h3>
+                        <p>Sourcing ideas from internal research and corporate challenges, then rigorously testing for problem-solution fit.</p>
+                        <ul class="service-features">
+                            <li>Rigorous Selection Framework</li>
+                            <li>Market Size Assessment</li>
+                            <li>Prototype Testing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Scale & Spin-Out</h3>
+                        <p>Transitioning successful ventures into independent entities with continued strategic support and capital access.</p>
+                        <ul class="service-features">
+                            <li>Independent Entity Setup</li>
+                            <li>Fundraising Support</li>
+                            <li>Exit Strategy Planning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="value-section">
+        <div class="container">
+            <h2>Value Proposition</h2>
+            <p class="value-subtitle">Delivering tailored strategic advantages to every stakeholder in the innovation ecosystem.</p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>FOUNDERS & ENTREPRENEURS</h3>
+                        <h4>Accelerate & Scale</h4>
+                        <p>We remove the chaos of early-stage building. Founders get validated ideas, operational muscle, and a clear path to funding without the typical startup chaos.</p>
+                        <ul class="value-benefits">
+                            <li><i class="fas fa-check"></i> Faster Validation</li>
+                            <li><i class="fas fa-check"></i> Shared Services</li>
+                            <li><i class="fas fa-check"></i> Capital Pathways</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>CORPORATES</h3>
+                        <h4>Innovate & Expand</h4>
+                        <p>We act as an external innovation engine. Corporates can experiment with disruptive business models and spin-offs while protecting their core brand equity.</p>
+                        <ul class="value-benefits">
+                            <li><i class="fas fa-check"></i> De-risked R&D</li>
+                            <li><i class="fas fa-check"></i> Agile Execution</li>
+                            <li><i class="fas fa-check"></i> New Revenue Streams</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>GOVERNMENT & ACADEMIA</h3>
+                        <h4>Impact & Growth</h4>
+                        <p>We bridge the gap between research and market. Universities and governments partner with us to commercialize IP and drive regional economic development.</p>
+                        <ul class="value-benefits">
+                            <li><i class="fas fa-check"></i> IP Commercialization</li>
+                            <li><i class="fas fa-check"></i> Job Creation</li>
+                            <li><i class="fas fa-check"></i> Talent Retention</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Outputs & Benefits Section -->
+    <section class="key-outputs-section">
+        <div class="container">
+            <h2>Key Outputs & Benefits</h2>
+            <p class="key-outputs-subtitle">Tangible results and strategic advantages of our model.</p>
+            
+            <!-- Deliverables by Phase -->
+            <div class="deliverables-section">
+                <h3 class="section-label">DELIVERABLES BY PHASE</h3>
+                <div class="deliverables-grid">
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4>Feasibility Report</h4>
+                    </div>
+                    
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h4>Validated Prototype</h4>
+                    </div>
+                    
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Live Product (MVP)</h4>
+                    </div>
+                    
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Independent Entity</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Why Build With Us -->
+            <div class="benefits-section">
+                <h3 class="section-label">WHY BUILD WITH US</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h4>VELOCITY</h4>
+                        <p>Rapid Ideation-to-Launch cycles leveraging shared resources and validated frameworks to move fast.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>GOVERNANCE</h4>
+                        <p>Centralized Legal & IP management ensures compliance and consistency from day one.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h4>FLEXIBILITY</h4>
+                        <p>Clear pathways for ventures to spin-out as independent entities or seek acquisition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="footer-gradient"><div></div><div></div><div></div><div></div></div>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo"><img src="images/logo.png" alt="HatchLab Logo"></div>
+                <p class="footer-meta">
+                  <strong>© 2026 HatchLab Innovations Pvt. Ltd.</strong><br>
+                  All rights reserved.
+                </p>
+            </div>
+            <div class="footer-column">
+                <div class="footer-contact">
+                    <a href="tel:+918276057111">+91 8276057111</a>
+                    <a href="mailto:info@hatchlabinnovations.com">info@hatchlabinnovations.com</a>
+                    <a href="mailto:admin@hatchlabinnovations.com">admin@hatchlabinnovations.com</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <form class="footer-form" onsubmit="return false;">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Contact Us</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-social">
+            <p>Connect with us through -</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/hatchlab-innovations/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/hatchlabinnovations.official/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/people/Hatchlab-Innovations/61558095073459/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Get In Touch Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="contact-modal-content">
+            <span class="close-contact-modal">&times;</span>
+            <h3>Get In Touch</h3>
+            <div class="contact-info-item">
+                <a href="tel:+918276057111"><img src="images/yellow phone icon.png"> +91 8276057111</a>
+            </div>
+            <div class="contact-info-item">
+                <a href="mailto:info@hatchlabinnovations.com">📧 info@hatchlabinnovations.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Glow Cursor
+        const cursor = document.querySelector(".glow-cursor");
+        document.addEventListener("mousemove", e => {
+            cursor.style.left = e.clientX + "px";
+            cursor.style.top = e.clientY + "px";
+        });
+
+        // Modal Logic
+        const contactModal = document.getElementById("contactModal");
+        const getInTouchBtn = document.getElementById("getInTouchBtn");
+        const closeContactBtn = document.querySelector(".close-contact-modal");
+
+        if (getInTouchBtn) {
+            getInTouchBtn.onclick = () => contactModal.style.display = "flex";
+        }
+
+        if (closeContactBtn) {
+            closeContactBtn.onclick = () => contactModal.style.display = "none";
+        }
+
+        window.onclick = (e) => {
+            if (e.target === contactModal) contactModal.style.display = "none";
+        };
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                contactModal.style.display = "none";
+            }
+        });
+    </script>
+    <script src="enhanced-mobile.js"></script>
+</body>
+</html>

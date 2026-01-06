@@ -1,0 +1,201 @@
+/* Pure Yellow Override - Replace all yellow variations with #FFFF00 */
+
+/* Global yellow color replacements */
+:root {
+  --pure-yellow: #FFFF00;
+  --pure-yellow-rgba: rgba(255, 255, 0, 0.2);
+  --pure-yellow-rgba-hover: rgba(255, 255, 0, 0.5);
+  --pure-yellow-rgba-glow: rgba(255, 255, 0, 0.1);
+}
+
+/* Replace #fcd703 with pure yellow - TEXT COLORS ONLY */
+*[style*="#fcd703"],
+.hero-section h1,
+.intro-section h2,
+.intro-card-content h3,
+.process-section h2,
+.step-title,
+.output-label,
+.brand-label,
+.contact-header h1,
+.section-heading,
+.card h3,
+.core-philosophy h2,
+.vision-mission h2,
+.about-intro h1,
+.pillars-heading,
+.pillar-title,
+.why-card h3,
+.initiative-title,
+.initiative-item-title,
+.initiative-btn,
+.team-gallery-title,
+.what-heading,
+.about-section h2,
+.gallery-heading,
+.footer-meta strong,
+.close-contact-modal:hover,
+.close-build-modal:hover,
+.header-nav a:hover,
+.contact-info-item a:hover,
+.footer-column a:hover,
+.footer-contact a:hover,
+.social-icons a,
+.footer-form button:hover {
+  color: #FFFF00 !important;
+}
+
+/* Icons should be yellow - NO BACKGROUNDS */
+.hero-icon i,
+.intro-card-icon i,
+.pillar-card-icon i,
+.why-card-icon i,
+.card-icon i {
+  color: #FFFF00 !important;
+}
+
+/* Remove all yellow backgrounds */
+.hero-icon,
+.intro-card-icon,
+.step-number,
+.pillar-card-icon,
+.why-card-icon,
+.card-icon {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Keep step numbers with dark background and yellow text */
+.step-number {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFF00 !important;
+}
+
+/* Button hover effects - no yellow backgrounds */
+.get-in-touch-btn:hover,
+.contact-btn:hover,
+.initiative-btn:hover,
+.footer-form button:hover,
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFF00 !important;
+}
+
+/* Border colors */
+.intro-section,
+.intro-card,
+.intro-card:hover,
+.step-output,
+.card,
+.card:hover,
+.pillar-card,
+.pillar-card:hover,
+.why-card,
+.why-card:hover,
+.initiative-btn,
+.team-member-card:hover,
+.get-in-touch-btn,
+.contact-modal-content,
+.footer-form input:focus,
+.header-nav button:hover,
+.initiative-nav button:hover,
+.gallery-controls button:hover,
+.team-gallery-nav button:hover {
+  border-color: #FFFF00 !important;
+}
+
+/* Gradients and linear backgrounds */
+.hero-section h1::after,
+.process-section h2::after,
+.core-philosophy h2::after,
+.vision-mission h2::after,
+.about-intro h1::after,
+.pillars-heading::after,
+.home-section h2::after,
+.what-heading::after,
+.initiative-title::after,
+.team-gallery-title::after {
+  background: linear-gradient(90deg, transparent, #FFFF00, transparent) !important;
+}
+
+/* Box shadows */
+.intro-card:hover,
+.card:hover,
+.pillar-card:hover,
+.why-card:hover,
+.get-in-touch-btn,
+.get-in-touch-btn:hover,
+.contact-btn,
+.contact-btn:hover,
+.initiative-btn:hover,
+.team-member-card:hover,
+.footer-form button,
+.footer-form button:hover,
+.social-icons a:hover,
+.glow-cursor {
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.3) !important;
+}
+
+/* Enhanced glow effects */
+.get-in-touch-btn:hover,
+.contact-btn:hover {
+  box-shadow: 0 0 40px rgba(255, 255, 0, 0.8), 0 0 60px rgba(255, 255, 0, 0.6) !important;
+}
+
+/* Glow cursor */
+.glow-cursor {
+  background: radial-gradient(circle, #FFFF00 0%, rgba(255, 255, 0, 0.35) 50%, transparent 70%) !important;
+  box-shadow: 0 0 12px #FFFF00 !important;
+}
+
+/* RGBA variations */
+.intro-card {
+  border: 1px solid rgba(255, 255, 0, 0.2) !important;
+}
+
+.intro-card:hover {
+  border-color: rgba(255, 255, 0, 0.5) !important;
+  box-shadow: 0 8px 25px rgba(255, 255, 0, 0.1) !important;
+}
+
+.step-output {
+  border: 1px solid rgba(255, 255, 0, 0.2) !important;
+}
+
+/* Footer button - no yellow background */
+.footer-form button {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFF00 !important;
+}
+
+/* Particle colors */
+.gallery-particles .particle {
+  background: #FFFF00 !important;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.35), 0 0 18px rgba(255, 255, 0, 0.12) !important;
+}
+
+/* Underline effects */
+.home-section h2::after,
+.what-heading::after,
+.initiative-title::after,
+.team-gallery-title::after {
+  background: linear-gradient(90deg, transparent 0%, #FFFF00 20%, #FFFF00 80%, transparent 100%) !important;
+}
+
+/* Specific overrides for different yellow shades */
+*[style*="#fcd703"] { color: #FFFF00 !important; }
+*[style*="#ffd700"] { color: #FFFF00 !important; }
+*[style*="#ffdf62"] { color: #FFFF00 !important; }
+*[style*="#d4a906"] { color: #FFFF00 !important; }
+*[style*="#e7e44d"] { color: #FFFF00 !important; }
+
+/* Remove background overrides */
+*[style*="background: #fcd703"] { background: transparent !important; }
+*[style*="background-color: #fcd703"] { background-color: transparent !important; }
+*[style*="background: #ffd700"] { background: transparent !important; }
+*[style*="background-color: #ffd700"] { background-color: transparent !important; }
+
+/* Border overrides */
+*[style*="border-color: #fcd703"] { border-color: #FFFF00 !important; }
+*[style*="border: 2px solid #fcd703"] { border: 2px solid #FFFF00 !important; }
+*[style*="border: 1px solid #fcd703"] { border: 1px solid #FFFF00 !important; }

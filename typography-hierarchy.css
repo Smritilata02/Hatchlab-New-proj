@@ -1,0 +1,321 @@
+/* Typography Hierarchy - Consistent font sizes and weights */
+
+/* ===== TYPOGRAPHY SCALE ===== */
+:root {
+  /* Font sizes */
+  --font-size-hero: 4rem;          /* Main hero titles - back to original */
+  --font-size-h1: 3rem;           /* Page titles - back to original */
+  --font-size-h2: 2.25rem;        /* Section headings */
+  --font-size-h3: 1.5rem;         /* Subsection headings */
+  --font-size-h4: 1.25rem;        /* Card titles */
+  --font-size-h5: 1.125rem;       /* Small headings */
+  --font-size-body-lg: 1.125rem;  /* Large body text */
+  --font-size-body: 1rem;         /* Regular body text */
+  --font-size-body-sm: 0.875rem;  /* Small body text */
+  --font-size-caption: 0.75rem;   /* Captions, labels */
+  
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+  --line-height-loose: 1.8;
+}
+
+/* ===== HERO ELEMENTS ===== */
+.hero-title,
+.hero h1,
+.hero-section h1 {
+  font-size: var(--font-size-hero) !important;
+  font-weight: var(--font-weight-extrabold) !important;
+  line-height: var(--line-height-tight) !important;
+  letter-spacing: -0.02em !important;
+}
+
+.hero-subtitle,
+.hero p {
+  font-size: var(--font-size-body-lg) !important;
+  font-weight: var(--font-weight-medium) !important;
+  line-height: var(--line-height-normal) !important;
+}
+
+/* ===== PAGE TITLES (H1) ===== */
+h1,
+.page-title,
+.about-intro h1,
+.contact-header h1 {
+  font-size: var(--font-size-h1) !important;
+  font-weight: var(--font-weight-bold) !important;
+  line-height: var(--line-height-tight) !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* ===== SECTION HEADINGS (H2) ===== */
+h2,
+.section-heading,
+.about-section h2,
+.what-heading,
+.initiative-title,
+.team-gallery-title,
+.gallery-heading,
+.pillars-heading,
+.vision-mission h2,
+.core-philosophy h2,
+.why-hatchlab-section h2,
+.three-pillars-section h2,
+.process-section h2,
+.intro-section h2 {
+  font-size: 1.75rem !important;
+  font-weight: 500 !important;
+  line-height: var(--line-height-tight) !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* ===== SUBSECTION HEADINGS (H3) ===== */
+h3,
+.card h3,
+.intro-card-content h3,
+.step-title {
+  font-size: var(--font-size-h3) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: var(--line-height-normal) !important;
+}
+
+/* Special override for Why Hatchlab card titles */
+.why-card h3 {
+  font-size: 1.1rem !important;
+  color: #fff !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: var(--line-height-normal) !important;
+}
+
+/* Special override for Three Pillars titles */
+.pillar-title {
+  font-size: 1.1rem !important;
+  color: #fff !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: var(--line-height-normal) !important;
+}
+
+/* Special override for Our Initiatives titles */
+.initiative-item-title {
+  font-size: 1.1rem !important;
+  color: #fff !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: var(--line-height-normal) !important;
+}
+
+/* ===== CARD TITLES (H4) ===== */
+h4,
+.card-title,
+.service-title,
+.feature-title {
+  font-size: var(--font-size-h4) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: var(--line-height-normal) !important;
+}
+
+/* ===== SMALL HEADINGS (H5) ===== */
+h5,
+.small-heading,
+.output-label,
+.brand-label {
+  font-size: var(--font-size-h5) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: var(--line-height-normal) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* ===== BODY TEXT ===== */
+/* Large body text */
+.intro-description,
+.hero-subtitle,
+.subtitle,
+.why-subtitle,
+.pillars-subtitle,
+.process-subtitle,
+.quote-description {
+  font-size: var(--font-size-body-lg) !important;
+  font-weight: var(--font-weight-regular) !important;
+  line-height: var(--line-height-relaxed) !important;
+}
+
+/* Regular body text */
+p,
+.body-text,
+.intro-card-content p,
+.card p,
+.why-card p,
+.step-description,
+.pillar-description {
+  font-size: var(--font-size-body) !important;
+  font-weight: var(--font-weight-regular) !important;
+  line-height: var(--line-height-relaxed) !important;
+}
+
+/* Small body text */
+.small-text,
+.caption,
+.footer-meta,
+.output-title {
+  font-size: var(--font-size-body-sm) !important;
+  font-weight: var(--font-weight-regular) !important;
+  line-height: var(--line-height-normal) !important;
+}
+
+/* ===== NAVIGATION & BUTTONS ===== */
+.header-nav a,
+.nav-link {
+  font-size: var(--font-size-body) !important;
+  font-weight: var(--font-weight-medium) !important;
+  line-height: var(--line-height-normal) !important;
+}
+
+.get-in-touch-btn,
+.contact-btn,
+.initiative-btn,
+.cta-btn,
+button {
+  font-size: var(--font-size-body) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: var(--line-height-normal) !important;
+}
+
+/* ===== SPECIAL ELEMENTS ===== */
+/* Step numbers */
+.step-number {
+  font-size: var(--font-size-h3) !important;
+  font-weight: var(--font-weight-bold) !important;
+  line-height: 1 !important;
+}
+
+/* Quotes */
+blockquote {
+  font-size: var(--font-size-h2) !important;
+  font-weight: var(--font-weight-medium) !important;
+  line-height: var(--line-height-normal) !important;
+  font-style: italic !important;
+}
+
+/* Labels and captions */
+.vertical-label,
+.label,
+.caption {
+  font-size: var(--font-size-caption) !important;
+  font-weight: var(--font-weight-medium) !important;
+  line-height: var(--line-height-normal) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+
+/* ===== RESPONSIVE TYPOGRAPHY ===== */
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --font-size-hero: 3.5rem;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.375rem;
+    --font-size-h4: 1.125rem;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  :root {
+    --font-size-hero: 2.5rem;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h3: 1.25rem;
+    --font-size-h4: 1.125rem;
+    --font-size-h5: 1rem;
+    --font-size-body-lg: 1rem;
+    --font-size-body: 0.875rem;
+    --font-size-body-sm: 0.75rem;
+  }
+}
+
+/* Small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  :root {
+    --font-size-hero: 2rem;
+    --font-size-h1: 1.75rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.125rem;
+    --font-size-h4: 1rem;
+  }
+}
+
+/* ===== FONT WEIGHT ADJUSTMENTS ===== */
+/* Make important headings more prominent */
+.hero-title,
+.page-title,
+.section-heading {
+  font-weight: var(--font-weight-extrabold) !important;
+}
+
+/* Medium weight for secondary headings */
+.card h3 {
+  font-weight: var(--font-weight-semibold) !important;
+}
+
+/* Regular weight for body text */
+.intro-description,
+.card p,
+.step-description {
+  font-weight: var(--font-weight-regular) !important;
+}
+
+/* ===== LETTER SPACING REFINEMENTS ===== */
+/* Tight spacing for large headings */
+.hero-title,
+h1,
+h2 {
+  letter-spacing: -0.02em !important;
+}
+
+/* Normal spacing for medium headings */
+h3,
+h4 {
+  letter-spacing: -0.01em !important;
+}
+
+/* Expanded spacing for labels and small caps */
+.vertical-label,
+.step-title,
+.output-label,
+.brand-label {
+  letter-spacing: 0.05em !important;
+}
+
+/* ===== LINE HEIGHT OPTIMIZATIONS ===== */
+/* Tight line height for headings */
+.hero-title,
+h1,
+h2,
+h3 {
+  line-height: var(--line-height-tight) !important;
+}
+
+/* Relaxed line height for body text */
+p,
+.intro-description,
+.card p,
+.step-description {
+  line-height: var(--line-height-relaxed) !important;
+}
+
+/* Normal line height for UI elements */
+.header-nav a,
+button,
+.get-in-touch-btn {
+  line-height: var(--line-height-normal) !important;
+}

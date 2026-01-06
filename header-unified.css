@@ -10,13 +10,24 @@ html .main-header {
   width: 100% !important;
   display: flex !important;
   align-items: center !important;
-  padding: 20px 40px !important;
+  padding: 0 50px !important;
   background: rgba(23, 22, 31, 0.95) !important;
   backdrop-filter: blur(10px) !important;
   z-index: 1000 !important;
   border-bottom: none !important;
   box-sizing: border-box !important;
-  height: auto !important;
+  height: 94px !important;
+}
+
+/* Remove focus outline from all header elements */
+body .header-nav a:focus,
+body .brand-name:focus,
+body .get-in-touch-btn:focus,
+html .header-nav a:focus,
+html .brand-name:focus,
+html .get-in-touch-btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 body .header-logo,
@@ -24,13 +35,13 @@ html .header-logo {
   display: flex !important;
   align-items: center !important;
   gap: 15px !important;
-  min-width: auto !important;
+  min-width: 360px !important;
 }
 
 body .header-logo img,
 html .header-logo img {
-  width: 50px !important;
-  height: auto !important;
+  width: 45px !important;
+  height: 45px !important;
 }
 
 body .brand-name,
@@ -39,6 +50,7 @@ html .brand-name {
   font-size: 20px !important;
   font-weight: 600 !important;
   letter-spacing: 0.5px !important;
+  line-height: 1 !important;
 }
 
 body .header-nav,
@@ -54,19 +66,19 @@ body .header-nav a,
 html .header-nav a {
   color: #fff !important;
   text-decoration: none !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
   transition: 0.3s !important;
-  font-weight: 500 !important;
+  font-weight: 520 !important;
 }
 
 body .header-nav a:hover,
 html .header-nav a:hover {
-  color: #fcd703 !important;
+  color: #FFFF00 !important;
 }
 
 body .get-in-touch-btn,
 html .get-in-touch-btn {
-  padding: 11px 23px !important;
+  padding: 12px 24px !important;
   background: #fff !important;
   border: none !important;
   color: #000 !important;
@@ -78,14 +90,18 @@ html .get-in-touch-btn {
   box-shadow: 0 0 20px rgba(252, 215, 3, 0.3) !important;
   position: relative !important;
   overflow: hidden !important;
-  height: auto !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 body .get-in-touch-btn:hover,
 html .get-in-touch-btn:hover {
-  background: #fcd703 !important;
+  background: #fff !important;
+  color: #000 !important;
   transform: scale(1.05) !important;
-  box-shadow: 0 0 40px rgba(252, 215, 3, 0.8), 0 0 60px rgba(252, 215, 3, 0.6) !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4) !important;
 }
 
 /* ================= TABLET RESPONSIVE (768px - 1024px) ================= */
@@ -324,7 +340,7 @@ html .get-in-touch-btn:hover {
 }
 
 .main-header .header-logo:hover .brand-name {
-  color: #fcd703 !important;
+  color: #FFFF00 !important;
   transition: color 0.3s ease !important;
 }
 /* Brand Name Link Styling */
@@ -373,4 +389,31 @@ html .get-in-touch-btn:hover {
   height: 44px !important;
   padding: 12px 24px !important;
   font-size: 16px !important;
+}
+/* Header Pure Yellow Override */
+.header-logo a.brand-name:hover {
+  color: #FFFF00 !important;
+}
+
+.main-header .header-logo:hover .brand-name {
+  color: #FFFF00 !important;
+}
+/* Remove underline effects from header nav */
+.header-nav a::before,
+.header-nav a::after {
+  display: none !important;
+}
+
+.header-nav a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+/* Remove box effects from header nav in mobile */
+@media (max-width: 768px) {
+  .header-nav a {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
 }

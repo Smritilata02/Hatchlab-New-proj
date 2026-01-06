@@ -1,0 +1,8 @@
+/* Contact Us Page Card Padding Override */
+.engagement-card {
+    padding: 5px 15px 10px !important;
+}
+
+.path-step {
+    padding: 5px 15px 10px !important;
+}

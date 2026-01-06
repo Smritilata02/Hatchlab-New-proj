@@ -1,0 +1,116 @@
+/* Contact Button Override - Pure White */
+.contact-btn {
+  display: inline-block !important;
+  padding: 12px 24px !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  border-radius: 6px !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: box-shadow 0.3s ease !important;
+  transform: none !important;
+  opacity: 1 !important;
+  position: relative !important;
+}
+
+.contact-btn:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+  transform: none !important;
+}
+
+.contact-btn:focus,
+.contact-btn:active,
+.contact-btn:visited {
+  background: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  transition: none !important;
+  border: none !important;
+}
+
+.contact-btn::before,
+.contact-btn::after {
+  display: none !important;
+}
+
+/* Initiative CTA Buttons */
+.initiative-btn,
+a.initiative-btn {
+  display: inline-block !important;
+  padding: 12px 24px !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  border-radius: 6px !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: box-shadow 0.3s ease !important;
+  transform: none !important;
+  cursor: pointer !important;
+}
+
+.initiative-btn:hover,
+a.initiative-btn:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+  transform: none !important;
+}
+
+/* Header and Footer CTA Buttons */
+.get-in-touch-btn,
+#getInTouchBtn,
+button.get-in-touch-btn,
+.footer-form button {
+  display: inline-block !important;
+  padding: 12px 24px !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  border-radius: 6px !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: box-shadow 0.3s ease !important;
+  transform: none !important;
+  cursor: pointer !important;
+}
+
+.get-in-touch-btn:hover,
+#getInTouchBtn:hover,
+button.get-in-touch-btn:hover,
+.footer-form button:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+  transform: none !important;
+}
+
+/* Gallery Title - Remove all underlines and create one clean underline */
+.team-gallery-title::before,
+.team-gallery-title::after {
+  display: none !important;
+}
+
+.team-gallery-title {
+  position: relative !important;
+  display: inline-block !important;
+  padding-bottom: 12px !important;
+}
+
+.team-gallery-title::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 60px !important;
+  height: 2px !important;
+  background: yellow !important;
+}

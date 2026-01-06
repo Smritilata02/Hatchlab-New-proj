@@ -1,0 +1,29 @@
+/* Contact Us Page - Get in Touch Button Fix */
+.main-header .get-in-touch-btn {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+    transition: none !important;
+}
+
+.main-header .get-in-touch-btn:hover {
+    background: #fff !important;
+    color: #000 !important;
+    transform: none !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Footer Contact Us Button Fix */
+.footer-form button {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+    transition: none !important;
+}
+
+.footer-form button:hover {
+    background: #fff !important;
+    color: #000 !important;
+    transform: none !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+}

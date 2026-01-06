@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="images/logo.png" rel="icon">
-    <title>Hatchlab Innovations</title>
+    <title>About Us - Hatchlab Innovations</title>
 
     <!-- Font Awesome (icons) -->
     <link rel="stylesheet"
@@ -13,441 +13,339 @@
         integrity="sha512-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7x1e6b7q3hS0Rr3y3+qY7V2Ld8K8xoVg6c3+X1V1j9a1Zl+9xqKZ0Xdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- CSS LIBS -->
     <link rel="stylesheet" href="https://www.hatchlabinnovations.com/assets/css/bootstrap.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- YOUR CSS -->
     <link rel="stylesheet" href="header-unified.css">
-    <link rel="stylesheet" href="about.css">
-    <!-- Deployment Override - Must be last -->
-    <link rel="stylesheet" href="header-deployment-override.css">
-    <!-- Mobile Header Fix -->
-    <link rel="stylesheet" href="header-mobile-fix.css">
-    <!-- Remove Yellow Borders -->
-    <link rel="stylesheet" href="remove-yellow-borders.css">
-    <!-- Cursor Fix -->
-    <link rel="stylesheet" href="cursor-fix.css">
-    <!-- Footer Input Fix -->
-    <link rel="stylesheet" href="footer-input-fix.css">
-    <!-- Universal Background -->
-    <link rel="stylesheet" href="universal-background.css">
-    <!-- Responsive Optimization -->
-    <link rel="stylesheet" href="responsive-optimization.css">
-    <!-- Enhanced Header -->
-    <link rel="stylesheet" href="header-enhanced.css">
-    <!-- Remove Click Effects -->
-    <link rel="stylesheet" href="remove-click-effects.css">
-    <!-- Desktop Header Fix -->
-    <link rel="stylesheet" href="desktop-header-fix.css">
-   
+    <link rel="stylesheet" href="footer-unified.css">
+    <link rel="stylesheet" href="pure-yellow-override.css">
+    <link rel="stylesheet" href="typography-hierarchy.css">
+    <link rel="stylesheet" href="contact-btn-override.css">
+    <link rel="stylesheet" href="about-header-footer-redesign.css">
+    
+    <!-- Google Font: Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-      body {
-        cursor: none;
-        font-family: 'Lora', serif;
-        background-color: #0f0f16;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-      }
+        body {
+            cursor: none;
+            font-family: 'Lora', serif;
+            background-color: #0f0f16;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
 
-      * {
-        font-family: 'Lora', serif;
-      }
+        * {
+            font-family: 'Lora', serif;
+        }
 
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
+        /* Glow Cursor */
+        .glow-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #FFFF00 0%, rgba(255, 255, 0, 0.3) 50%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px #FFFF00, 0 0 40px rgba(255, 255, 0, 0.5);
+            transition: transform 0.1s ease;
+        }
 
-      /* About Intro Section */
-      .about-intro {
-        padding: 80px 0 60px;
-        text-align: center;
-      }
+        /* Hero Section */
+        .hero-sec {
+            height: 60vh;
+            min-height: 400px;
+            width: 100%;
+            color: #fff;
+            display: flex;
+            position: relative;
+            background: #0f0f16;
+        }
 
-      .about-intro h1 {
-        font-size: 2.5rem;
-        color: #fcd703;
-        margin-bottom: 30px;
-        position: relative;
-        display: inline-block;
-        padding-bottom: 15px;
-        font-weight: 700;
-      }
+        .main {
+            padding-top: 180px;
+            left: 0;
+            width: 100%;
+            position: relative;
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
 
-      .about-intro h1::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 80px;
-        height: 3px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          #fcd703,
-          transparent
-        );
-        margin-left: calc(50% - 40px);
-        opacity: 0.85;
-      }
+        .hero {
+            text-align: center;
+        }
 
-      .about-intro p {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        color: #ddd;
-        max-width: 800px;
-        margin: 0 auto;
-      }
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 0;
+        }
 
-      /* Vision & Mission Section */
-      .vision-mission {
-        padding: 80px 0;
-        background: rgba(255, 255, 255, 0.02);
-        text-align: center;
-      }
+        .word {
+            display: inline-block;
+            margin-right: 20px;
+            opacity: 0;
+            animation: dropAndBounce 0.8s ease-out forwards;
+        }
 
-      .vision-mission h2 {
-        font-size: 2.5rem;
-        color: #fcd703;
-        text-align: center;
-        margin-bottom: 15px;
-        position: relative;
-        display: inline-block;
-        padding-bottom: 15px;
-        font-weight: 700;
-      }
+        .word.bouncing {
+            animation: continuousBounce 2s ease-in-out infinite;
+            opacity: 1;
+        }
 
-      .vision-mission h2::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 80px;
-        height: 3px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          #fcd703,
-          transparent
-        );
-        margin-left: calc(50% - 40px);
-        opacity: 0.85;
-      }
+        .word:nth-child(1) { animation-delay: 0s; }
+        .word:nth-child(2) { animation-delay: 0.1s; }
 
-      .subtitle {
-        text-align: center;
-        color: #aaa;
-        font-size: 1.1rem;
-        margin-bottom: 50px;
-      }
+        @keyframes dropAndBounce {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(10px);
+            }
+            80% {
+                transform: translateY(-5px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-      .cards-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        max-width: 900px;
-        margin: 0 auto;
-      }
+        @keyframes continuousBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
 
-      .card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(252, 215, 3, 0.2);
-        border-radius: 12px;
-        padding: 40px 30px;
-        text-align: center;
-        transition: all 0.3s ease;
-      }
+        .word.white {
+            color: #fff;
+        }
 
-      .card:hover {
-        transform: translateY(-5px);
-        border-color: rgba(252, 215, 3, 0.5);
-        box-shadow: 0 10px 30px rgba(252, 215, 3, 0.1);
-      }
+        .word.yellow {
+            color: #FFFF00;
+        }
 
-      .card-icon {
-        font-size: 3rem;
-        color: #fcd703;
-        margin-bottom: 20px;
-      }
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
 
-      .card h3 {
-        font-size: 1.3rem;
-        color: #fcd703;
-        margin-bottom: 20px;
-        font-weight: 600;
-      }
+        /* Content Sections */
+        .content-section {
+            padding: 80px 5% 60px;
+            color: #fff;
+        }
 
-      .card p {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #ddd;
-        margin: 0;
-      }
-
-      /* Core Philosophy Section */
-      .core-philosophy {
-        padding: 80px 0;
-        text-align: center;
-      }
-
-      .core-philosophy h2 {
-        font-size: 2.5rem;
-        color: #fcd703;
-        margin-bottom: 15px;
-        position: relative;
-        display: inline-block;
-        padding-bottom: 15px;
-        font-weight: 700;
-      }
-
-      .core-philosophy h2::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 80px;
-        height: 3px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          #fcd703,
-          transparent
-        );
-        margin-left: calc(50% - 40px);
-        opacity: 0.85;
-      }
-
-      .quote-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 40px 0;
-      }
-
-      blockquote {
-        font-size: 2rem;
-        line-height: 1.4;
-        color: #fff;
-        margin: 40px 0;
-        position: relative;
-        font-style: italic;
-      }
-
-      .quote-description {
-        font-size: 1.1rem;
-        color: #aaa;
-        line-height: 1.6;
-        margin-top: 30px;
-      }
-
-      /* Mobile Responsive */
-      @media (max-width: 768px) {
         .container {
-          padding: 0 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .about-intro {
-          padding-top: 50px;
+        /* Section Titles */
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: #FFFF00;
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 18px;
         }
 
-        .about-intro h1 {
-          font-size: 2rem;
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #FFFF00 20%, #FFFF00 80%, transparent 100%);
         }
 
-        .about-intro p {
-          font-size: 1rem;
-          line-height: 1.6;
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-bottom: 50px;
+            text-align: left;
         }
 
-        .vision-mission,
-        .core-philosophy {
-          padding: 60px 0;
+        /* About Content */
+        .about-content {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 60px 0;
         }
 
-        .vision-mission h2,
-        .core-philosophy h2 {
-          font-size: 2rem;
+        .about-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ddd;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .cards-container {
-          grid-template-columns: 1fr;
-          gap: 25px;
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+            justify-items: center;
         }
 
         .card {
-          padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 30px 25px;
+            text-align: left;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(255, 255, 0, 0.1);
         }
 
         .card-icon {
-          font-size: 2.5rem;
+            font-size: 2.2rem;
+            color: #FFFF00;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card:hover .card-icon {
+            transform: scale(1.1);
         }
 
         .card h3 {
-          font-size: 1.2rem;
+            font-size: 1.1rem;
+            color: #fff !important;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-align: center;
         }
 
         .card p {
-          font-size: 0.95rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #ddd;
+            margin: 0;
+            text-align: left;
         }
 
-        blockquote {
-          font-size: 1.4rem;
-          margin: 30px 0;
+        /* Philosophy Section */
+        .philosophy-section {
+            text-align: left;
+            padding: 80px 5% 60px;
         }
 
-        blockquote::before,
-        blockquote::after {
-          display: none;
-        }
-
-        .quote-description {
-          font-size: 1rem;
-        }
-      }
-
-      /* Extra Small Mobile */
-      @media (max-width: 480px) {
-        .about-intro {
-          padding: 50px 0 30px;
-        }
-
-        .about-intro h1 {
-          font-size: 1.8rem;
-        }
-
-        .about-intro p {
-          font-size: 0.9rem;
-        }
-
-        .vision-mission h2,
-        .core-philosophy h2 {
-          font-size: 1.7rem;
-        }
-
-        .card {
-          padding: 25px 15px;
-        }
-
-        .card-icon {
-          font-size: 2.2rem;
-        }
-
-        blockquote {
-          font-size: 1.2rem;
-        }
-      }
-
-      /* MacBook Air View (1024px - 1440px) */
-      @media (min-width: 1024px) and (max-width: 1440px) {
-        .container {
-          max-width: 1000px;
-          padding: 0 30px;
-        }
-
-        .about-intro {
-          padding: 100px 0 80px;
-        }
-
-        .about-intro h1 {
-          font-size: 2.8rem;
-        }
-
-        .about-intro p {
-          font-size: 1.3rem;
-          max-width: 900px;
-        }
-
-        .vision-mission,
-        .core-philosophy {
-          padding: 100px 0;
-        }
-
-        .vision-mission h2,
-        .core-philosophy h2 {
-          font-size: 2.8rem;
-        }
-
-        .cards-container {
-          max-width: 1000px;
-          gap: 50px;
-        }
-
-        .card {
-          padding: 50px 40px;
-        }
-
-        .card-icon {
-          font-size: 3.5rem;
-        }
-
-        .card h3 {
-          font-size: 1.4rem;
-        }
-
-        .card p {
-          font-size: 1.1rem;
+        .philosophy-section .section-title {
+            text-align: left;
         }
 
         .quote-container {
-          max-width: 900px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
         }
 
         blockquote {
-          font-size: 2.2rem;
+            font-size: 2rem;
+            line-height: 1.4;
+            color: #fff;
+            margin: 40px 0;
+            position: relative;
+            font-style: italic;
         }
 
         .quote-description {
-          font-size: 1.2rem;
-        }
-      }
-
-      /* Large Desktop */
-      @media (min-width: 1441px) {
-        .container {
-          max-width: 1300px;
+            font-size: 1.1rem;
+            color: #ddd;
+            line-height: 1.6;
+            margin-top: 30px;
         }
 
-        .about-intro h1 {
-          font-size: 3.5rem;
-        }
 
-        .about-intro p {
-          font-size: 1.4rem;
-        }
 
-        .vision-mission h2,
-        .core-philosophy h2 {
-          font-size: 3rem;
-        }
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
 
-        blockquote {
-          font-size: 2.4rem;
-        }
-      }
+            .main {
+                padding-top: 120px;
+            }
 
-      .contact-info-item img {
-        width: 30px;
-        height: auto;
-        vertical-align: middle;
-        margin-right: 8px;
-      }
+            .content-section {
+                padding: 60px 4% 40px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card {
+                padding: 30px 20px;
+            }
+
+            blockquote {
+                font-size: 1.4rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-form {
+                flex-direction: column;
+            }
+        }
     </style>
-
-
 </head>
 
 <body>
     <div class="glow-cursor"></div>
+    
+    <!-- Header -->
     <header class="main-header">
         <div class="header-logo">
             <a href="index.html"><img src="images/logo.png" alt="Hatchlab Logo"></a>
@@ -462,47 +360,57 @@
         </nav>
     </header>
 
-    <div style="padding-top: 30px;"></div>
-    
-    <!-- About Us Section -->
-    <section class="about-intro">
+    <!-- Hero Section -->
+    <section class="hero-sec">
+        <div id="particles-js"></div>
+        <div class="main">
+            <div class="hero">
+                <h1 class="hero-title">
+                    <span class="word yellow">About</span>
+                    <span class="word white">Us</span>
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
         <div class="container">
-            <h1 style="padding-top: 50px;">About Us</h1>
             <p>Hatchlab Innovations is an integrated platform for enterprise creation. Through Enterprise Creation as a Service (ECaaS), we combine a start-up studio, a diversified investment arm, and a modern consultancy so entrepreneurs, executives, and investors can create, finance, and scale ventures with confidence.</p>
         </div>
     </section>
 
-    <!-- Vision & Mission Section -->
-    <section class="vision-mission">
+    <!-- Vision & Mission -->
+    <section class="content-section">
         <div class="container">
-            <h2>Vision & Mission</h2>
-            <p class="subtitle">Guiding principles for the future of enterprise.</p>
+            <h2 class="section-title">Vision & Mission</h2>
+            <p class="section-subtitle">Guiding principles for the future of enterprise.</p>
             
-            <div class="cards-container">
-                <div class="card vision-card">
+            <div class="cards-grid">
+                <div class="card">
                     <div class="card-icon">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <h3>OUR VISION</h3>
+                    <h3>Our Vision</h3>
                     <p>To become the premier platform for building the next generation of global enterprises.</p>
                 </div>
                 
-                <div class="card mission-card">
+                <div class="card">
                     <div class="card-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
-                    <h3>OUR MISSION</h3>
+                    <h3>Our Mission</h3>
                     <p>To empower innovators and institutions by providing the resources, capital and expertise required to transform ideas into successful businesses.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Philosophy Section -->
-    <section class="core-philosophy">
+    <!-- Core Philosophy -->
+    <section class="philosophy-section">
         <div class="container">
-            <h2>OUR CORE PHILOSOPHY</h2>
-            <p class="subtitle">Guiding principles for the future of enterprises.</p>
+            <h2 class="section-title">Our Core Philosophy</h2>
+            <p class="section-subtitle">Guiding principles for the future of enterprises.</p>
             
             <div class="quote-container">
                 <blockquote>
@@ -515,40 +423,29 @@
             </div>
         </div>
     </section>
-<footer class="footer-section">
-  <!-- Yellow gradient blobs -->
-    <div class="footer-gradient">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
 
-
-    
-        <!-- Main horizontal row -->
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="footer-gradient"></div>
+        
         <div class="footer-content">
-            <!-- Column 1: Logo + Copyright -->
             <div class="footer-column">
                 <div class="footer-logo">
                     <img src="images/logo.png" alt="HatchLab Logo">
                 </div>
                 <p class="footer-meta">
-                  <strong>© 2026 HatchLab Innovations Pvt. Ltd.</strong><br>
-                  All rights reserved.
+                    <strong>© 2026 HatchLab Innovations Pvt. Ltd.</strong><br>
+                    All rights reserved.
                 </p>
             </div>
 
-            <!-- Column 3: Contact Info -->
             <div class="footer-column">
                 <div class="footer-contact">
                     <a href="tel:+918276057111">+91 8276057111</a>
                     <a href="mailto:info@hatchlabinnovations.com">info@hatchlabinnovations.com</a>
-                    <a href="mailto:admin@hatchlabinnovations.com">admin@hatchlabinnovations.com</a>
                 </div>
             </div>
 
-            <!-- Column 4: Email Form -->
             <div class="footer-column">
                 <form class="footer-form" action="#" onsubmit="return false;">
                     <input type="email" placeholder="Enter your email" required>
@@ -557,9 +454,7 @@
             </div>
         </div>
 
-        <!-- Social icons – vertical & centered below the text -->
         <div class="footer-social">
-            <p>Connect with us through -</p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/company/hatchlab-innovations/posts/?feedView=all" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
@@ -574,203 +469,72 @@
         </div>
     </footer>
 
-<script src="https://www.hatchlabinnovations.com/assets/js/jquery-3.7.1.min.js"></script>
-<script src="https://www.hatchlabinnovations.com/assets/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://www.hatchlabinnovations.com/assets/js/carousel.js"></script>
-<script src="https://www.hatchlabinnovations.com/assets/js/asp.min.js"></script>
-<script src="https://www.hatchlabinnovations.com/assets/js/aspTrigger.min.js"></script>
-<script src="https://www.hatchlabinnovations.com/assets/js/aspeff.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-<script src="https://www.hatchlabinnovations.com/assets/js/main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.38/bundled/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://www.hatchlabinnovations.com/assets/js/particles.js"></script>
-<script src="https://www.hatchlabinnovations.com/assets/js/app.js"></script>
-<script src="enhanced-mobile.js"></script>
-
-
-
-<script>
-particlesJS("particles-js", {
-  "particles": {
-    "number": { "value": 80 },
-    "size": { "value": 3 },
-    "color": { "value": "#ffffff" },
-    "line_linked": { "enable": true, "color": "#ffffff", "opacity": 0.3 },
-    "move": { "enable": true, "speed": 2 }
-  }
-});
-
-// Slide-in sections alternating left/right
-gsap.registerPlugin(ScrollTrigger);
-document.querySelectorAll(".about-section").forEach((section, index) => {
- gsap.from(section, {
-  scrollTrigger: { 
-    trigger: section, 
-    start: "top 80%",
-    toggleActions: "play none none none",
-    onEnter: () => section.classList.add("mask-active")
-  },
-  opacity: 0,
-  x: index % 2 === 0 ? -100 : 100,
-  duration: 1
-});
-
-});
-</script>
-
-<script>
-// Glow Cursor Effect
-const glowCursor = document.querySelector('.glow-cursor');
-document.addEventListener('mousemove', (e) => {
-  glowCursor.style.left = e.clientX + 'px';
-  glowCursor.style.top = e.clientY + 'px';
-});
-
-
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const faders = document.querySelectorAll(".fade-in-on-scroll");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate__fadeInUp");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  faders.forEach(fader => observer.observe(fader));
-});
-</script>
-
-
-
-
-
-<!-- About text GSAP scrolling animation -->
- <script>
-ScrollTrigger.create({
-  trigger: section,
-  start: "top 80%",
-  once: true, 
-  onEnter: () => {
-    gsap.to(wordSpans, {
-      opacity: 1,
-      color: "#fff",
-      duration: 0.3,
-      stagger: 0.08,
-      ease: "power1.inOut"
-    });
-  }
-});
-
-</script>
-
-
-
-<script>
-gsap.registerPlugin(ScrollTrigger);
-
-document.querySelectorAll(".about-section").forEach((section, index) => {
-  const p = section.querySelector("p");      
-  const img = section.querySelector(".about-image");
-
-  
-  const words = p.innerText.split(" ");
-  p.innerHTML = words.map(word => `<span class="word">${word} </span>`).join("");
-
-  const wordSpans = p.querySelectorAll(".word");
-
-
-  gsap.set(wordSpans, { opacity: 0, color: "#888" });
-
-
-  ScrollTrigger.create({
-    trigger: section,
-    start: "top 80%",
-    onEnter: () => {
-      gsap.to(wordSpans, {
-        opacity: 1,
-        color: "#fff",
-        duration: 0.3,
-        stagger: 0.08,
-        ease: "power1.inOut",
-        
-      });
-    }
-  });
-
-  
-
-  // Slide-in image
-  if (img) {
-    gsap.from(img, {
-      scrollTrigger: {
-        trigger: section,
-        start: "top 80%",
-        toggleActions: "play none none reset"
-      },
-      opacity: 0,
-      x: index % 2 === 0 ? 50 : -50,
-      duration: 1.5,
-      ease: "power3.out",
-      immediateRender: false  
-    });
-  }
-});
-</script>
-
-
-  <!-- Get In Touch Modal -->
-  <div id="contactModal" class="contact-modal">
-    <div class="contact-modal-content">
-      <span class="close-contact-modal">&times;</span>
-      <h3>Get In Touch</h3>
-      <div class="contact-info-item">
-        <a href="tel:+918276057111"><img src="images/yellow phone icon.png"> +91 8276057111</a>
-      </div>
-      <div class="contact-info-item">
-        <a href="mailto:info@hatchlabinnovations.com">📧 info@hatchlabinnovations.com</a>
-      </div>
+    <!-- Get In Touch Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="contact-modal-content">
+            <span class="close-contact-modal">&times;</span>
+            <h3>Get In Touch</h3>
+            <div class="contact-info-item">
+                <a href="tel:+918276057111"><img src="images/yellow phone icon.png"> +91 8276057111</a>
+            </div>
+            <div class="contact-info-item">
+                <a href="mailto:info@hatchlabinnovations.com">📧 info@hatchlabinnovations.com</a>
+            </div>
+        </div>
     </div>
-  </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("contactModal");
-  const openBtn = document.getElementById("getInTouchBtn");
-  const closeBtn = document.querySelector(".close-contact-modal");
+    <!-- Scripts -->
+    <script src="https://www.hatchlabinnovations.com/assets/js/particles.js"></script>
+    <script src="https://www.hatchlabinnovations.com/assets/js/app.js"></script>
 
-  // Open modal
-  openBtn.addEventListener("click", () => {
-    modal.style.display = "flex";
-    modal.classList.add("active");
-  });
+    <script>
+        // Particles
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "size": { "value": 3 },
+                "color": { "value": "#ffffff" },
+                "line_linked": { "enable": true, "color": "#ffffff", "opacity": 0.3 },
+                "move": { "enable": true, "speed": 2 }
+            }
+        });
 
-  // Close modal on ×
-  closeBtn.addEventListener("click", () => {
-    modal.classList.remove("active");
-    setTimeout(() => { modal.style.display = "none"; }, 300);
-  });
+        // Hero text animation
+        setTimeout(() => {
+            const words = document.querySelectorAll('.word');
+            words.forEach(word => word.classList.add('bouncing'));
+        }, 1200);
 
-  // Close modal when clicking outside content
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.remove("active");
-      setTimeout(() => { modal.style.display = "none"; }, 300);
-    }
-  });
-});
+        // Glow Cursor
+        const glowCursor = document.querySelector('.glow-cursor');
+        document.addEventListener('mousemove', (e) => {
+            glowCursor.style.left = e.clientX + 'px';
+            glowCursor.style.top = e.clientY + 'px';
+        });
 
-</script>
+        // Modal
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("contactModal");
+            const openBtn = document.getElementById("getInTouchBtn");
+            const closeBtn = document.querySelector(".close-contact-modal");
 
+            openBtn.addEventListener("click", () => {
+                modal.style.display = "flex";
+                modal.classList.add("active");
+            });
 
+            closeBtn.addEventListener("click", () => {
+                modal.classList.remove("active");
+                setTimeout(() => { modal.style.display = "none"; }, 300);
+            });
 
+            window.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove("active");
+                    setTimeout(() => { modal.style.display = "none"; }, 300);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
