@@ -1,0 +1,6 @@
+/* Hide default cursor on all interactive elements to prevent hand cursor with glow cursor */
+a, button, .header-nav a, .get-in-touch-btn, .footer-form button, .social-icons a, 
+input[type="submit"], input[type="button"], .cta-btn, .card, .engagement-card, 
+.path-step, .footer-logo img, .brand-name, .contact-btn, #getInTouchBtn, #buildTogetherBtn {
+    cursor: none !important;
+}
