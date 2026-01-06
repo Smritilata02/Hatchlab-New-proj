@@ -56,8 +56,7 @@
             font-family: 'Lora', serif; 
         }
 
-        /* Particles Containers */
-        #particles-js, #contact-particles {
+        #particles-js {
             position: fixed;
             top: 0;
             left: 0;
@@ -65,10 +64,6 @@
             height: 100%;
             z-index: 1;
             pointer-events: none;
-        }
-
-        #contact-particles {
-            z-index: 2;
         }
 
         /* Contact Section - Centered Layout */
@@ -80,7 +75,6 @@
             width: 100%;
             position: relative;
             min-height: 100vh;
-            z-index: 3;
         }
 
         /* Hero Animations */
@@ -115,19 +109,18 @@
             width: 100%;
             padding: 0 20px;
             position: relative;
-            z-index: 4;
+            z-index: 2;
         }
 
         /* Brand Label - Hatchlab One */
         .brand-label {
             font-size: 1.2rem;
-            color: yellow;
+            color: #FFFF00 !important;
             margin-bottom: 15px;
             letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 600;
-            animation: dropDown 1.5s ease-out, glow-pulse 3s ease-in-out infinite;
-            text-shadow: 0 0 20px rgba(252, 215, 3, 0.8);
+            animation: dropDown 1.5s ease-out;
         }
 
         @keyframes dropDown {
@@ -374,7 +367,7 @@
                 font-size: 1rem;
                 letter-spacing: 2px;
                 margin-top: 40px;
-                color: #fcd703 !important;
+                color: #FFFF00 !important;
             }
 
             .contact-header h1 {
@@ -401,7 +394,7 @@
             .section-heading {
                 font-size: 1.5rem;
                 text-align: center;
-                color: #fcd703 !important;
+                color: #FFFF00 !important;
             }
 
             .engagement-card,
@@ -614,16 +607,16 @@
     
     <!-- Contact Us Section -->
     <section class="contact-section">
-        <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;"></div>
+        <div id="particles-js"></div>
         <div class="contact-wrapper">
             
             <!-- Hero Section -->
             <div class="hero" style="text-align: center; margin-bottom: 60px; position: relative; z-index: 3;">
                 <p class="brand-label" style="font-size: 1.2rem; color:yellow; margin-bottom: 15px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600;">Hatchlab One</p>
                 <h1 class="hero-title" style="font-size: 4rem; margin-bottom: 20px; color: #fff;">
-                    <span class="word white" style="color: #fff; display: inline-block; margin-right: 20px;">Partner</span>
-                    <span class="word white" style="color: #fff; display: inline-block; margin-right: 20px;">With</span>
-                    <span class="word yellow" style="color: #FFFF00; display: inline-block; margin-right: 20px;">Hatchlab</span>
+                    <span class="word white" style="color: #fff; display: inline-block; margin-right: 2px;">Partner</span>
+                    <span class="word white" style="color: #fff; display: inline-block; margin-right: 2px;">With</span>
+                    <span class="word yellow" style="color: #FFFF00; display: inline-block; margin-right: 2px;">Hatchlab</span>
                 </h1>
                 <p class="subtitle" style="font-size: 1.2rem; line-height: 1.6; color: #FFFFFF; max-width: 700px; margin: 30px auto 0; padding-bottom: 40px;">Ready to build the future? Whether you are a founder, investor, or corporate leader, engage with our ecosystem today.</p>
             </div>
@@ -776,42 +769,28 @@
   </style>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // Background Particles
+        // Enhanced Hero Particles
         particlesJS("particles-js", {
             "particles": {
-                "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
                 "color": { "value": "#ffffff" },
                 "shape": { "type": "circle" },
-                "opacity": { "value": 0.3, "random": true },
-                "size": { "value": 2, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
-                "move": { "enable": true, "speed": 0.8, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
-            },
-            "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false }, "onclick": { "enable": false }, "resize": true } },
-            "retina_detect": true
-        });
-
-        // Yellow Floating Particles
-        particlesJS("contact-particles", {
-            "particles": {
-                "number": { "value": 30, "density": { "enable": true, "value_area": 1000 } },
-                "color": { "value": "#FFFF00" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.6, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
-                "size": { "value": 4, "random": true, "anim": { "enable": true, "speed": 2, "size_min": 1, "sync": false } },
-                "line_linked": { "enable": false },
-                "move": { "enable": true, "speed": 1.5, "direction": "top", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+                "opacity": { "value": 0.5, "random": true },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 1.2, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
             },
             "interactivity": {
                 "detect_on": "canvas",
                 "events": {
-                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onhover": { "enable": true, "mode": "grab" },
                     "onclick": { "enable": true, "mode": "push" },
                     "resize": true
                 },
                 "modes": {
-                    "repulse": { "distance": 100, "duration": 0.4 },
+                    "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
                     "push": { "particles_nb": 4 }
                 }
             },
