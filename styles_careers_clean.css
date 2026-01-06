@@ -147,16 +147,27 @@ a.email {
   font-weight: 600;
   letter-spacing: 0.3px;
   text-decoration: none;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
-/* Desktop font size override */
+a.email:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Desktop font size override - Content only */
 @media (min-width: 1025px) {
-  h1 { font-size: 3.5rem !important; line-height: 1.2 !important; }
-  h2 { font-size: 2.5rem !important; line-height: 1.3 !important; }
-  .card h3 { font-size: 1.8rem !important; line-height: 1.4 !important; }
-  .card p, .card li, .card p2 { font-size: 18px !important; line-height: 1.6 !important; }
-  .email { font-size: 18px !important; line-height: 1.5 !important; }
+  .content h1 { font-size: 3.5rem !important; line-height: 1.2 !important; }
+  .content h2 { font-size: 2.5rem !important; line-height: 1.3 !important; }
+  .content .card h3 { font-size: 1.8rem !important; line-height: 1.4 !important; }
+  .content .card p, .content .card li, .content .card p2 { font-size: 18px !important; line-height: 1.6 !important; }
+  .content .email { font-size: 18px !important; line-height: 1.5 !important; }
+  
+  /* Footer text size increase */
+  .footer-meta { font-size: 18px !important; }
+  .footer-meta strong { font-size: 18px !important; }
+  .footer-contact a { font-size: 20px !important; }
+  .footer-form input[type="email"] { font-size: 16px !important; }
+  .footer-form button { font-size: 16px !important; }
 }
 
 /* ✅ Mobile Optimization */

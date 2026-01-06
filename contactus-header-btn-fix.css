@@ -2,15 +2,15 @@
 .main-header .get-in-touch-btn {
     background: #fff !important;
     color: #000 !important;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
-    transition: none !important;
+    box-shadow: none !important;
+    transition: box-shadow 0.3s ease !important;
 }
 
 .main-header .get-in-touch-btn:hover {
     background: #fff !important;
     color: #000 !important;
     transform: none !important;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8) !important;
 }
 
 /* Footer Contact Us Button Fix */

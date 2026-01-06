@@ -1,0 +1,8 @@
+/* Remove initial glow from Let's Build Together CTA button and add glow only on hover */
+.cta-btn {
+    box-shadow: none !important;
+}
+
+.cta-btn:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6) !important;
+}

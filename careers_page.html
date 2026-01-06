@@ -126,27 +126,89 @@
         .word:nth-child(4) { animation-delay: 0.3s; }
         .word:nth-child(5) { animation-delay: 0.4s; }
 
-        /* Career page desktop header fix */
-        @media (min-width: 1025px) {
-            /* Career page content text size fix */
-            .content h1 {
-                font-size: 2.5rem !important;
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
             }
-            
-            .content h2 {
-                font-size: 2rem !important;
+
+            .main {
+                padding-top: 120px;
             }
-            
-            .content h3 {
-                font-size: 1.5rem !important;
+
+            .contact-header {
+                padding-top: 80px;
             }
-            
-            .content p, .content li {
-                font-size: 18px !important;
+
+            .brand-label {
+                font-size: 1rem;
+                letter-spacing: 2px;
+                margin-top: 40px;
+                color: #fcd703 !important;
             }
-            
-            .email {
-                font-size: 18px !important;
+
+            .contact-header h1 {
+                font-size: 2rem;
+                color: #fcd703 !important;
+            }
+
+            .contact-header .subtitle {
+                font-size: 1rem;
+            }
+
+            .contact-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+
+            .engagement-models,
+            .path-forward {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .section-heading {
+                font-size: 1.5rem;
+                text-align: center;
+                color: #fcd703 !important;
+            }
+
+            .engagement-card,
+            .path-step {
+                padding: 15px 20px;
+                min-height: 100px;
+            }
+
+            .card-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .card-icon i {
+                font-size: 1.3rem;
+            }
+
+            .step-number {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+
+            .card-content h3,
+            .step-content h3 {
+                font-size: 1.1rem;
+                color: #FFFFFF !important;
+            }
+
+            .card-content p,
+            .step-content p {
+                font-size: 0.9rem;
+            }
+
+            .cta-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
             }
         }
 

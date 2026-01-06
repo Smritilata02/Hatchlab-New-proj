@@ -16,7 +16,7 @@ html .main-header {
   z-index: 1000 !important;
   border-bottom: none !important;
   box-sizing: border-box !important;
-  height: 94px !important;
+  height: 119px !important;
 }
 
 /* Remove focus outline from all header elements */
@@ -66,7 +66,7 @@ body .header-nav a,
 html .header-nav a {
   color: #fff !important;
   text-decoration: none !important;
-  font-size: 18px !important;
+  font-size: 21px !important;
   transition: 0.3s !important;
   font-weight: 520 !important;
 }

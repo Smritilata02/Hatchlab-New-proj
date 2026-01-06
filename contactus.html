@@ -33,6 +33,8 @@
     <link rel="stylesheet" href="typography-hierarchy.css">
     <!-- Contact Us Header Button Fix -->
     <link rel="stylesheet" href="contactus-header-btn-fix.css">
+    <!-- CTA Glow Fix -->
+    <link rel="stylesheet" href="cta-glow-fix.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Updated Particles.js CDN -->
@@ -337,16 +339,16 @@
             font-weight: 700;
             font-size: 1.1rem;
             border-radius: 8px;
-            transition: none !important;
+            transition: all 0.3s ease !important;
             border: 2px solid #fff !important;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+            box-shadow: none !important;
         }
 
         .cta-btn:hover {
             background: #FFFFFF !important;
             color: #000 !important;
             transform: none !important;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6) !important;
         }
 
         /* Mobile Responsive */
@@ -570,6 +572,20 @@
         .footer-logo img {
             width: 40px !important;
             height: auto !important;
+        }
+        
+        /* Footer Contact Font Size Increase */
+        .footer-contact a {
+            font-size: 22px !important;
+        }
+        
+        /* Footer Button Glow Fix */
+        .footer-form button {
+            box-shadow: none !important;
+        }
+        
+        .footer-form button:hover {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6) !important;
         }
     </style>
 </head>
